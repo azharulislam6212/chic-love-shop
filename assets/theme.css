@@ -237,8 +237,6 @@ body {
   font-weight: var(--font-body-weight);
   background-color: var(--body-bg-color);
   color: var(--body-color);
-
-  background-color: #000000;
 }
 
 @media screen and (min-width: 750px) {
