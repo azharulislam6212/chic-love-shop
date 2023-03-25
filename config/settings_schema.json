@@ -261,8 +261,8 @@
         "id": "theme_button_border_color",
         "label": "Button border",
         "default": "#030405"
-        },
-        {
+      },
+      {
         "type": "color",
         "id": "theme_hover_button_color",
         "label": "On hover: Button Label",
