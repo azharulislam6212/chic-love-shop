@@ -169,37 +169,37 @@
         "id": "primary_button_color",
         "label": "Button Label",
         "default": "#ffffff"
-        },
-        {
+      },
+      {
         "type": "color",
         "id": "primary_button_bg_color",
         "label": "Button Background",
         "default": "#030405"
-        },
-        {
+      },
+      {
         "type": "color",
         "id": "primary_button_border_color",
         "label": "Button border",
         "default": "#030405"
-        },
-        {
+      },
+      {
         "type": "color",
         "id": "primary_hover_button_color",
         "label": "On hover: Button Label",
         "default": "#030405"
-        },
-        {
+      },
+      {
         "type": "color",
         "id": "primary_hover_button_bg_color",
         "label": "On hover: Button background",
         "default": "#FFFF00"
-        },
-        {
+      },
+      {
         "type": "color",
         "id": "primary_hover_button_border_color",
         "label": "On hover: Button border",
         "default": "#030405"
-        },
+      },
       {
         "type": "header",
         "content": "Secondary Button Color"
@@ -209,37 +209,37 @@
         "id": "secondary_button_color",
         "label": "Button Label",
         "default": "#030405"
-        },
-        {
+      },
+      {
         "type": "color",
         "id": "secondary_button_bg_color",
         "label": "Button Background",
         "default": "#ffffff"
-        },
-        {
+      },
+      {
         "type": "color",
         "id": "scondary_button_border_color",
         "label": "Button border",
         "default": "#030405"
-        },
-        {
+      },
+      {
         "type": "color",
         "id": "secondary_hover_button_color",
         "label": "On hover: Button Label",
         "default": "#FFFF00"
-        },
-        {
+      },
+      {
         "type": "color",
         "id": "secondary_hover_button_bg_color",
         "label": "On hover: Button background",
         "default": "#030405"
-        },
-        {
+      },
+      {
         "type": "color",
         "id": "secondary_hover_button_border_color",
         "label": "On hover: Button border",
         "default": "#FFFF00"
-        },
+      },
       {
         "type": "header",
         "content": "Theme Button Color"
@@ -249,14 +249,14 @@
         "id": "theme_button_color",
         "label": "Button Label",
         "default": "#030405"
-        },
-        {
+      },
+      {
         "type": "color",
         "id": "theme_button_bg_color",
         "label": "Button Background",
         "default": "#FFFF00"
-        },
-        {
+      },
+      {
         "type": "color",
         "id": "theme_button_border_color",
         "label": "Button border",
@@ -267,24 +267,24 @@
         "id": "theme_hover_button_color",
         "label": "On hover: Button Label",
         "default": "#ffffff"
-        },
-        {
+      },
+      {
         "type": "color",
         "id": "theme_hover_button_bg_color",
         "label": "On hover: Button background",
         "default": "#030405"
-        },
-        {
+      },
+      {
         "type": "color",
         "id": "theme_hover_button_border_color",
         "label": "On hover: Button border",
         "default": "#030405"
-       },
-       {
+      },
+      {
         "type": "header",
         "content": "Theme Button Style"
-       },
-       {
+      },
+      {
         "type": "select",
         "id": "button_style",
         "label": "Button Style",
@@ -405,7 +405,7 @@
         "options": [
           {
             "label": "Capitalize",
-            "value": "capitalize" 
+            "value": "capitalize"
           },
           {
             "label": "Uppercase",
@@ -446,7 +446,7 @@
         "options": [
           {
             "label": "Body Font",
-            "value": "body" 
+            "value": "body"
           },
           {
             "label": "heading Font",
@@ -459,7 +459,7 @@
         "type": "text",
         "id": "nav_font_weight",
         "label": "Font Weight - Navigation",
-         "placeholder": "400"
+        "placeholder": "400"
       },
       {
         "type": "select",
@@ -468,7 +468,7 @@
         "options": [
           {
             "label": "Capitalize",
-            "value": "capitalize" 
+            "value": "capitalize"
           },
           {
             "label": "Uppercase",
@@ -496,7 +496,7 @@
         "options": [
           {
             "label": "Body Font",
-            "value": "body" 
+            "value": "body"
           },
           {
             "label": "heading Font",
@@ -509,7 +509,7 @@
         "type": "text",
         "id": "btn_font_weight",
         "label": "Font Weight - Button",
-         "placeholder": "400"
+        "placeholder": "400"
       },
       {
         "type": "select",
@@ -518,7 +518,7 @@
         "options": [
           {
             "label": "Capitalize",
-            "value": "capitalize" 
+            "value": "capitalize"
           },
           {
             "label": "Uppercase",
