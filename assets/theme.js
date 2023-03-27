@@ -338,3 +338,22 @@ $(function () {
       }
     });
 });
+
+// custom scripts
+
+// accordion script
+    $('.trigger').click(function(j) {
+    
+    var dropDown = $(this).closest('li').find('.content');
+    $(this).closest('.faq_accordion').find('.content').not(dropDown).slideUp();
+    
+    if ($(this).hasClass('is-open')) {
+      $(this).removeClass('is-open');
+    } else {
+      $(this).closest('.faq_accordion').find('.trigger.is-open').removeClass('is-open');
+      $(this).addClass('is-open');
+    }
+    
+    dropDown.stop(false, true).slideToggle();
+    j.preventDefault();
+  });
