@@ -152,6 +152,12 @@ a:hover, a:focus{
   text-decoration: none;
 }
 
+.placeholder-svg{
+  height: 100%;
+  width: 100%;
+}
+
+
 [data-overlay] {
   position: relative;
 }
