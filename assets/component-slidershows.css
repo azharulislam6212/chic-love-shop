@@ -157,7 +157,7 @@
 
   
   .slick-dots {
-    bottom: -40px;
+    bottom: 20px;
   }
    .slick-dots li button {
     width: auto;
@@ -193,7 +193,7 @@
     height: 8px;
         opacity:9;
   }
-  
+
   .slick-dotted.slick-slider {
     margin-bottom:0px;
   }
