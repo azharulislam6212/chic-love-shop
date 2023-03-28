@@ -262,20 +262,16 @@
         <div class="description  animated" data-animation-in="{{des_animation}}" data-delay-in="0.{{des_delay}}" >{{text}}</div>
         {% endif %}
 
-
   {%- when 'button' -%}
       {%- liquid
 
 				assign btn_label = block.settings.btn_label
 				assign btn_link = block.settings.btn_link
-		
-
+	
 			-%}
 
 
-
-
-									{% if btn_label != blank %}
+	{% if btn_label != blank %}
 									<a href="{{btn_link}}" class="btn btn--{{button_style}} animated {{icon_class}}" data-animation-in="{{btn_animation}}" data-delay-in="0.{{btn_delay}}">{{btn_label}} {{btn_icon}}</a>
 									{% endif %}
 
