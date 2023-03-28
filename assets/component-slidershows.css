@@ -132,7 +132,7 @@
   .main-slider .slick-arrow.prev  {
     left: 50px
   }
-  .main-slider.slick-arrow.next {
+  .main-slider .slick-arrow.next {
     right: 50px
   }
   
@@ -142,7 +142,7 @@
   }
   
   @media (max-width: 750px){
-    .main-slider.slick-arrow.prev  {
+    .main-slider .slick-arrow.prev  {
       left: 15px
     }
     .main-slider .slick-arrow.next {
