@@ -22,20 +22,20 @@
 
         {% if block.settings.image != blank %}
 
-          div
+          <div data-overlay="{{overlayimage}}">
 					<div class="ss_img lazyload js{% if block.settings.mb_image != blank %} hidden-xs-down {% else %}{% if forloop.first %} lazypreload{% endif %}{% endif %}"
 					 data-bgset="{% render 'bgset', image: block.settings.image, sizes: dsizes %}" data-sizes="auto" data-parent-fit="contain"
 					 style="background-position:{{ block.settings.alignment }};{% unless forloop.first %}background-image:url('{{ block.settings.image | img_url: '2000x' }}');{% endunless %}">
 					</div>
-
+        </div>
 					{% if block.settings.mb_image != blank %}
-
+            <div data-overlay="{{overlayimage}}">
 					<div class="ss_img lazyload{% if forloop.first %} lazypreload{% endif %} js hidden-sm-up"
 						 data-bgset="{% include 'bgset', image: block.settings.mb_image, sizes: msizes %}" data-sizes="auto" data-parent-fit="contain"
 						 style="background-position:{{ block.settings.alignment }};{% unless forloop.first %}background-image:url('{{ block.settings.mb_image | img_url: '780x' }}');{% endunless %}">
 					</div>
 
-
+ </div>
 					  {% endif %}
 
 					
