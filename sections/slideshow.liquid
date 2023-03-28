@@ -251,7 +251,7 @@
 
 
 					
-					
+					{%if enable_custom_color %}
 						
 						.block-{{block.id}} .slideshow-content .heading{
 							color: {{ heading_color }};
@@ -313,7 +313,7 @@
                             fill: {{ secondary_hover_button_color }};
                         }
 
-			
+						{%endif %}
 					  </style>
 						
 			</div>
