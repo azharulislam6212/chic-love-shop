@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 .ss_img {
     transition: opacity .8s cubic-bezier(.44,.13,.48,.87);
@@ -78,3 +79,85 @@
 
 
 
+=======
+
+.ss_img {
+    transition: opacity .8s cubic-bezier(.44,.13,.48,.87);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.slick-active .ss_img, .no-js .ss_img {
+    opacity: 1;
+    visibility: visible;
+}
+.sslider .slider-item, .sslider .slick-list, .sslider .slick-track {
+    height: 100%;
+}
+
+
+.slider-small{
+    height: 575px;
+}
+
+.slider-medium{
+    height: 675px;
+}
+
+.slider-large{
+    height: 750px;
+}
+.slider-extra-large{
+    height: 960px;
+}
+.slider-full-height{
+    height: 100vh;
+}
+
+
+.icon-active{
+    display: inline-flex;
+    align-items: center;
+}
+
+.icon-active svg {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    display: inline-block;
+}
+
+ .slideshow-content .heading{
+    font-style: normal;
+    font-size: 83px;
+    font-weight: bold;
+    font-style: normal;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+}
+ .slideshow-content .description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 19px;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+
+
+/*------------- Slick Slider Arrow -----------------*/
+
+
+
+
+
+
+>>>>>>> 48dabe779551b4fd96b9e94635654bb37111b413
