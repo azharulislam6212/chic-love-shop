@@ -27,7 +27,7 @@
         assign dsizes = ''
         endif    
         assign msizes = '375,540,780,1080'
-        
+
         %}
 
 
@@ -79,7 +79,6 @@
 				assign heading = block.settings.heading
 
 
-		
 				assign heading_font_size_desk = block.settings.heading_font_size_desk
 				assign heading_lh_desk = block.settings.heading_lh_desk
 				assign heading_font_size_tab = block.settings.heading_font_size_tab
@@ -90,6 +89,13 @@
 				assign heading_font_weight = block.settings.heading_font_weight
 
       %}
+
+
+      		
+      {% if heading != blank %}
+        <h1 class="heading  animated text-{{heading_text_transfrom}}" data-animation-in="{{heading_animation}}" data-delay-in="0.{{heading_delay}}"  >{{heading}}</h1>
+        {% endif %}
+
 
 
 			{%- liquid
@@ -172,10 +178,7 @@
 			
      
 								
-										
-										{% if heading != blank %}
-										<h1 class="heading  animated text-{{heading_text_transfrom}}" data-animation-in="{{heading_animation}}" data-delay-in="0.{{heading_delay}}"  >{{heading}}</h1>
-										{% endif %}
+								
 										{% if text != blank %}
 										<div class="description  animated" data-animation-in="{{des_animation}}" data-delay-in="0.{{des_delay}}" >{{text}}</div>
 										{% endif %}
