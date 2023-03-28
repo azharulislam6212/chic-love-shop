@@ -3,7 +3,6 @@
 
 {%- liquid
 	assign banner_height = section.settings.banner_height
-	assign banner_height = section.settings.overlayimage
 
 -%}
 
@@ -483,7 +482,17 @@
 					"type": "image_picker",
 					"id": "mb_image",
 					"label": "Mobile Image"
-				}
+				},
+				{
+					"type": "range",
+					"id": "overlayimage",
+					"label": "Overlay On Image",
+					"min": 0,
+					"max": 10,
+					"step": 1,
+					"default": 3,
+					"unit": "%"
+				  }
 			]
 		},
     {
