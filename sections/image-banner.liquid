@@ -14,13 +14,26 @@
 
 
 
-<div class="banner" id="section_{{ section.id }}">
+<slideshows-component  class=" section_{{ section.id }}" id="section_{{ section.id }}">
 	<div class="banner-{{slider_height}}"  >	
 
   {%- for block in section.blocks -%}
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+    
+		
 
 			{%- liquid
 				assign content_position = block.settings.content_position
@@ -133,7 +146,7 @@
 
 			-%}
 
-			<div  class=" no-js block-{{block.id}}"   data-overlay="{{overlayimage}}"  {{ block.shopify_attributes }}>
+			<div  class="block-{{block.id}}"   data-overlay="{{overlayimage}}"  {{ block.shopify_attributes }}>
 
 
 				    {% if block.type == 'slide' and block.settings.image != blank %}
@@ -315,8 +328,8 @@
     {%- endfor -%}   
 
 </div>
+</slideshows-component>
 
-</div>
 
 
 {%- if request.design_mode -%}
