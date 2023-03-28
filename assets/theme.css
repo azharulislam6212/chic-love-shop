@@ -395,7 +395,9 @@ padding: 11px 49px;
   fill:var(--primary-button-color);
 }
 
-
+.btn--primary:hover, .btn--primary:focus{
+  fill:var(--primary-hover-button-color);
+}
 
  .btn--secondary:hover svg{
   fill: {{ hover_button_color }};
