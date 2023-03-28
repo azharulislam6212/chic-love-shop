@@ -112,9 +112,9 @@
         "template--18319593734437__7b7773c6-ffb5-49df-99ef-13da81f1b40f-1679983816b9aa7ae4-6"
       ],
       "settings": {
-        "container": "container",
+        "container": "container-fluid",
         "section_background": "#FFFF00",
-        "remove_container_space": false,
+        "remove_container_space": true,
         "padding_top": 36,
         "padding_bottom": 36,
         "padding_top_m": 30,
