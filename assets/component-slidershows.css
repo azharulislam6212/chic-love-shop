@@ -73,7 +73,7 @@
 
 @media only screen and (min-width: 750px) {
     .slideshow-absolute {
-        padding: 70px ;
+        padding: 70px 0;
     }
 }
 /*------------- Slick Slider Arrow -----------------*/
