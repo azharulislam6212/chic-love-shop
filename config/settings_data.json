@@ -5,6 +5,7 @@
     "heading_scale": 100,
     "type_body_font": "assistant_n4",
     "body_scale": 100,
+    "btn_text_transfrom": "uppercase",
     "page_width": 1200,
     "spacing_sections": 0,
     "spacing_grid_horizontal": 8,
@@ -139,7 +140,10 @@
           "color_scheme": "background-1"
         }
       }
-    }
+    },
+    "content_for_index": [
+
+    ]
   },
   "presets": {
     "Default": {
