@@ -143,9 +143,9 @@
   
   @media (max-width: 750px){
     .main-slider .slick-arrow.prev  {
-      left: 15px
+      left: 0px
     }
     .main-slider .slick-arrow.next {
-      right: 15px;
+      right: 0px;
     }
   }
