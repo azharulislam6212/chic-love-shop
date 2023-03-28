@@ -364,7 +364,138 @@
 			  }
 			],
 			"default": "medium"
-		  }
+		  },
+      {
+        "type": "header",
+        "content": "Color"
+        },
+      {
+        "type": "checkbox",
+        "id": "enable_custom_color",
+        "label": "Enable Custom Color",
+        "default": false
+      },
+                {
+        "type": "color",
+        "id": "heading_color",
+        "label": "Heading",
+        "default": "#fff"
+        },
+        {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text",
+        "default": "#fff"
+        },
+        {
+        "type": "header",
+        "content": "Primary Button Color"
+        },
+        {
+        "type": "color",
+        "id": "primary_button_color",
+        "label": "Button Label",
+        "default": "#ffffff"
+        },
+        {
+        "type": "color",
+        "id": "primary_button_bg_color",
+        "label": "Button Background",
+        "default": "#030405"
+        },
+        {
+        "type": "color",
+        "id": "primary_button_border_color",
+        "label": "Button border",
+        "default": "#030405"
+        },
+        {
+        "type": "color",
+        "id": "primary_hover_button_color",
+        "label": "On hover: Button Label",
+        "default": "#030405"
+        },
+        {
+        "type": "color",
+        "id": "primary_hover_button_bg_color",
+        "label": "On hover: Button background",
+        "default": "#FFFF00"
+        },
+        {
+        "type": "color",
+        "id": "primary_hover_button_border_color",
+        "label": "On hover: Button border",
+        "default": "#030405"
+        },
+        {
+        "type": "header",
+        "content": "Secondary Button Color"
+        },
+        {
+        "type": "color",
+        "id": "secondary_button_color",
+        "label": "Button Label",
+        "default": "#030405"
+        },
+        {
+        "type": "color",
+        "id": "secondary_button_bg_color",
+        "label": "Button Background",
+        "default": "#ffffff"
+        },
+        {
+        "type": "color",
+        "id": "scondary_button_border_color",
+        "label": "Button border",
+        "default": "#030405"
+        },
+        {
+        "type": "color",
+        "id": "secondary_hover_button_color",
+        "label": "On hover: Button Label",
+        "default": "#FFFF00"
+        },
+        {
+        "type": "color",
+        "id": "secondary_hover_button_bg_color",
+        "label": "On hover: Button background",
+        "default": "#030405"
+        },
+        {
+        "type": "color",
+        "id": "secondary_hover_button_border_color",
+        "label": "On hover: Button border",
+        "default": "#FFFF00"
+        },
+        {
+        "type": "header",
+        "content": "Animation"
+       },
+        {
+        "type": "select",
+        "id": "btn_animation",
+        "label": "Choose Animation",
+        "options": [
+          {"label": "FadeInLeft", "value": "fadeInLeft"},
+          {"label": "FadeInRight", "value": "fadeInRight"},
+          {"label": "fadeInDown", "value": "fadeInDown"},
+          {"label": "fadeInUp", "value": "fadeInUp"},
+          {"label": "ZoomIn", "value": "zoomIn"},
+          {"label": "SlideInDown", "value": "slideInDown"},
+          {"label": "SlideInUp", "value": "slideInUp"}
+        ],
+        "default": "fadeInUp"
+      },
+      {
+        "type": "range",
+        "id": "btn_delay",
+        "label":"Animation Delay",
+        "min": 0,
+        "max": 9,
+        "step": 1,
+        "default": 5,
+        "unit": "%"
+      }
     ],
     "blocks": [
 		{
