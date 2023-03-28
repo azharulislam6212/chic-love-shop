@@ -233,54 +233,52 @@ fill: {{ primary_button_color }};
              <div class="banner-content">
                <!-- Slide Title -->
 
-      {%- for block in section.blocks -%}
-        {%- case block.type -%}
-          {%- when 'heading' -%}
+                      {%- for block in section.blocks -%}
+                        {%- case block.type -%}
+                          {%- when 'heading' -%}
 
-            {%- liquid
-            
-              assign heading = block.settings.heading
-            %}
+                            {%- liquid
+                            
+                              assign heading = block.settings.heading
+                            %}
 
-            {% if heading != blank %}
-              <h1 class="heading  animated text-{{heading_text_transfrom}}" data-animation-in="{{heading_animation}}" data-delay-in="0.{{heading_delay}}"  >{{heading}}</h1>
-              {% endif %}
+                            {% if heading != blank %}
+                              <h1 class="heading  animated text-{{heading_text_transfrom}}" data-animation-in="{{heading_animation}}" data-delay-in="0.{{heading_delay}}"  >{{heading}}</h1>
+                              {% endif %}
 
-              {%- when 'description' -%}
+                              {%- when 'description' -%}
 
-            {%- liquid
-            
-              assign text = block.settings.text
+                            {%- liquid
+                            
+                              assign text = block.settings.text
 
-            %}
+                            %}
 
-            {% if text != blank %}
-              <div class="description  animated" data-animation-in="{{des_animation}}" data-delay-in="0.{{des_delay}}" >{{text}}</div>
-              {% endif %}
+                            {% if text != blank %}
+                              <div class="description  animated" data-animation-in="{{des_animation}}" data-delay-in="0.{{des_delay}}" >{{text}}</div>
+                              {% endif %}
 
-        {%- when 'button' -%}
-            {%- liquid
+                        {%- when 'button' -%}
+                            {%- liquid
 
-              assign btn_label = block.settings.btn_label
-              assign btn_link = block.settings.btn_link
-        
-            -%}
+                              assign btn_label = block.settings.btn_label
+                              assign btn_link = block.settings.btn_link
+                        
+                            -%}
 
-        {% if btn_label != blank %}
-                        <a href="{{btn_link}}" class="btn btn--{{button_style}} animated {{icon_class}}" data-animation-in="{{btn_animation}}" data-delay-in="0.{{btn_delay}}">{{btn_label}} {{btn_icon}}</a>
-            {% endif %}
+                        {% if btn_label != blank %}
+                                        <a href="{{btn_link}}" class="btn btn--{{button_style}} animated {{icon_class}}" data-animation-in="{{btn_animation}}" data-delay-in="0.{{btn_delay}}">{{btn_label}} {{btn_icon}}</a>
+                            {% endif %}
 
-          {%- endcase -%}
-        {%- endfor -%}   
-
+                          {%- endcase -%}
+                        {%- endfor -%}   
 
 								<!-- Slide Title / End -->
-							</div>
 						</div>
 					</div>
-			 	 </div>
-			 </div>
-
+				</div>
+			 	</div>
+			</div>
 
 </div>
 </div>
