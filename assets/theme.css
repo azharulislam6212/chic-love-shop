@@ -477,7 +477,7 @@ padding: 11px 49px;
 
 .newsletter-form__field-wrapper{
   background: #FFFFFF;
-  border-radius: 70px;
+  border-radius: var(--btn-border-radius);
 }
 
 
