@@ -3,7 +3,7 @@
     "3cf82f8d-239d-4a38-bc53-3f76f2b326bb": {
       "type": "slideshow",
       "blocks": {
-        "0f84be14-4ea0-4236-984b-e2e7446d4c68": {
+        "32fee708-1594-42b6-a9f7-cc8e07932b1f": {
           "type": "slide",
           "settings": {
             "image": "shopify:\/\/shop_images\/Mask_group_4.png",
@@ -21,10 +21,10 @@
             "des_animation": "fadeInDown",
             "des_delay": 5,
             "button_style": "secondary",
-            "button_icon": "with_icon",
+            "button_icon": "with_not_icon",
             "btn_label": "Start Shopping",
             "btn_link": "shopify:\/\/collections\/all",
-            "content_alignment": "text-left",
+            "content_alignment": "text-center",
             "content_position": "align-items-center",
             "heading_color": "#fff",
             "text_color": "#fff",
@@ -46,7 +46,7 @@
         }
       },
       "block_order": [
-        "0f84be14-4ea0-4236-984b-e2e7446d4c68"
+        "32fee708-1594-42b6-a9f7-cc8e07932b1f"
       ],
       "settings": {
         "slider_height": "full-height",
