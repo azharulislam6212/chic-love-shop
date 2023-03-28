@@ -22,7 +22,6 @@
 
         {% if block.settings.image != blank %}
 
-				
 					<div class="ss_img lazyload js{% if block.settings.mb_image != blank %} hidden-xs-down {% else %}{% if forloop.first %} lazypreload{% endif %}{% endif %}"
 					 data-bgset="{% render 'bgset', image: block.settings.image, sizes: dsizes %}" data-sizes="auto" data-parent-fit="contain"
 					 style="background-position:{{ block.settings.alignment }};{% unless forloop.first %}background-image:url('{{ block.settings.image | img_url: '2000x' }}');{% endunless %}">
@@ -148,7 +147,7 @@
 
 			-%}
 
-			<div  class="banner-item block-{{block.id}}"  data-overlay="{{overlayimage}}"  {{ block.shopify_attributes }}>
+
 
 
 				    
