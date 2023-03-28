@@ -1,0 +1,222 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "db1da258-544b-4064-a6cc-98a3cc3acc0f": {
+      "type": "faq-accordion-section",
+      "blocks": {
+        "a063ea7f-4523-40a5-a8da-d30090b75d59": {
+          "type": "heading",
+          "settings": {
+            "main_heading": "answers to all your questions"
+          }
+        },
+        "f88f0f7b-0d31-4111-848c-2a2514d5e269": {
+          "type": "group_acc_heading",
+          "settings": {
+            "small_heading": "ORDERS & SHIPPING"
+          }
+        },
+        "a672db40-ed84-42ac-ad9b-e93ae6dd1926": {
+          "type": "accordion_info",
+          "settings": {
+            "question": "Are these gummies veagan?",
+            "answer": "Yes, Lemme Sleep is vegan and vegetarian."
+          }
+        },
+        "b4977e47-2aa3-489b-9fee-bb0dce37bfd4": {
+          "type": "accordion_info",
+          "settings": {
+            "question": "Are these gummies veagan?",
+            "answer": "Yes, Lemme Sleep is vegan and vegetarian."
+          }
+        },
+        "7599143c-0242-4c10-831e-49a0d5d59b1f": {
+          "type": "accordion_info",
+          "settings": {
+            "question": "Are these gummies veagan?",
+            "answer": "Yes, Lemme Sleep is vegan and vegetarian."
+          }
+        },
+        "def210fe-4a6b-4c27-a99d-f814ef9eab63": {
+          "type": "accordion_info",
+          "settings": {
+            "question": "Are these gummies veagan?",
+            "answer": "Yes, Lemme Sleep is vegan and vegetarian."
+          }
+        },
+        "c34b1c3f-e22b-47a0-aeef-c8bba2951b36": {
+          "type": "group_acc_heading",
+          "settings": {
+            "small_heading": "ORDERS & SHIPPING"
+          }
+        },
+        "3ebd142f-1db6-43a0-8207-4509ae38570b": {
+          "type": "accordion_info",
+          "settings": {
+            "question": "Are these gummies veagan?",
+            "answer": "Yes, Lemme Sleep is vegan and vegetarian."
+          }
+        },
+        "63907247-e0e7-4ce2-a451-44b2bc9590bc": {
+          "type": "accordion_info",
+          "settings": {
+            "question": "Are these gummies veagan?",
+            "answer": "Yes, Lemme Sleep is vegan and vegetarian."
+          }
+        },
+        "f0a5aff9-6ea1-424f-894e-372efecd1d8b": {
+          "type": "accordion_info",
+          "settings": {
+            "question": "Are these gummies veagan?",
+            "answer": "Yes, Lemme Sleep is vegan and vegetarian."
+          }
+        },
+        "51aed158-fabf-4678-9aa3-afca2b222a90": {
+          "type": "accordion_info",
+          "settings": {
+            "question": "Are these gummies veagan?",
+            "answer": "Yes, Lemme Sleep is vegan and vegetarian."
+          }
+        },
+        "6d26f9ab-2b6a-4816-b5dc-5f9bfcd00cb3": {
+          "type": "group_acc_heading",
+          "settings": {
+            "small_heading": "ORDERS & SHIPPING"
+          }
+        },
+        "506031a8-c843-4cb0-8912-d38b74825f90": {
+          "type": "accordion_info",
+          "settings": {
+            "question": "Are these gummies veagan?",
+            "answer": "Yes, Lemme Sleep is vegan and vegetarian."
+          }
+        },
+        "abb61ae8-6554-4146-91b5-2242dbe86c7e": {
+          "type": "accordion_info",
+          "settings": {
+            "question": "Are these gummies veagan?",
+            "answer": "Yes, Lemme Sleep is vegan and vegetarian."
+          }
+        },
+        "dff5213f-2a4e-4c6f-bb7e-28cb67ef0e36": {
+          "type": "accordion_info",
+          "settings": {
+            "question": "Are these gummies veagan?",
+            "answer": "Yes, Lemme Sleep is vegan and vegetarian."
+          }
+        },
+        "09692079-b135-4879-803d-efcdb750eed2": {
+          "type": "accordion_info",
+          "settings": {
+            "question": "Are these gummies veagan?",
+            "answer": "Yes, Lemme Sleep is vegan and vegetarian."
+          }
+        }
+      },
+      "block_order": [
+        "a063ea7f-4523-40a5-a8da-d30090b75d59",
+        "f88f0f7b-0d31-4111-848c-2a2514d5e269",
+        "a672db40-ed84-42ac-ad9b-e93ae6dd1926",
+        "b4977e47-2aa3-489b-9fee-bb0dce37bfd4",
+        "7599143c-0242-4c10-831e-49a0d5d59b1f",
+        "def210fe-4a6b-4c27-a99d-f814ef9eab63",
+        "c34b1c3f-e22b-47a0-aeef-c8bba2951b36",
+        "3ebd142f-1db6-43a0-8207-4509ae38570b",
+        "63907247-e0e7-4ce2-a451-44b2bc9590bc",
+        "f0a5aff9-6ea1-424f-894e-372efecd1d8b",
+        "51aed158-fabf-4678-9aa3-afca2b222a90",
+        "6d26f9ab-2b6a-4816-b5dc-5f9bfcd00cb3",
+        "506031a8-c843-4cb0-8912-d38b74825f90",
+        "abb61ae8-6554-4146-91b5-2242dbe86c7e",
+        "dff5213f-2a4e-4c6f-bb7e-28cb67ef0e36",
+        "09692079-b135-4879-803d-efcdb750eed2"
+      ],
+      "settings": {
+        "container": "container",
+        "section_background": "#dfc8e7",
+        "remove_container_space": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_m": 30,
+        "padding_bottom_m": 30
+      }
+    },
+    "672c05fe-00c4-4a1b-8a88-806c29470103": {
+      "type": "marquee-section",
+      "blocks": {
+        "71f4e961-540d-4795-b865-462dd6fa9d21": {
+          "type": "text",
+          "settings": {
+            "text": "Viales"
+          }
+        },
+        "d78d5353-27a4-42f6-833c-e1f603fc9363": {
+          "type": "text",
+          "settings": {
+            "text": "Junior"
+          }
+        },
+        "3d8687d5-69eb-4cec-867f-af7c047f97a0": {
+          "type": "text",
+          "settings": {
+            "text": "PREVEGRIP"
+          }
+        },
+        "02720739-b3a6-4369-ab0a-cb62ed4eec66": {
+          "type": "text",
+          "settings": {
+            "text": "Sleep"
+          }
+        },
+        "6509b375-267c-4942-b8cf-4dbeb0f55ea6": {
+          "type": "text",
+          "settings": {
+            "text": "Anti-stress"
+          }
+        },
+        "f0aa9bc7-2eed-4ef4-a8cc-5d681c63596d": {
+          "type": "text",
+          "settings": {
+            "text": "Radient skin"
+          }
+        },
+        "f9d12c5b-6a73-44ff-b5c3-406897c94ad4": {
+          "type": "text",
+          "settings": {
+            "text": "Hair&nails"
+          }
+        }
+      },
+      "block_order": [
+        "71f4e961-540d-4795-b865-462dd6fa9d21",
+        "d78d5353-27a4-42f6-833c-e1f603fc9363",
+        "3d8687d5-69eb-4cec-867f-af7c047f97a0",
+        "02720739-b3a6-4369-ab0a-cb62ed4eec66",
+        "6509b375-267c-4942-b8cf-4dbeb0f55ea6",
+        "f0aa9bc7-2eed-4ef4-a8cc-5d681c63596d",
+        "f9d12c5b-6a73-44ff-b5c3-406897c94ad4"
+      ],
+      "settings": {
+        "container": "container-fluid",
+        "section_background": "#FFFF00",
+        "remove_container_space": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_m": 0,
+        "padding_bottom_m": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "db1da258-544b-4064-a6cc-98a3cc3acc0f",
+    "672c05fe-00c4-4a1b-8a88-806c29470103"
+  ]
+}
