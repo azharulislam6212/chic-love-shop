@@ -107,6 +107,14 @@
 				assign des_lh_mob = block.settings.des_lh_mob
 
       %}
+      
+      {% if text != blank %}
+        <div class="description  animated" data-animation-in="{{des_animation}}" data-delay-in="0.{{des_delay}}" >{{text}}</div>
+        {% endif %}
+
+
+      {%- liquid
+
 				assign btn_label = block.settings.btn_label
 				assign btn_link = block.settings.btn_link
 		
@@ -176,9 +184,7 @@
      
 								
 								
-										{% if text != blank %}
-										<div class="description  animated" data-animation-in="{{des_animation}}" data-delay-in="0.{{des_delay}}" >{{text}}</div>
-										{% endif %}
+									
 									
 
 									{% if btn_label != blank %}
