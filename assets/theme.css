@@ -391,6 +391,8 @@ padding: 11px 49px;
   color: var(--primary-hover-button-color);
 }
 
+
+
 .btn--secondary{
   background-color: var(--secondary-button-bg-color);
   border: 2px solid var(--secondary-button-border-color);
