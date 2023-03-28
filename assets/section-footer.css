@@ -177,7 +177,7 @@
   flex-grow: 1;
 }
 
-.footer-block__newsletter .rte{
+.footer-block__newsletter.rte{
   font-weight: 600;
   font-size: 10px;
   line-height: 22px;
