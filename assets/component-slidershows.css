@@ -13,13 +13,6 @@
     background-size: cover;
     background-position: center center;
 }
-.slick-active .ss_img, .no-js .ss_img {
-    opacity: 1;
-    visibility: visible;
-}
-.sslider .slider-item, .sslider .slick-list, .sslider .slick-track {
-    height: 100%;
-}
 
 
 .slider-small{
@@ -89,8 +82,15 @@
     width: 100%;
 }
 
+/*------------- Slick Slider -----------------*/
 
-/*------------- Slick Slider Arrow -----------------*/
+.slick-active .ss_img, .no-js .ss_img {
+    opacity: 1;
+    visibility: visible;
+}
+.sslider .slider-item, .sslider .slick-list, .sslider .slick-track {
+    height: 100%;
+}
 
 
 .slick-arrow::before,
