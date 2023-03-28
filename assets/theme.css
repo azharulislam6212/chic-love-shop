@@ -482,6 +482,7 @@ padding: 11px 49px;
 
 
 .newsletter-form__button{
-  background: #FFFF00;
+  background: #FFFF00 !important;
   border-radius: var(--btn-border-radius);
+  width: 60px !important;
 }
