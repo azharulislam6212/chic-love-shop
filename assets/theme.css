@@ -492,7 +492,7 @@ button:focus{
   transition: 0.3s all ease-in;
 }
 .newsletter-form__button:hover,
-.newsletter-form__button:hover{
+.newsletter-form__button:focus{
   background: #000 !important;
   transition: 0.3s all ease-in;
 }
