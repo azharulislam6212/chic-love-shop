@@ -391,13 +391,13 @@ padding: 11px 49px;
   color: var(--primary-hover-button-color);
 }
 
-.block-{{block.id}} .btn--primary svg{
-  fill: {{ primary_button_color }};
+.btn--primary svg{
+  fill:var(--primary-button-color);
 }
 
 
 
-.block-{{block.id}} .btn--secondary:hover svg{
+ .btn--secondary:hover svg{
   fill: {{ hover_button_color }};
 }
 
