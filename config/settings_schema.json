@@ -218,7 +218,7 @@
       },
       {
         "type": "color",
-        "id": "scondary_button_border_color",
+        "id": "secondary_button_border_color",
         "label": "Button border",
         "default": "#030405"
       },

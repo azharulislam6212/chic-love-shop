@@ -16,7 +16,7 @@
 
 
 <slideshows-component  class=" section_{{ section.id }}" id="section_{{ section.id }}">
-	<div class="main-slider sslider slider-{{slider_height}}  slick" id="Slider-{{ section.id }}"   data-slick='{
+	<div class="main-slider sslider banner-{{slider_height}}  slick" id="Slider-{{ section.id }}"   data-slick='{
 		"dots": {{ enable_dot }}, 
 		"autoplay": {{ autoplay }}, 
 		"infinite": true, 
@@ -42,15 +42,24 @@
 				assign heading = block.settings.heading
 				assign text = block.settings.text
 
-				assign preheading_font_size = block.settings.preheading_font_size
-				assign preheading_lh = block.settings.preheading_lh
+		
 				assign heading_font_size_desk = block.settings.heading_font_size_desk
 				assign heading_lh_desk = block.settings.heading_lh_desk
+				assign heading_font_size_tab = block.settings.heading_font_size_tab
+				assign heading_lh_tab = block.settings.heading_lh_tab
 				assign heading_font_size_mob = block.settings.heading_font_size_mob
 				assign heading_lh_mob = block.settings.heading_lh_mob
+				assign heading_text_transfrom = block.settings.heading_text_transfrom
+				assign heading_font_weight = block.settings.heading_font_weight
+
+
+
 				assign des_font_size = block.settings.des_font_size
 				assign des_lh = block.settings.des_lh
-
+				assign des_font_size_tab = block.settings.des_font_size_tab
+				assign des_lh_tab = block.settings.des_lh_tab
+				assign des_font_size_mob = block.settings.des_font_size_mob
+				assign des_lh_mob = block.settings.des_lh_mob
 
 
 				assign btn_label = block.settings.btn_label
@@ -68,7 +77,7 @@
 				 
 
 				 
-				assign preheading_color = block.settings.preheading_color
+
 				assign heading_color = block.settings.heading_color
 				assign text_color = block.settings.text_color
 					
@@ -90,11 +99,10 @@
 				assign secondary_hover_button_bg_color = block.settings.secondary_hover_button_bg_color
 				assign secondary_hover_button_border_color = block.settings.secondary_hover_button_border_color
 
+				assign enable_custom_color = block.settings.enable_custom_color
 
 
-
-                assign preheading_animation = block.settings.preheading_animation
-                assign preheading_delay = block.settings.preheading_delay
+       
 	
 				assign heading_animation = block.settings.heading_animation
                 assign heading_delay = block.settings.heading_delay
@@ -102,8 +110,9 @@
 				assign des_animation = block.settings.des_animation
 				assign des_delay = block.settings.des_delay
 
-				assign btn_first_animation = block.settings.btn_first_animation
-				assign btn_first_delay = block.settings.btn_first_delay
+				assign btn_animation = block.settings.btn_animation
+				assign btn_delay = block.settings.btn_delay
+			
 			
 
 
@@ -135,7 +144,7 @@
 
 			-%}
 
-			<div  class="slider-item    slideshow_slide_{{block.id}} block-{{block.id}}" data-video-type="{{ videotype  }}"   data-video-start="1"  data-overlay="{{overlayimage}}"  {{ block.shopify_attributes }}>
+			<div  class="slider-item slideshow_slide_{{block.id}} block-{{block.id}}"  data-overlay="{{overlayimage}}"  {{ block.shopify_attributes }}>
 
 
 				    {% if block.type == 'slide' and block.settings.image != blank %}
@@ -171,32 +180,30 @@
                   
 					  {% else %}
 					  <div class="ss_img js">
-						  <div class="ph_bg">{% capture current %}{% cycle 1, 2 %}{% endcapture %}{{ 'lifestyle-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}</div>
+						  <div class="ph_bg banner-{{slider_height}}">{% capture current %}{% cycle 1, 2 %}{% endcapture %}{{ 'lifestyle-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}</div>
 					  </div>
 				  {% endif %}
 
 			
-               <div class="slideshow-absolute absolute-content d-flex w-100 {{ content_alignment }} {{ content_position }}  {%if content_position contains "align-items-end"%} bottom_possion_padding {%endif%}">
+               <div class="banner-absolute absolute-content d-flex w-100 {{ content_alignment }} {{ content_position }}  {%if content_position contains "align-items-end"%} bottom_possion_padding {%endif%}">
 				 <div class="container">
 					<div class="row">
 						<div class="col-md-12">
-							<div class="slideshow-content">
+							<div class="banner-content">
 								<!-- Slide Title -->
 								<div class="home-slider-desc">
-									<div class="home-slider-title mb-4">
-										{% if subheading != blank %}
-										<h5 class="pre-heading animated" data-animation-in="{{ preheading_animation }}" data-delay-in="0.{{preheading_delay}}" >{{subheading}}</h5>
-										{% endif %}
+								
+										
 										{% if heading != blank %}
-										<h1 class="heading  animated" data-animation-in="{{heading_animation}}" data-delay-in="0.{{heading_delay}}"  >{{heading}}</h1>
+										<h1 class="heading  animated text-{{heading_text_transfrom}}" data-animation-in="{{heading_animation}}" data-delay-in="0.{{heading_delay}}"  >{{heading}}</h1>
 										{% endif %}
 										{% if text != blank %}
 										<div class="description  animated" data-animation-in="{{des_animation}}" data-delay-in="0.{{des_delay}}" >{{text}}</div>
 										{% endif %}
-									</div>
+									
 
 									{% if btn_label != blank %}
-									<a href="{{btn_link}}" class="btn btn--{{button_style}} animated {{icon_class}}" data-animation-in="{{btn_first_animation}}" data-delay-in="0.{{btn_first_delay}}">{{btn_label}} {{btn_icon}}</a>
+									<a href="{{btn_link}}" class="btn btn--{{button_style}} animated {{icon_class}}" data-animation-in="{{btn_animation}}" data-delay-in="0.{{btn_delay}}">{{btn_label}} {{btn_icon}}</a>
 									{% endif %}
 
 								</div>
@@ -208,68 +215,110 @@
 			 </div>
 
 					<style>
-						 .block-{{block.id}} .slideshow-content .pre-heading{
-                           font-size: {{preheading_font_size | append: 'px'}};
-                           line-height: {{ preheading_lh | append: 'px'}};
-						}
-
-						 .block-{{block.id}} .slideshow-content .heading{
+					
+						 .block-{{block.id}} .banner-content .heading{
                            font-size: {{heading_font_size_desk | append: 'px'}};
                            line-height: {{ heading_lh_desk | append: 'px'}};
+						   font-weight: {{heading_font_weight}};
 						}
 
+						.block-{{block.id}} .banner-content .description{
+							font-size: {{des_font_size | append: 'px'}};
+							line-height: {{ des_lh | append: 'px'}};
+						 }
+
+						@media only screen and (max-width: 992px) {
+
+							.block-{{block.id}} .banner-content .heading{
+								font-size: {{heading_font_size_tab | append: 'px'}};
+								line-height: {{ heading_lh_tab | append: 'px'}};
+							 }
+
+							 .block-{{block.id}} .banner-content .description{
+								font-size: {{des_font_size_tab | append: 'px'}};
+								line-height: {{ des_lh_tab | append: 'px'}};
+							 }
+
+
+						}
 						@media only screen and (max-width: 767px) {
-							.block-{{block.id}} .slideshow-content .heading{
+							.block-{{block.id}} .banner-content .heading{
 								font-size: {{heading_font_size_mob | append: 'px'}};
 								line-height: {{ heading_lh_mob | append: 'px'}};
+							 }
+
+							 .block-{{block.id}} .banner-content .description{
+								font-size: {{des_font_size_mob | append: 'px'}};
+								line-height: {{ des_lh_mob | append: 'px'}};
 							 }
 
 						}
 
 
-						.block-{{block.id}} .slideshow-content .description{
-							font-size: {{des_font_size | append: 'px'}};
-							line-height: {{ des_lh | append: 'px'}};
-						 }
-
 					
-						.block-{{block.id}} .slideshow-content .pre-heading{
-							color: {{ preheading_color }};
-						}
+					{%if enable_custom_color %}
 						
-						.block-{{block.id}} .slideshow-content .heading{
+						.block-{{block.id}} .banner-content .heading{
 							color: {{ heading_color }};
 						}
 						
-						.block-{{block.id}} .slideshow-content .description{
+						.block-{{block.id}} .banner-content .description{
 							color: {{ text_color }};
 						}
 
-						.block-{{block.id}} .slideshow-content .description strong{
+						.block-{{block.id}} .banner-content .description strong{
 							color: {{ text_color }};
 						}
 
 						.block-{{block.id}} .btn--primary {
-							background: {{ button_bg_color }};
-							border: 2px solid {{ button_border_color }};
-							color: {{ button_color }};
+							color: {{ primary_button_color }};
+							background: {{ primary_button_bg_color }};
+							border: 2px solid {{ primary_button_border_color }};
+						
 						}
 
                         .block-{{block.id}} .btn--primary svg{
-                            fill: {{ button_color }};
+                            fill: {{ primary_button_color }};
                         }
 						
 						.block-{{block.id}} .btn--primary:hover,
 						.block-{{block.id}} .btn--primary:focus,
 						.block-{{block.id}} .btn--primary:not(:disabled):not(.disabled):active{
-							color: {{ hover_button_color }};
-                            background: {{ hover_button_bg_color }};
-							border: 1px solid {{ hover_button_border_color }};
+							color: {{ primary_hover_button_color }};
+                            background: {{ primary_hover_button_bg_color }};
+							border: 2px solid {{ primary_hover_button_border_color }};
 						}
+
+						
                         .block-{{block.id}} .btn--primary:hover svg{
-                            fill: {{ hover_button_color }};
+                            fill: {{ primary_hover_button_color }};
                         }
-			
+
+
+						.block-{{block.id}} .btn--secondary {
+							color: {{ secondary_button_color }};
+							background: {{ secondary_button_bg_color }};
+							border: 2px solid {{ scondary_button_border_color }};
+						
+						}
+
+                        .block-{{block.id}} .btn--secondary svg{
+                            fill: {{ secondary_button_color }};
+                        }
+						
+						.block-{{block.id}} .btn--secondary:hover,
+						.block-{{block.id}} .btn--secondary:focus,
+						.block-{{block.id}} .btn--secondary:not(:disabled):not(.disabled):active{
+							color: {{ secondary_hover_button_color }};
+                            background: {{ secondary_hover_button_bg_color }};
+							border: 2px solid {{ secondary_hover_button_border_color }};
+						}
+						
+                        .block-{{block.id}} .btn--secondary:hover svg{
+                            fill: {{ secondary_hover_button_color }};
+                        }
+
+						{%endif %}
 					  </style>
 						
 			</div>
@@ -380,7 +429,7 @@
 					"type": "textarea",
 					"id": "heading",
 					"label": "Heading",
-					"default": "The Powered Convertible Top Of Your Dreams",
+					"default": "gummies that give you life, literally",
 					"info": "Don't want? Keep blank."
 				},
 				{
@@ -390,7 +439,7 @@
 					"min": 0,
 					"max": 90,
 					"step": 1,
-					"default":82,
+					"default":80,
 					"unit": "px"
 				  },
 				  {
@@ -400,7 +449,27 @@
 					"min": 0,
 					"max": 100,
 					"step": 1,
-					"default": 90,
+					"default": 100,
+					"unit": "px"
+				  },
+				  {
+					"type": "range",
+					"id": "heading_font_size_tab",
+					"label": "Font Size (Tablet)",
+					"min": 0,
+					"max": 90,
+					"step": 1,
+					"default":50,
+					"unit": "px"
+				  },
+				  {
+					"type": "range",
+					"id": "heading_lh_tab",
+					"label": "Line Height (Tablet)",
+					"min": 0,
+					"max": 100,
+					"step": 1,
+					"default": 55,
 					"unit": "px"
 				  },
 				  {
@@ -410,7 +479,7 @@
 					"min": 0,
 					"max": 50,
 					"step": 1,
-					"default": 45,
+					"default": 30,
 					"unit": "px"
 				  },
 				  {
@@ -420,8 +489,56 @@
 					"min": 0,
 					"max": 80,
 					"step": 1,
-					"default": 55,
+					"default": 40,
 					"unit": "px"
+				  },
+				  {
+					"type": "select",
+					"id": "heading_text_transfrom",
+					"label": "Heading Text Transform",
+					"options": [
+					  {
+						"label": "Capitalize",
+						"value": "capitalize"
+					  },
+					  {
+						"label": "Uppercase",
+						"value": "uppercase"
+					  },
+					  {
+						"label": "Lowercase",
+						"value": "lowercase"
+					  },
+					  {
+						"label": "None",
+						"value": "none"
+					  }
+					],
+					"default": "none"
+				  },
+				  {
+					"type": "select",
+					"id": "heading_font_weight",
+					"label": "Heading Text Transform",
+					"options": [
+					  {
+						"label": "Bold",
+						"value": "700"
+					  },
+					  {
+						"label": "Semi Bold",
+						"value": "500"
+					  },
+					  {
+						"label": "Regular",
+						"value": "400"
+					  },
+					  {
+						"label": "Light",
+						"value": "300"
+					  }
+					],
+					"default": "700"
 				  },
 				  {
 					"type": "header",
@@ -460,10 +577,9 @@
 					"type": "richtext",
 					"id": "text",
 					"label": "Text",
-					"default": "<p>Minded Refresh:Up to 70% off regular price</p>",
+					"default": "<p>Clinically-backed ingredients formulated to become a divine part of your everyday life.</p>",
 					"info": "Don't want? Keep blank."
 				},
-		
 				{
 					"type": "range",
 					"id": "des_font_size",
@@ -471,7 +587,7 @@
 					"min": 0,
 					"max": 30,
 					"step": 1,
-					"default": 20,
+					"default": 18,
 					"unit": "px"
 				  },
 				  {
@@ -479,9 +595,49 @@
 					"id": "des_lh",
 					"label": "Line Height",
 					"min": 0,
-					"max": 26,
+					"max": 40,
 					"step": 1,
-					"default": 22,
+					"default": 30,
+					"unit": "px"
+				  },
+				  {
+					"type": "range",
+					"id": "des_font_size_tab",
+					"label": "Font Size (Tablet",
+					"min": 0,
+					"max": 30,
+					"step": 1,
+					"default": 16,
+					"unit": "px"
+				  },
+				  {
+					"type": "range",
+					"id": "des_lh_tab",
+					"label": "Line Height (Tablet)",
+					"min": 0,
+					"max": 40,
+					"step": 1,
+					"default": 24,
+					"unit": "px"
+				  },
+				  {
+					"type": "range",
+					"id": "des_font_size_mob",
+					"label": "Font Size (Mobile)",
+					"min": 0,
+					"max": 30,
+					"step": 1,
+					"default": 16,
+					"unit": "px"
+				  },
+				  {
+					"type": "range",
+					"id": "des_lh_mob",
+					"label": "Line Height (Mobile)",
+					"min": 0,
+					"max": 40,
+					"step": 1,
+					"default": 24,
 					"unit": "px"
 				  },
 				  {
@@ -587,6 +743,12 @@
 					"type": "header",
 					"content": "Color"
 				  },
+				{
+				  "type": "checkbox",
+				  "id": "enable_custom_color",
+				  "label": "Enable Custom Color",
+				  "default": false
+				},
                   {
 					"type": "color",
 					"id": "heading_color",
@@ -685,7 +847,7 @@
 				 },
 				  {
 					"type": "select",
-					"id": "btn_first_animation",
+					"id": "btn_animation",
 					"label": "Choose Animation",
 					"options": [
 						{"label": "FadeInLeft", "value": "fadeInLeft"},
@@ -700,7 +862,7 @@
 				},
 				{
 					"type": "range",
-					"id": "btn_first_delay",
+					"id": "btn_delay",
 					"label":"Animation Delay",
 					"min": 0,
 					"max": 9,
@@ -737,7 +899,7 @@
 					"default": 3,
 					"unit": "%"
 				  },
-                  {
+				  {
 					"type": "header",
 					"content": "Heading"
 				},
@@ -745,17 +907,17 @@
 					"type": "textarea",
 					"id": "heading",
 					"label": "Heading",
-					"default": "The Powered Convertible Top Of Your Dreams",
+					"default": "gummies that give you life, literally",
 					"info": "Don't want? Keep blank."
 				},
-                {
+				{
 					"type": "range",
 					"id": "heading_font_size_desk",
 					"label": "Font Size (Desktop)",
 					"min": 0,
 					"max": 90,
 					"step": 1,
-					"default":82,
+					"default":80,
 					"unit": "px"
 				  },
 				  {
@@ -765,7 +927,27 @@
 					"min": 0,
 					"max": 100,
 					"step": 1,
-					"default": 90,
+					"default": 100,
+					"unit": "px"
+				  },
+				  {
+					"type": "range",
+					"id": "heading_font_size_tab",
+					"label": "Font Size (Tablet)",
+					"min": 0,
+					"max": 90,
+					"step": 1,
+					"default":50,
+					"unit": "px"
+				  },
+				  {
+					"type": "range",
+					"id": "heading_lh_tab",
+					"label": "Line Height (Tablet)",
+					"min": 0,
+					"max": 100,
+					"step": 1,
+					"default": 55,
 					"unit": "px"
 				  },
 				  {
@@ -775,7 +957,7 @@
 					"min": 0,
 					"max": 50,
 					"step": 1,
-					"default": 45,
+					"default": 30,
 					"unit": "px"
 				  },
 				  {
@@ -785,8 +967,56 @@
 					"min": 0,
 					"max": 80,
 					"step": 1,
-					"default": 55,
+					"default": 40,
 					"unit": "px"
+				  },
+				  {
+					"type": "select",
+					"id": "heading_text_transfrom",
+					"label": "Heading Text Transform",
+					"options": [
+					  {
+						"label": "Capitalize",
+						"value": "capitalize"
+					  },
+					  {
+						"label": "Uppercase",
+						"value": "uppercase"
+					  },
+					  {
+						"label": "Lowercase",
+						"value": "lowercase"
+					  },
+					  {
+						"label": "None",
+						"value": "none"
+					  }
+					],
+					"default": "none"
+				  },
+				  {
+					"type": "select",
+					"id": "heading_font_weight",
+					"label": "Heading Text Transform",
+					"options": [
+					  {
+						"label": "Bold",
+						"value": "700"
+					  },
+					  {
+						"label": "Semi Bold",
+						"value": "500"
+					  },
+					  {
+						"label": "Regular",
+						"value": "400"
+					  },
+					  {
+						"label": "Light",
+						"value": "300"
+					  }
+					],
+					"default": "700"
 				  },
 				  {
 					"type": "header",
@@ -825,18 +1055,17 @@
 					"type": "richtext",
 					"id": "text",
 					"label": "Text",
-					"default": "<p>Minded Refresh:  <br> <strong>Up to 70% off regular price</strong></p>",
+					"default": "<p>Clinically-backed ingredients formulated to become a divine part of your everyday life.</p>",
 					"info": "Don't want? Keep blank."
 				},
-		
-                {
+				{
 					"type": "range",
 					"id": "des_font_size",
 					"label": "Font Size",
 					"min": 0,
 					"max": 30,
 					"step": 1,
-					"default": 20,
+					"default": 18,
 					"unit": "px"
 				  },
 				  {
@@ -844,9 +1073,49 @@
 					"id": "des_lh",
 					"label": "Line Height",
 					"min": 0,
-					"max": 26,
+					"max": 40,
 					"step": 1,
-					"default": 22,
+					"default": 30,
+					"unit": "px"
+				  },
+				  {
+					"type": "range",
+					"id": "des_font_size_tab",
+					"label": "Font Size (Tablet",
+					"min": 0,
+					"max": 30,
+					"step": 1,
+					"default": 16,
+					"unit": "px"
+				  },
+				  {
+					"type": "range",
+					"id": "des_lh_tab",
+					"label": "Line Height (Tablet)",
+					"min": 0,
+					"max": 40,
+					"step": 1,
+					"default": 24,
+					"unit": "px"
+				  },
+				  {
+					"type": "range",
+					"id": "des_font_size_mob",
+					"label": "Font Size (Mobile)",
+					"min": 0,
+					"max": 30,
+					"step": 1,
+					"default": 16,
+					"unit": "px"
+				  },
+				  {
+					"type": "range",
+					"id": "des_lh_mob",
+					"label": "Line Height (Mobile)",
+					"min": 0,
+					"max": 40,
+					"step": 1,
+					"default": 24,
 					"unit": "px"
 				  },
 				  {
@@ -951,6 +1220,12 @@
 				{
 					"type": "header",
 					"content": "Color"
+				  },
+				  {
+					"type": "checkbox",
+					"id": "enable_custom_color",
+					"label": "Enable Custom Color",
+					"default": false
 				  },
                   {
 					"type": "color",
