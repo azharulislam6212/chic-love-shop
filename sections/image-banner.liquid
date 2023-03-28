@@ -5,54 +5,7 @@
 	assign banner_height = section.settings.banner_height
 	assign overlayimage = section.settings.overlayimage
 	assign content_position = section.settings.content_position
-	assign content_alignment = section.settings.content_alignment
-
-        		
-				assign button_style = section.settings.button_style
-				assign button_icon = section.settings.button_icon
-			
-	
-				assign btn_icon = ''
-				if button_icon == 'with_icon'
-                 assign icon_class = "icon-active" 
-				assign btn_icon = '<span class="ml-4"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 476.213 476.213" style="enable-background:new 0 0 476.213 476.213;" xml:space="preserve"> <polygon points="476.213,238.105 400,161.893 400,223.106 0,223.106 0,253.106 400,253.106 400,314.32 "/><g></g> <g>  </g>  <g> </g> <g> </g>  <g>  </g> <g></g>    <g>   </g> <g>   </g>  <g>  </g> <g>  </g> <g>   </g>  <g> </g>  <g>  </g>     <g></g>  <g></g></svg></span>'
-				 endif
-
-
-				assign heading_color = section.settings.heading_color
-				assign text_color = section.settings.text_color
-					
-				assign primary_button_color = section.settings.primary_button_color
-				assign primary_button_bg_color = section.settings.primary_button_bg_color
-				assign primary_button_border_color = section.settings.primary_button_border_color
-				
-				assign primary_hover_button_color = section.settings.primary_hover_button_color
-				assign primary_hover_button_bg_color = section.settings.primary_hover_button_bg_color
-				assign primary_hover_button_border_color = section.settings.primary_hover_button_border_color
-
-
-
-				assign secondary_button_color = section.settings.secondary_button_color
-				assign secondary_button_bg_color = section.settings.secondary_button_bg_color
-				assign scondary_button_border_color = section.settings.scondary_button_border_color
-				
-				assign secondary_hover_button_color = section.settings.secondary_hover_button_color
-				assign secondary_hover_button_bg_color = section.settings.secondary_hover_button_bg_color
-				assign secondary_hover_button_border_color = section.settings.secondary_hover_button_border_color
-
-				assign enable_custom_color = section.settings.enable_custom_color
-
-
-	
-				assign heading_animation = section.settings.heading_animation
-        assign heading_delay = section.settings.heading_delay
-
-				assign des_animation = section.settings.des_animation
-				assign des_delay = section.settings.des_delay
-
-				assign btn_animation = section.settings.btn_animation
-				assign btn_delay = section.settings.btn_delay
-			
+				assign content_alignment = section.settings.content_alignment
 -%}
 
 
@@ -165,10 +118,57 @@
 
 				assign btn_label = block.settings.btn_label
 				assign btn_link = block.settings.btn_link
+		
+				assign button_style = block.settings.button_style
+				assign button_icon = block.settings.button_icon
+			
+	
+				assign btn_icon = ''
+				if button_icon == 'with_icon'
+                 assign icon_class = "icon-active" 
+				assign btn_icon = '<span class="ml-4"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 476.213 476.213" style="enable-background:new 0 0 476.213 476.213;" xml:space="preserve"> <polygon points="476.213,238.105 400,161.893 400,223.106 0,223.106 0,253.106 400,253.106 400,314.32 "/><g></g> <g>  </g>  <g> </g> <g> </g>  <g>  </g> <g></g>    <g>   </g> <g>   </g>  <g>  </g> <g>  </g> <g>   </g>  <g> </g>  <g>  </g>     <g></g>  <g></g></svg></span>'
+				 endif
 
+
+				assign heading_color = block.settings.heading_color
+				assign text_color = block.settings.text_color
+					
+				assign primary_button_color = block.settings.primary_button_color
+				assign primary_button_bg_color = block.settings.primary_button_bg_color
+				assign primary_button_border_color = block.settings.primary_button_border_color
+				
+				assign primary_hover_button_color = block.settings.primary_hover_button_color
+				assign primary_hover_button_bg_color = block.settings.primary_hover_button_bg_color
+				assign primary_hover_button_border_color = block.settings.primary_hover_button_border_color
+
+
+
+				assign secondary_button_color = block.settings.secondary_button_color
+				assign secondary_button_bg_color = block.settings.secondary_button_bg_color
+				assign scondary_button_border_color = block.settings.scondary_button_border_color
+				
+				assign secondary_hover_button_color = block.settings.secondary_hover_button_color
+				assign secondary_hover_button_bg_color = block.settings.secondary_hover_button_bg_color
+				assign secondary_hover_button_border_color = block.settings.secondary_hover_button_border_color
+
+				assign enable_custom_color = block.settings.enable_custom_color
+
+
+       
+	
+				assign heading_animation = block.settings.heading_animation
+                assign heading_delay = block.settings.heading_delay
+
+				assign des_animation = block.settings.des_animation
+				assign des_delay = block.settings.des_delay
+
+				assign btn_animation = block.settings.btn_animation
+				assign btn_delay = block.settings.btn_delay
+			
 			
 
 			-%}
+
 
 
 
@@ -770,7 +770,7 @@
     },
     {
 			"type": "button",
-			"name": "Button",
+			"name": "BUtton",
       "limit": 2,
 			"settings": [
         {
