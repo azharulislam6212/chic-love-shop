@@ -51,7 +51,7 @@
             "btn_delay": 5
           }
         },
-        "0c29e058-5466-478e-acb8-316f881f6a0b": {
+        "d2af5d9d-8c70-44e5-8e62-21c27b3938fe": {
           "type": "slide",
           "settings": {
             "overlayimage": 3,
@@ -101,7 +101,7 @@
       },
       "block_order": [
         "32fee708-1594-42b6-a9f7-cc8e07932b1f",
-        "0c29e058-5466-478e-acb8-316f881f6a0b"
+        "d2af5d9d-8c70-44e5-8e62-21c27b3938fe"
       ],
       "settings": {
         "slider_height": "full-height",
