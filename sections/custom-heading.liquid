@@ -1,0 +1,154 @@
+
+{%- liquid
+    assign container = section.settings.container
+    assign remove_container_space = section.settings.remove_container_space
+-%}
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+  @media screen and (max-width: 767px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top_m }}px;
+      padding-bottom: {{ section.settings.padding_bottom_m }}px;
+    }
+  }
+{%- endstyle -%}
+<section class="middle section-{{ section.id }}-padding" id="section_{{ section.id }}">
+	<div class="{{ container }} {%if remove_container_space != false %} p-0 {% endif %}">
+        <div class="row justify-content-center">
+        
+        </div>
+	</div>
+  </section>
+
+<style>
+</style>
+
+{% schema %}
+  {
+    "name": "Custom Heading Text",
+    "class": "custom_heading_text",
+    "settings": [
+        {
+        "type": "select",
+        "id": "container",
+        "label": "Section Width",
+        "options": [
+            {"label": "Default", "value": "container"},
+            {"label": "Full wide", "value": "container-fluid"}
+        ],
+        "default": "container"
+    },
+    {
+        "type": "checkbox",
+        "id": "remove_container_space",
+        "label": "Remove Container Space",
+        "default": false
+    },
+        {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    },
+    {
+          "type": "header",
+          "content": "Top Bottom Padding (Mobile)"
+        }, {
+          "type": "range",
+          "id": "padding_top_m",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "unit": "px",
+          "label": "Padding Top",
+          "default": 30
+        }, {
+          "type": "range",
+          "id": "padding_bottom_m",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "unit": "px",
+          "label": "Padding Bottom",
+          "default": 30
+        }
+    ],
+    "blocks":[
+        {
+        "type": "divider",
+        "name": "Divider",
+        "limit": 1
+      },
+      {
+        "type": "initial_heading",
+        "name": "Initial Heading",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading_one",
+            "label": "Heading One Text",
+            "default": "100% Year of"
+          },
+          {
+            "type": "color",
+            "id": "heading_one_color",
+            "label": "Heading One Color",
+            "default": "#fff"
+          }
+        ]
+      },
+      {
+        "type": "secondary_heading",
+        "name": "Secondary Heading",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading_two",
+            "label": "Heading Two Text",
+            "default": "Convertible Development"
+          },
+          {
+            "type": "color",
+            "id": "heading_two_color",
+            "label": "Heading Two Color",
+            "default": "#fff"
+          },
+          {
+            "type": "text",
+            "id": "heading_two_part_two",
+            "label": "Heading Two Rest Of The Text",
+            "default": "Experience"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom Heading"
+      }
+  ] 
+  }
+{% endschema %}

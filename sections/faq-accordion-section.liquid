@@ -1,0 +1,214 @@
+{{ 'component-faq-accordion-section.css' | asset_url | stylesheet_tag }}
+{%- liquid
+    assign container = section.settings.container
+    assign remove_container_space = section.settings.remove_container_space
+-%}
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+  @media screen and (max-width: 767px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top_m }}px;
+      padding-bottom: {{ section.settings.padding_bottom_m }}px;
+    }
+  }
+{%- endstyle -%}
+<section class="faq-accordion middle section-{{ section.id }}-padding" id="section_{{ section.id }}">
+	<div class="{{ container }} {%if remove_container_space != false %} p-0 {% endif %}">
+        <div class="floating_shape_wrapper row justify-content-center">
+            <div class="col-12 col-md-12 col-lg-12 col-xl-12 center">
+            {% for block in section.blocks %}
+                {% if block.type == 'heading' %}
+                    <div class="section_heading_wrapper">
+                        <h1 class="section_heading">{{block.settings.main_heading}}</h1>
+                    </div>
+                {% endif %}
+            </div>
+            <div class="col-12 col-md-8 col-lg-8 col-xl-8 center">
+                <div class="each_accordion_section">
+                    {% if block.type == 'group_acc_heading' %}
+                        <div class="each_section_heading_wrapper">
+                            <h3 class="each_section_heading">{{block.settings.small_heading}}</h3>
+                        </div>
+                    {% endif %}
+                    {% if block.type == 'accordion_info' %}
+                    <div class="single_accordion">
+                        <ul>
+                            <li>
+                                <div class="trigger-wrapper">
+                                    <h3 class="trigger">{{block.settings.question}}</h3>
+                                </div>
+                                <div class="content">
+                                    {{ block.settings.answer}}
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+            <div class="floating_shapes_container">
+                <img class="first_background" src="{{'faq_page_big_star.svg' | asset_url}}">
+                <img class="second_background" src="{{'faq_page_small_star.svg' | asset_url}}">
+            </div>
+        </div>
+	</div>
+  </section>
+<style>
+.faq-accordion{
+  background: {{section.settings.section_background}};
+  position: relative;
+  overflow: hidden;
+}
+.trigger-wrapper .trigger.is-open::after{
+    content: url('{{'minus_icon.svg' | asset_url}}');
+}
+.trigger-wrapper .trigger::after {
+    content: url('{{'accordion-plus-icon.svg' | asset_url}}');
+    position: absolute;
+    top: 58%;
+    right: 0;
+    transform: translateY(-50%);
+}
+</style>
+
+{% schema %}
+  {
+    "name": "Accordion Section",
+    "class": "accordion-section",
+    "settings": [
+        {
+        "type": "select",
+        "id": "container",
+        "label": "Section Width",
+        "options": [
+            {"label": "Default", "value": "container"},
+            {"label": "Full wide", "value": "container-fluid"}
+        ],
+        "default": "container"
+    },
+    {
+        "type": "color",
+        "id": "section_background",
+        "label": "Section Background",
+        "default": "#DFC8E7"
+    },
+    {
+        "type": "checkbox",
+        "id": "remove_container_space",
+        "label": "Remove Container Space",
+        "default": false
+    },
+        {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    },
+    {
+          "type": "header",
+          "content": "Top Bottom Padding (Mobile)"
+        }, {
+          "type": "range",
+          "id": "padding_top_m",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "unit": "px",
+          "label": "Padding Top",
+          "default": 30
+        }, {
+          "type": "range",
+          "id": "padding_bottom_m",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "unit": "px",
+          "label": "Padding Bottom",
+          "default": 30
+        }
+    ],
+    "blocks":[
+        {
+            "type": "heading",
+            "name": "Section Heading",
+            "limit": 1,
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "main_heading",
+                    "label": "Section Heading",
+                    "default": "answers to all your questions"
+                }
+            ]
+        },
+        {
+            "type": "group_acc_heading",
+            "name": "Group Accordion Heading",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "small_heading",
+                    "label": "Group Accordion Heading",
+                    "default": "ORDERS & SHIPPING"
+                }
+            ]
+        },
+        {
+            "type": "accordion_info",
+            "name": "Question & Answer",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "question",
+                    "label": "Question",
+                    "default": "Are these gummies veagan?"
+                },
+                {
+                    "type": "textarea",
+                    "id": "answer",
+                    "label": "Answer",
+                    "default": "Yes, Lemme Sleep is vegan and vegetarian."
+                }
+            ]
+        }
+    ],
+    "presets": [
+      {
+        "name": "Accordion Section",
+        "blocks": [
+            {
+                "type": "heading"
+            },
+            {
+                "type": "group_acc_heading"
+            },
+            {
+                "type": "accordion_info"
+            }
+        ]
+      }
+  ] 
+  }
+{% endschema %}
