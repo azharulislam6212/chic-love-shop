@@ -27,7 +27,7 @@
           "settings": {
             "column": "3",
             "heading": "",
-            "menu": "footer"
+            "menu": "business"
           }
         },
         "335c52a4-7f27-4d69-af25-ffb81862ed4a": {
@@ -46,7 +46,7 @@
         "335c52a4-7f27-4d69-af25-ffb81862ed4a"
       ],
       "settings": {
-        "bg_color": "#A5A2DC",
+        "bg_color": "#a5a2dc",
         "heading_color": "#030405",
         "text_color": "#030405",
         "text_hover_color": "#ffff00",
