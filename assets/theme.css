@@ -399,9 +399,7 @@ padding: 11px 49px;
   fill:var(--primary-hover-button-color);
 }
 
- .btn--secondary:hover svg{
-  fill: {{ hover_button_color }};
-}
+
 
 .btn--secondary{
   background-color: var(--secondary-button-bg-color);
@@ -415,6 +413,13 @@ padding: 11px 49px;
   color: var(--secondary-hover-button-color);
 }
 
+.btn--primary svg{
+  fill:var(--secondary-button-color);
+}
+
+.btn--primary:hover svg, .btn--primary:focus svg{
+  fill:var(--secondary-hover-button-color);
+}
 
 .btn--theme{
   background-color: var(--theme-button-bg-color);
