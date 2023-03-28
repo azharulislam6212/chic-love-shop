@@ -501,4 +501,5 @@ button:focus{
 .newsletter-form__button:hover svg>path,
 .newsletter-form__button:focus svg>path{
   stroke: #FFFFFF;
+  transition: 0.3s all ease-in;
 }
