@@ -395,7 +395,7 @@ padding: 11px 49px;
   fill:var(--primary-button-color);
 }
 
-.btn--primary:hover, .btn--primary:focus{
+.btn--primary:hover svg, .btn--primary:focus svg{
   fill:var(--primary-hover-button-color);
 }
 
