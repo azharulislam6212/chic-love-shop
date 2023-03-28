@@ -120,11 +120,11 @@
 
 {%if enable_custom_color %}
  
- .block-{{block.id}} .banner-content .heading{
+.section_{{ section.id }} .banner-content .heading{
    color: {{ heading_color }};
  }
  
- .block-{{block.id}} .banner-content .description{
+ .section_{{ section.id }} .banner-content .description{
    color: {{ text_color }};
  }
 
@@ -230,7 +230,7 @@
       {%- endfor -%}   
 
 
-      <div class="banner-absolute absolute-content d-flex w-100 {{ content_alignment }} {{ content_position }}  {%if content_position contains "align-items-end"%} bottom_possion_padding {%endif%}">
+ <div class="banner-absolute absolute-content d-flex w-100 {{ content_alignment }} {{ content_position }}  {%if content_position contains "align-items-end"%} bottom_possion_padding {%endif%}">
         <div class="container">
          <div class="row">
            <div class="col-md-12">
