@@ -212,6 +212,12 @@
                            font-size: {{heading_font_size_desk | append: 'px'}};
                            line-height: {{ heading_lh_desk | append: 'px'}};
 						}
+
+						.block-{{block.id}} .slideshow-content .description{
+							font-size: {{des_font_size | append: 'px'}};
+							line-height: {{ des_lh | append: 'px'}};
+						 }
+
 						@media only screen and (max-width: 992px) {
 
 						}
@@ -221,14 +227,15 @@
 								line-height: {{ heading_lh_mob | append: 'px'}};
 							 }
 
+							 .block-{{block.id}} .slideshow-content .description{
+								font-size: {{des_font_size_mob | append: 'px'}};
+								line-height: {{ des_lh | append: 'px'}};
+							 }
+
 						}
 
 
-						.block-{{block.id}} .slideshow-content .description{
-							font-size: {{des_font_size | append: 'px'}};
-							line-height: {{ des_lh | append: 'px'}};
-						 }
-
+					
 					
 					
 						
