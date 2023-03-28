@@ -225,17 +225,24 @@ $('.trigger').click(function(j) {
 });
 
 document.addEventListener("shopify:section:load", function(event) {
-
+  marquee();
 });
 
 document.addEventListener('shopify:block:select', function(event) {
-
+  marquee();
 });
 
 
 
 function marquee(){
-  
+  $('.marquee').marquee({
+    direction: 'left',
+    css3easing: 'linear',
+    easing: 'linear',
+    duration: 15000,
+    gap: 50,
+    pauseOnHover: true
+    });
 }
   // Select all links with hashes
   $('a[href*="#"]')
