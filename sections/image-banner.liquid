@@ -14,13 +14,16 @@
   {%- for block in section.blocks -%}
     {%- case block.type -%}
       {%- when 'image' -%}
-  
+        {%- liquid
+          assign image = block.settings.image
+          assign image_sm = block.settings.image_sm
+          
+        %}
 
 			{%- liquid
 				assign content_position = block.settings.content_position
 				assign content_alignment = block.settings.content_alignment
-				assign image = block.settings.image
-				assign image_sm = block.settings.image_sm
+		
 				assign subheading = block.settings.subheading
 				assign heading = block.settings.heading
 				assign text = block.settings.text
