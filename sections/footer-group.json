@@ -13,6 +13,14 @@
             "menu": "footer"
           }
         },
+        "acc20a2c-6430-4f04-81a9-0e9ce635be31": {
+          "type": "link_list",
+          "settings": {
+            "column": "3",
+            "heading": "",
+            "menu": ""
+          }
+        },
         "5d0bbc14-345a-4b38-89d5-893c31eab6e2": {
           "type": "text",
           "settings": {
@@ -33,6 +41,7 @@
       },
       "block_order": [
         "bb928c56-178d-4c9d-8b58-c7f40b492810",
+        "acc20a2c-6430-4f04-81a9-0e9ce635be31",
         "5d0bbc14-345a-4b38-89d5-893c31eab6e2",
         "335c52a4-7f27-4d69-af25-ffb81862ed4a"
       ],
