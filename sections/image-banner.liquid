@@ -2,12 +2,8 @@
 <noscript>{{ 'section-image-banner.css' | asset_url | stylesheet_tag }}</noscript>
 
 {%- liquid
-	assign autoplay = section.settings.autoplay_enabled
-	assign autoplay_timeout = section.settings.autoplay_timeout | times: 1000.0
-    
-	assign enable_dot = section.settings.enable_dot
-	assign slider_height = section.settings.slider_height
-	assign arrow_enabled = section.settings.arrow_enabled
+	assign banner_height = section.settings.banner_height
+
 
 
 -%}
