@@ -19,7 +19,27 @@
 
 
 
+        assign button_style = block.settings.button_style
+				assign button_icon = block.settings.button_icon
+			
+	
+				assign btn_icon = ''
+				if button_icon == 'with_icon'
+                 assign icon_class = "icon-active" 
+				assign btn_icon = '<span class="ml-4"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 476.213 476.213" style="enable-background:new 0 0 476.213 476.213;" xml:space="preserve"> <polygon points="476.213,238.105 400,161.893 400,223.106 0,223.106 0,253.106 400,253.106 400,314.32 "/><g></g> <g>  </g>  <g> </g> <g> </g>  <g>  </g> <g></g>    <g>   </g> <g>   </g>  <g>  </g> <g>  </g> <g>   </g>  <g> </g>  <g>  </g>     <g></g>  <g></g></svg></span>'
+				 endif
 
+
+
+				assign heading_animation = block.settings.heading_animation
+                assign heading_delay = block.settings.heading_delay
+
+				assign des_animation = block.settings.des_animation
+				assign des_delay = block.settings.des_delay
+
+				assign btn_animation = block.settings.btn_animation
+				assign btn_delay = block.settings.btn_delay
+			
 
         assign heading_color = section.settings.heading_color
 				assign text_color = section.settings.text_color
@@ -132,12 +152,6 @@
 			
 				assign text = block.settings.text
 
-				assign des_font_size = block.settings.des_font_size
-				assign des_lh = block.settings.des_lh
-				assign des_font_size_tab = block.settings.des_font_size_tab
-				assign des_lh_tab = block.settings.des_lh_tab
-				assign des_font_size_mob = block.settings.des_font_size_mob
-				assign des_lh_mob = block.settings.des_lh_mob
 
       %}
 
@@ -152,27 +166,7 @@
 				assign btn_label = block.settings.btn_label
 				assign btn_link = block.settings.btn_link
 		
-				assign button_style = block.settings.button_style
-				assign button_icon = block.settings.button_icon
-			
 	
-				assign btn_icon = ''
-				if button_icon == 'with_icon'
-                 assign icon_class = "icon-active" 
-				assign btn_icon = '<span class="ml-4"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 476.213 476.213" style="enable-background:new 0 0 476.213 476.213;" xml:space="preserve"> <polygon points="476.213,238.105 400,161.893 400,223.106 0,223.106 0,253.106 400,253.106 400,314.32 "/><g></g> <g>  </g>  <g> </g> <g> </g>  <g>  </g> <g></g>    <g>   </g> <g>   </g>  <g>  </g> <g>  </g> <g>   </g>  <g> </g>  <g>  </g>     <g></g>  <g></g></svg></span>'
-				 endif
-
-
-
-				assign heading_animation = block.settings.heading_animation
-                assign heading_delay = block.settings.heading_delay
-
-				assign des_animation = block.settings.des_animation
-				assign des_delay = block.settings.des_delay
-
-				assign btn_animation = block.settings.btn_animation
-				assign btn_delay = block.settings.btn_delay
-			
 			
 
 			-%}
