@@ -57,8 +57,8 @@
       ],
       "settings": {
         "slider_height": "full-height",
-        "enable_dot": false,
-        "arrow_enabled": false,
+        "enable_dot": true,
+        "arrow_enabled": true,
         "autoplay_enabled": false,
         "autoplay_timeout": 7
       }
