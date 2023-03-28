@@ -51,7 +51,7 @@
         "enable_country_selector": true,
         "enable_language_selector": true,
         "payment_enable": true,
-        "custom_text": "&copy; Artprenr {{ 'now' | date: '%Y' }} All Rights Reserved.",
+        "custom_text": "Chic & Love Fashion Brand S.L.",
         "margin_top": 0,
         "padding_top": 60,
         "padding_bottom": 60
