@@ -71,7 +71,7 @@
     margin-bottom: 40px;
 }
 
-@media only screen and (min-width: 750px) {
+@media only screen and (max-width: 750px) {
     .slideshow-absolute {
         padding: 70px 0;
     }
