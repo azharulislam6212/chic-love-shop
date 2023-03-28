@@ -10,7 +10,7 @@
           "settings": {
             "column": "4",
             "newsletter_enable": true,
-            "heading": "SIGNUP TO THE MAILING LIST",
+            "heading": "Déjanos tu email y no te pierdas ninguna novedad",
             "newsletter_caption": "For VIP monthly special deals on selected Artwork."
           }
         },
@@ -46,8 +46,10 @@
         "335c52a4-7f27-4d69-af25-ffb81862ed4a"
       ],
       "settings": {
-        "color_scheme": "background-1",
-        "show_social": true,
+        "bg_color": "#A5A2DC",
+        "heading_color": "#030405",
+        "text_color": "#030405",
+        "text_hover_color": "#ffff00",
         "enable_country_selector": false,
         "enable_language_selector": false,
         "payment_enable": false,
