@@ -52,7 +52,9 @@
     position: relative;
     display: inline-block;
 }
-
+.slideshow-absolute {
+    padding: 100px 0;
+}
  .slideshow-content .heading{
     font-style: normal;
     font-size: 80px;
