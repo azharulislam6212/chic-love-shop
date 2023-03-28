@@ -64,88 +64,9 @@
         "autoplay_enabled": false,
         "autoplay_timeout": 7
       }
-    },
-    "7f5b7512-cd0c-413d-869e-289452dd1bd3": {
-      "type": "image-banner",
-      "blocks": {
-        "template--18319593734437__7f5b7512-cd0c-413d-869e-289452dd1bd3-1679999056e88838de-0": {
-          "type": "image",
-          "settings": {
-          }
-        },
-        "bdf329fe-bae7-4429-92b6-4d2304d66725": {
-          "type": "heading",
-          "settings": {
-            "heading": "gummies that give you life, literally"
-          }
-        },
-        "c7f414db-caee-4a74-85d9-6935125a41b3": {
-          "type": "description",
-          "settings": {
-            "text": "<p>Clinically-backed ingredients formulated to become a divine part of your everyday life.<\/p>"
-          }
-        },
-        "a0824b9c-2208-4a97-9648-23d42f3b2315": {
-          "type": "button",
-          "settings": {
-            "btn_label": "Start Shopping",
-            "btn_link": "shopify:\/\/collections\/all"
-          }
-        }
-      },
-      "block_order": [
-        "template--18319593734437__7f5b7512-cd0c-413d-869e-289452dd1bd3-1679999056e88838de-0",
-        "bdf329fe-bae7-4429-92b6-4d2304d66725",
-        "c7f414db-caee-4a74-85d9-6935125a41b3",
-        "a0824b9c-2208-4a97-9648-23d42f3b2315"
-      ],
-      "settings": {
-        "banner_height": "medium",
-        "content_alignment": "text-center",
-        "content_position": "align-items-center justify-content-center",
-        "overlayimage": 3,
-        "heading_font_size_desk": 80,
-        "heading_lh_desk": 100,
-        "heading_font_size_tab": 50,
-        "heading_lh_tab": 55,
-        "heading_font_size_mob": 30,
-        "heading_lh_mob": 40,
-        "heading_text_transfrom": "none",
-        "heading_font_weight": "700",
-        "heading_animation": "fadeInRight",
-        "heading_delay": 2,
-        "des_font_size": 18,
-        "des_lh": 30,
-        "des_font_size_tab": 16,
-        "des_lh_tab": 24,
-        "des_font_size_mob": 16,
-        "des_lh_mob": 24,
-        "des_animation": "fadeInDown",
-        "des_delay": 5,
-        "button_style": "primary",
-        "button_icon": "with_icon",
-        "btn_animation": "fadeInUp",
-        "btn_delay": 5,
-        "enable_custom_color": false,
-        "heading_color": "#fff",
-        "text_color": "#fff",
-        "primary_button_color": "#ffffff",
-        "primary_button_bg_color": "#030405",
-        "primary_button_border_color": "#030405",
-        "primary_hover_button_color": "#030405",
-        "primary_hover_button_bg_color": "#FFFF00",
-        "primary_hover_button_border_color": "#030405",
-        "secondary_button_color": "#030405",
-        "secondary_button_bg_color": "#ffffff",
-        "scondary_button_border_color": "#030405",
-        "secondary_hover_button_color": "#FFFF00",
-        "secondary_hover_button_bg_color": "#030405",
-        "secondary_hover_button_border_color": "#FFFF00"
-      }
     }
   },
   "order": [
-    "3cf82f8d-239d-4a38-bc53-3f76f2b326bb",
-    "7f5b7512-cd0c-413d-869e-289452dd1bd3"
+    "3cf82f8d-239d-4a38-bc53-3f76f2b326bb"
   ]
 }

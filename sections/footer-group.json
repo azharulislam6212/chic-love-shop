@@ -4,6 +4,26 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "bb928c56-178d-4c9d-8b58-c7f40b492810": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "footer"
+          }
+        },
+        "5d0bbc14-345a-4b38-89d5-893c31eab6e2": {
+          "type": "text",
+          "settings": {
+            "heading": "Heading",
+            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "bb928c56-178d-4c9d-8b58-c7f40b492810",
+        "5d0bbc14-345a-4b38-89d5-893c31eab6e2"
+      ],
       "settings": {
         "color_scheme": "background-1",
         "newsletter_enable": true,
