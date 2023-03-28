@@ -432,6 +432,13 @@ padding: 11px 49px;
   border: 2px solid var(--theme-hover-button-border-color);
   color: var(--theme-hover-button-color);
 }
+.btn--primary svg{
+  fill:var(--theme-button-color);
+}
+
+.btn--theme:hover svg, .btn--primary:focus svg{
+  fill:var(--theme-hover-button-color);
+}
 
 
 /* payment button */
