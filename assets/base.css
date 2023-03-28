@@ -1449,6 +1449,7 @@ details[open] > .share-button__fallback {
   min-width: calc(7rem + (var(--inputs-border-width) * 2));
   position: relative;
   border: 1.5px solid #030405;
+  border-radius: var(--btn-border-radius);
 }
 
 
