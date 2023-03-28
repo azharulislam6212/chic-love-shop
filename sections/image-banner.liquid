@@ -10,7 +10,7 @@
 
 <div class=" banner section_{{ section.id }}" id="section_{{ section.id }}">
 	<div class="banner-{{banner_height}} " >	
-  <div  class="banner-item "  data-overlay="{{overlayimage}}"  {{ block.shopify_attributes }}>
+  <div  class="banner-item "   {{ block.shopify_attributes }}>
   {%- for block in section.blocks -%}
     {%- case block.type -%}
       {%- when 'image' -%}
