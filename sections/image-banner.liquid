@@ -15,18 +15,7 @@
 
 
 <slideshows-component  class=" section_{{ section.id }}" id="section_{{ section.id }}">
-	<div class="main-slider sslider banner-{{slider_height}}  slick" id="Slider-{{ section.id }}"   data-slick='{
-		"dots": {{ enable_dot }}, 
-		"autoplay": {{ autoplay }}, 
-		"infinite": true, 
-		"slidesToShow": 1, 
-		"slidesToScroll": 1, 
-		"fade": false,
-		"cssEase": "linear", 
-		"arrows": {{arrow_enabled}}, 
-		"autoplaySpeed": {{ autoplay_timeout }}, 
-		"pauseOnHover": false
-		}'>	
+	<div class="mssliderain-slider  banner-{{slider_height}} " >	
 
   {%- for block in section.blocks -%}
 		
