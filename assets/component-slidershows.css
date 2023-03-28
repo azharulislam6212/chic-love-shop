@@ -182,6 +182,8 @@
   
     width: 20px;
     height: 8px;
+
+
     content: "";
     text-align: center;
     opacity: 0.5;
@@ -189,8 +191,6 @@
   }
    .slick-dots li.slick-active button::before {
     background:rgb(0, 0, 0);
-    width: 20px;
-    height: 8px;
         opacity:9;
   }
 
