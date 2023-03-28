@@ -16,8 +16,10 @@
       {%- when 'image' -%}
         {%- liquid
           assign image = block.settings.image
-          assign image_sm = block.settings.image_s
+          assign image_sm = block.settings.image_sm
         %}
+
+        
 
 			{%- liquid
 				assign content_position = block.settings.content_position
