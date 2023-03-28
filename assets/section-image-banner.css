@@ -14,6 +14,11 @@
   background-position: center center;
 }
 
+.banner-item .ss_img {
+  opacity: 1;
+  visibility: visible;
+}
+
 
 .banner-small{
   height: 575px;
