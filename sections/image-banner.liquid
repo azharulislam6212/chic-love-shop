@@ -12,6 +12,7 @@
 <div class=" banner section_{{ section.id }}" id="section_{{ section.id }}">
 	<div class="banner-{{banner_height}} "  data-overlay="{{overlayimage}}" >	
 
+  <div class="banner-item">
   {%- for block in section.blocks -%}
     {%- case block.type -%}
       {%- when 'image' -%}
@@ -294,6 +295,7 @@
     {%- endfor -%}   
 
 
+</div>
 </div>
 </div>
 
