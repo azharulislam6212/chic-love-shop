@@ -2,7 +2,6 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
-
     "header": {
       "type": "header",
       "settings": {
@@ -17,9 +16,48 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
+    },
+    "7e6d48ce-3f75-4194-b817-811c45347221": {
+      "type": "faq-accordion-section",
+      "blocks": {
+        "sections--18319593505061__7e6d48ce-3f75-4194-b817-811c45347221-16799837666115ef11-0": {
+          "type": "heading",
+          "settings": {
+            "main_heading": "answers to all your questions"
+          }
+        },
+        "sections--18319593505061__7e6d48ce-3f75-4194-b817-811c45347221-16799837666115ef11-1": {
+          "type": "group_acc_heading",
+          "settings": {
+            "small_heading": "ORDERS & SHIPPING"
+          }
+        },
+        "sections--18319593505061__7e6d48ce-3f75-4194-b817-811c45347221-16799837666115ef11-2": {
+          "type": "accordion_info",
+          "settings": {
+            "question": "Are these gummies veagan?",
+            "answer": "Yes, Lemme Sleep is vegan and vegetarian."
+          }
+        }
+      },
+      "block_order": [
+        "sections--18319593505061__7e6d48ce-3f75-4194-b817-811c45347221-16799837666115ef11-0",
+        "sections--18319593505061__7e6d48ce-3f75-4194-b817-811c45347221-16799837666115ef11-1",
+        "sections--18319593505061__7e6d48ce-3f75-4194-b817-811c45347221-16799837666115ef11-2"
+      ],
+      "settings": {
+        "container": "container",
+        "section_background": "#DFC8E7",
+        "remove_container_space": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_m": 30,
+        "padding_bottom_m": 30
+      }
     }
   },
   "order": [
-    "header"
+    "header",
+    "7e6d48ce-3f75-4194-b817-811c45347221"
   ]
 }
