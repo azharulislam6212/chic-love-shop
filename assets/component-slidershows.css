@@ -75,6 +75,9 @@
     .slideshow-absolute {
         padding: 70px 0;
     }
+    .slideshow-content .heading {
+        margin-bottom: 20px;
+    }
 }
 
 /*------------- Slick Slider Arrow -----------------*/
