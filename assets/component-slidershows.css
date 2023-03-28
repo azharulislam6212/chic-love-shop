@@ -73,7 +73,7 @@
 
 @media only screen and (max-width: 991px) {
     .slideshow-absolute {
-        padding: 70px 0;
+        padding: 70px 30px;
     }
     .slideshow-content .heading {
         margin-bottom: 20px;
@@ -141,7 +141,7 @@
     height: 40px;
   }
   
-  @media (max-width: 750px){
+  @media (max-width: 768px){
     .main-slider .slick-arrow.prev  {
       left: 0px
     }
