@@ -8,7 +8,7 @@
         "2d26b522-a089-44c8-9806-eb09bf8dbdef": {
           "type": "newslatter",
           "settings": {
-            "column": "5",
+            "column": "4",
             "newsletter_enable": true,
             "heading": "Déjanos tu email y no te pierdas ninguna novedad",
             "newsletter_caption": "*Al unirte aceptas la Política de privacidad y recibir comunicaciones."
