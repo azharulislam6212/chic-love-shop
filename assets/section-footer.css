@@ -177,7 +177,9 @@
   flex-grow: 1;
 }
 
-
+.footer-block__newsletter .rte{
+  
+}
 
 @media screen and (min-width: 750px) {
   /* Pushes other components to the right of the flexbox */
