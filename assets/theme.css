@@ -413,11 +413,11 @@ padding: 11px 49px;
   color: var(--secondary-hover-button-color);
 }
 
-.btn--primary svg{
+.btn--secondary svg{
   fill:var(--secondary-button-color);
 }
 
-.btn--primary:hover svg, .btn--primary:focus svg{
+.btn--secondary:hover svg, .btn--secondary:focus svg{
   fill:var(--secondary-hover-button-color);
 }
 
@@ -432,11 +432,11 @@ padding: 11px 49px;
   border: 2px solid var(--theme-hover-button-border-color);
   color: var(--theme-hover-button-color);
 }
-.btn--primary svg{
+.btn--theme svg{
   fill:var(--theme-button-color);
 }
 
-.btn--theme:hover svg, .btn--primary:focus svg{
+.btn--theme:hover svg, .btn--theme:focus svg{
   fill:var(--theme-hover-button-color);
 }
 
