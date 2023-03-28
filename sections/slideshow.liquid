@@ -219,7 +219,7 @@
 						 }
 
 						@media only screen and (max-width: 992px) {
-							
+
 							.block-{{block.id}} .slideshow-content .heading{
 								font-size: {{heading_font_size_mob | append: 'px'}};
 								line-height: {{ heading_lh_mob | append: 'px'}};
@@ -441,6 +441,26 @@
 					"max": 100,
 					"step": 1,
 					"default": 100,
+					"unit": "px"
+				  },
+				  {
+					"type": "range",
+					"id": "heading_font_size_tab",
+					"label": "Font Size (Tablet)",
+					"min": 0,
+					"max": 90,
+					"step": 1,
+					"default":60,
+					"unit": "px"
+				  },
+				  {
+					"type": "range",
+					"id": "heading_lh_tab",
+					"label": "Line Height (Tablet)",
+					"min": 0,
+					"max": 100,
+					"step": 1,
+					"default": 80,
 					"unit": "px"
 				  },
 				  {
