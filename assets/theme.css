@@ -444,7 +444,10 @@ padding: 11px 49px;
 .btn--theme:hover svg, .btn--theme:focus svg{
   fill:var(--theme-hover-button-color);
 }
-
+button:focus{
+  outline: none;
+  
+}
 
 /* payment button */
 
