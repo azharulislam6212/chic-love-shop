@@ -48,13 +48,13 @@
 .banner-absolute {
     padding: 100px ;
 }
- .banner-content .heading{
+.banner-content .heading{
     font-style: normal;
     font-size: 80px;
     line-height: 100px;
     font-style: normal;
     color: #FFFFFF;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
  .banner-content .description {
     font-style: normal;
@@ -67,9 +67,6 @@
 @media only screen and (max-width: 991px) {
     .banner-absolute {
         padding: 70px 30px;
-    }
-    .banner-content .heading {
-        margin-bottom: 20px;
     }
 
     .banner-content .description {
