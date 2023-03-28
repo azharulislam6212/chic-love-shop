@@ -16,8 +16,7 @@
       {%- when 'image' -%}
         {%- liquid
           assign image = block.settings.image
-          assign image_sm = block.settings.image_sm
-
+          assign image_sm = block.settings.image_s
         %}
 
 			{%- liquid
@@ -304,6 +303,7 @@
     {%- endcase -%}
     {%- endfor -%}   
 
+</div>
 </div>
 </div>
 
