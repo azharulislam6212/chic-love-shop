@@ -15,11 +15,10 @@
 
 
 <slideshows-component  class=" section_{{ section.id }}" id="section_{{ section.id }}">
-	<div class="sslider banner-{{slider_height}}  slick"  >	
+	<div class="sslider banner-{{slider_height}}"  >	
 
   {%- for block in section.blocks -%}
 		
-
 
 			{%- liquid
 				assign content_position = block.settings.content_position
