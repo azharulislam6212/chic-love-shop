@@ -449,9 +449,11 @@ blockquote {
 .field__input,
 .form__label,
 .select__select {
-  font-size: 1.3rem;
-  line-height: calc(1 + 0.5 / var(--font-body-scale));
-  letter-spacing: 0.04rem;
+  color: #030405;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 28px;
+  opacity: 0.5;
 }
 
 .color-foreground {
