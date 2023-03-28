@@ -121,7 +121,7 @@ document.addEventListener('shopify:block:select', function(event) {
 
       playPauseVideo(slick,"play");
 
-      $('#' + slider).slick('slickGoTo', slideIndex);
+      $('#' + slider).slick('slickGoTo', slideIndex).slickAnimation();
       document.getElementById(slider).scrollIntoView({ 
         behavior: 'smooth',
         block: 'center'
@@ -144,7 +144,7 @@ document.addEventListener('shopify:block:select', function(event) {
     setTimeout(function() {
 
       playPauseVideo(slick,"play");
-      $('#' + slider).slick('slickGoTo', slideIndex);
+      $('#' + slider).slick('slickGoTo', slideIndex).slickAnimation();
       document.getElementById(slider).scrollIntoView({ 
         behavior: 'smooth',
         block: 'center' 
