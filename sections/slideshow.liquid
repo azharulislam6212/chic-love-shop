@@ -267,10 +267,35 @@
                             background: {{ primary_hover_button_bg_color }};
 							border: 2px solid {{ primary_hover_button_border_color }};
 						}
+
+                        .block-{{block.id}} .btn--secondary:hover svg{
+                            fill: {{ hover_button_color }};
+                        }
+
+
+						.block-{{block.id}} .btn--secondary {
+							color: {{ primary_button_color }};
+							background: {{ primary_button_bg_color }};
+							border: 2px solid {{ primary_button_border_color }};
+						
+						}
+
+                        .block-{{block.id}} .btn--primary svg{
+                            fill: {{ primary_button_color }};
+                        }
+						
+						.block-{{block.id}} .btn--primary:hover,
+						.block-{{block.id}} .btn--primary:focus,
+						.block-{{block.id}} .btn--primary:not(:disabled):not(.disabled):active{
+							color: {{ primary_hover_button_color }};
+                            background: {{ primary_hover_button_bg_color }};
+							border: 2px solid {{ primary_hover_button_border_color }};
+						}
 						
                         .block-{{block.id}} .btn--primary:hover svg{
                             fill: {{ hover_button_color }};
                         }
+
 			
 					  </style>
 						
