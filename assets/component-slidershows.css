@@ -15,21 +15,21 @@
 }
 
 
-.slider-small{
+.banner-small{
     height: 575px;
 }
 
-.slider-medium{
+.banner-medium{
     height: 675px;
 }
 
-.slider-large{
+.banner-large{
     height: 750px;
 }
-.slider-extra-large{
+.banner-extra-large{
     height: 960px;
 }
-.slider-full-height{
+.banner-full-height{
     height: 100vh;
 }
 
