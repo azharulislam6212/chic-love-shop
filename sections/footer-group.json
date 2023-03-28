@@ -14,12 +14,10 @@
             "newsletter_caption": "*Al unirte aceptas la Política de privacidad y recibir comunicaciones."
           }
         },
-        "acc20a2c-6430-4f04-81a9-0e9ce635be31": {
-          "type": "link_list",
+        "a0d21785-92c8-4279-8f3f-7fc3028b0712": {
+          "type": "blank_space",
           "settings": {
-            "column": "2",
-            "heading": "",
-            "menu": ""
+            "column": "2"
           }
         },
         "bb928c56-178d-4c9d-8b58-c7f40b492810": {
@@ -41,7 +39,7 @@
       },
       "block_order": [
         "2d26b522-a089-44c8-9806-eb09bf8dbdef",
-        "acc20a2c-6430-4f04-81a9-0e9ce635be31",
+        "a0d21785-92c8-4279-8f3f-7fc3028b0712",
         "bb928c56-178d-4c9d-8b58-c7f40b492810",
         "335c52a4-7f27-4d69-af25-ffb81862ed4a"
       ],
