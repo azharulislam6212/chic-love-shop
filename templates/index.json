@@ -1,63 +1,81 @@
 {
   "sections": {
-    "3cf82f8d-239d-4a38-bc53-3f76f2b326bb": {
-      "type": "slideshow",
+    "image_banner": {
+      "type": "image-banner",
       "blocks": {
-        "template--18319593734437__3cf82f8d-239d-4a38-bc53-3f76f2b326bb-16799729253c1d1f49-0": {
-          "type": "slide",
+        "heading": {
+          "type": "heading",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Mask_group_4.png",
-            "overlayimage": 0,
-            "heading": "The Powered Convertible Top Of Your Dreams",
-            "heading_font_size_desk": 82,
-            "heading_lh_desk": 90,
-            "heading_font_size_mob": 45,
-            "heading_lh_mob": 55,
-            "heading_animation": "fadeInRight",
-            "heading_delay": 2,
-            "text": "<p>Minded Refresh:Up to 70% off regular price<\/p>",
-            "des_font_size": 20,
-            "des_lh": 22,
-            "des_animation": "fadeInDown",
-            "des_delay": 5,
-            "button_style": "primary",
-            "button_icon": "with_icon",
-            "btn_label": "Start Shopping",
-            "btn_link": "shopify:\/\/collections\/all",
-            "content_alignment": "text-left",
-            "content_position": "align-items-center",
-            "heading_color": "#ffffff",
-            "text_color": "#ffffff",
-            "primary_button_color": "#ffffff",
-            "primary_button_bg_color": "#030405",
-            "primary_button_border_color": "#030405",
-            "primary_hover_button_color": "#030405",
-            "primary_hover_button_bg_color": "#FFFF00",
-            "primary_hover_button_border_color": "#030405",
-            "secondary_button_color": "#030405",
-            "secondary_button_bg_color": "#ffffff",
-            "scondary_button_border_color": "#030405",
-            "secondary_hover_button_color": "#FFFF00",
-            "secondary_hover_button_bg_color": "#030405",
-            "secondary_hover_button_border_color": "#FFFF00",
-            "btn_first_animation": "fadeInUp",
-            "btn_first_delay": 5
+            "heading": "Image banner",
+            "heading_size": "h0"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop all",
+            "button_link_1": "shopify:\/\/collections\/all",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
-        "template--18319593734437__3cf82f8d-239d-4a38-bc53-3f76f2b326bb-16799729253c1d1f49-0"
+        "heading",
+        "text",
+        "button"
       ],
       "settings": {
-        "slider_height": "full-height",
-        "enable_dot": false,
-        "arrow_enabled": false,
-        "autoplay_enabled": false,
-        "autoplay_timeout": 7
+        "image_overlay_opacity": 40,
+        "image_height": "large",
+        "desktop_content_position": "bottom-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 28,
+        "padding_bottom": 36
       }
     }
   },
   "order": [
-    "3cf82f8d-239d-4a38-bc53-3f76f2b326bb"
+    "image_banner",
+    "featured_collection"
   ]
 }

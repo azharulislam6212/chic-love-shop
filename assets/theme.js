@@ -143,7 +143,7 @@ class SlideshowsComponent extends HTMLElement {
           '<div class="prev"><svg width="25" height="40" viewBox="0 0 25 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 3L5 20L22 37" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/></svg></div>',
         nextArrow:
           '<div class="next"><svg width="25" height="40" viewBox="0 0 25 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 37L20 20L3 3" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/></svg></div>',
-      }).slickAnimation();
+      });
 
       slick.on("beforeChange", function(event, slick) {
         slick = $(slick.$slider);
