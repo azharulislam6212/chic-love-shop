@@ -19,7 +19,32 @@
           assign image_sm = block.settings.image_sm
         %}
 
-        
+
+        {% if block.type == 'slide' and block.settings.image != blank %}
+
+				
+					<div class="ss_img lazyload js{% if block.settings.mb_image != blank %} hidden-xs-down {% else %}{% if forloop.first %} lazypreload{% endif %}{% endif %}"
+					 data-bgset="{% render 'bgset', image: block.settings.image, sizes: dsizes %}" data-sizes="auto" data-parent-fit="contain"
+					 style="background-position:{{ block.settings.alignment }};{% unless forloop.first %}background-image:url('{{ block.settings.image | img_url: '2000x' }}');{% endunless %}">
+					</div>
+
+					{% if block.settings.mb_image != blank %}
+					<div class="ss_img lazyload{% if forloop.first %} lazypreload{% endif %} js hidden-sm-up"
+						 data-bgset="{% include 'bgset', image: block.settings.mb_image, sizes: msizes %}" data-sizes="auto" data-parent-fit="contain"
+						 style="background-position:{{ block.settings.alignment }};{% unless forloop.first %}background-image:url('{{ block.settings.mb_image | img_url: '780x' }}');{% endunless %}">
+					</div>
+					  {% endif %}
+
+					
+                  
+					  {% else %}
+					  <div class="ss_img js">
+						  <div class="ph_bg banner-{{slider_height}} ">{% capture current %}{% cycle 1, 2 %}{% endcapture %}{{ 'lifestyle-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}</div>
+					  </div>
+				  {% endif %}
+
+
+
 
 			{%- liquid
 				assign content_position = block.settings.content_position
@@ -127,42 +152,7 @@
 			<div  class="banner-item block-{{block.id}}"  data-overlay="{{overlayimage}}"  {{ block.shopify_attributes }}>
 
 
-				    {% if block.type == 'slide' and block.settings.image != blank %}
-
-				
-					<div class="ss_img lazyload js{% if block.settings.mb_image != blank %} hidden-xs-down {% else %}{% if forloop.first %} lazypreload{% endif %}{% endif %}"
-					 data-bgset="{% render 'bgset', image: block.settings.image, sizes: dsizes %}" data-sizes="auto" data-parent-fit="contain"
-					 style="background-position:{{ block.settings.alignment }};{% unless forloop.first %}background-image:url('{{ block.settings.image | img_url: '2000x' }}');{% endunless %}">
-					</div>
-
-					{% if block.settings.mb_image != blank %}
-					<div class="ss_img lazyload{% if forloop.first %} lazypreload{% endif %} js hidden-sm-up"
-						 data-bgset="{% include 'bgset', image: block.settings.mb_image, sizes: msizes %}" data-sizes="auto" data-parent-fit="contain"
-						 style="background-position:{{ block.settings.alignment }};{% unless forloop.first %}background-image:url('{{ block.settings.mb_image | img_url: '780x' }}');{% endunless %}">
-					</div>
-					  {% endif %}
-
-					
-                  {% elsif block.type == 'video' and block.settings.video_url != blank %}
-                    {% if block.settings.video_url.type == "youtube" %}
-
-                        <iframe class="embed-player slide-media" width="980" height="520" src="https://www.youtube.com/embed/{{ block.settings.video_url.id }}?enablejsapi=1&controls=0&fs=0&iv_load_policy=3&rel=0&showinfo=0&loop=1&playlist={{block.settings.video_url.id}}&start=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
-
-
-                        {% comment %} <iframe class="embed-player slide-media" width="980" height="520" src="https://www.youtube.com/embed/{{ block.settings.video_url.id }}?enablejsapi=1&controls=0&fs=0&iv_load_policy=3&rel=0&showinfo=0&loop=1&playlist={{block.settings.video_url.id}}&playsinline=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> {% endcomment %}
-                    {% elsif block.settings.video_url.type == "vimeo" %}
-                        <iframe class="embed-player slide-media" src="https://player.vimeo.com/video/{{block.settings.video_url.id}}?api=1&byline=0&portrait=0&title=0&background=1&mute=1&loop=1&autoplay=0&id={{block.settings.video_url.id}}" width="980" height="520" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    {% endif %}
-                     {% elsif block.type == 'video' and block.settings.mp4url != blank %}
-                      <video class="slide-video slide-media" loop muted preload="metadata" playsinline>
-                        <source src="{{block.settings.mp4url}}" type="video/mp4" />
-                    </video>
-                  
-					  {% else %}
-					  <div class="ss_img js">
-						  <div class="ph_bg banner-{{slider_height}} ">{% capture current %}{% cycle 1, 2 %}{% endcapture %}{{ 'lifestyle-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}</div>
-					  </div>
-				  {% endif %}
+				    
 
 			
                <div class="banner-absolute absolute-content d-flex w-100 {{ content_alignment }} {{ content_position }}  {%if content_position contains "align-items-end"%} bottom_possion_padding {%endif%}">
