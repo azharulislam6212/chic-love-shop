@@ -495,4 +495,5 @@ button:focus{
 .newsletter-form__button:focus{
   background: #000 !important;
   transition: 0.3s all ease-in;
+  color: #FFFFFF !important;
 }
