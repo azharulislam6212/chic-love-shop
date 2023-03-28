@@ -93,7 +93,7 @@
         <h1 class="heading  animated text-{{heading_text_transfrom}}" data-animation-in="{{heading_animation}}" data-delay-in="0.{{heading_delay}}"  >{{heading}}</h1>
         {% endif %}
 
-        {%- when 'heading' -%}
+        {%- when 'description' -%}
 
 			{%- liquid
 			
@@ -106,7 +106,7 @@
 				assign des_font_size_mob = block.settings.des_font_size_mob
 				assign des_lh_mob = block.settings.des_lh_mob
 
-
+      %}
 				assign btn_label = block.settings.btn_label
 				assign btn_link = block.settings.btn_link
 		
