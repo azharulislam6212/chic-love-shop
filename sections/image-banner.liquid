@@ -499,36 +499,7 @@
         "id": "secondary_hover_button_border_color",
         "label": "On hover: Button border",
         "default": "#FFFF00"
-        },
-        {
-        "type": "header",
-        "content": "Animation"
-       },
-        {
-        "type": "select",
-        "id": "btn_animation",
-        "label": "Choose Animation",
-        "options": [
-          {"label": "FadeInLeft", "value": "fadeInLeft"},
-          {"label": "FadeInRight", "value": "fadeInRight"},
-          {"label": "fadeInDown", "value": "fadeInDown"},
-          {"label": "fadeInUp", "value": "fadeInUp"},
-          {"label": "ZoomIn", "value": "zoomIn"},
-          {"label": "SlideInDown", "value": "slideInDown"},
-          {"label": "SlideInUp", "value": "slideInUp"}
-        ],
-        "default": "fadeInUp"
-      },
-      {
-        "type": "range",
-        "id": "btn_delay",
-        "label":"Animation Delay",
-        "min": 0,
-        "max": 9,
-        "step": 1,
-        "default": 5,
-        "unit": "%"
-      }
+        }
     ],
     "blocks": [
 		{
@@ -858,7 +829,36 @@
 					"id": "btn_link",
 					"label": "Button Link",
 					"default": "\/collections\/all"
-				}
+				},
+        {
+          "type": "header",
+          "content": "Animation"
+         },
+          {
+          "type": "select",
+          "id": "btn_animation",
+          "label": "Choose Animation",
+          "options": [
+            {"label": "FadeInLeft", "value": "fadeInLeft"},
+            {"label": "FadeInRight", "value": "fadeInRight"},
+            {"label": "fadeInDown", "value": "fadeInDown"},
+            {"label": "fadeInUp", "value": "fadeInUp"},
+            {"label": "ZoomIn", "value": "zoomIn"},
+            {"label": "SlideInDown", "value": "slideInDown"},
+            {"label": "SlideInUp", "value": "slideInUp"}
+          ],
+          "default": "fadeInUp"
+        },
+        {
+          "type": "range",
+          "id": "btn_delay",
+          "label":"Animation Delay",
+          "min": 0,
+          "max": 9,
+          "step": 1,
+          "default": 5,
+          "unit": "%"
+        }
       ]
     }
      ],
