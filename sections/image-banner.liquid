@@ -173,8 +173,6 @@
 				assign btn_label = block.settings.btn_label
 				assign btn_link = block.settings.btn_link
 		
-	
-			
 
 			-%}
 
@@ -186,115 +184,6 @@
 									{% endif %}
 
 
-					<style>
-					
-						 .block-{{block.id}} .banner-content .heading{
-                           font-size: {{heading_font_size_desk | append: 'px'}};
-                           line-height: {{ heading_lh_desk | append: 'px'}};
-						   font-weight: {{heading_font_weight}};
-						}
-
-						.block-{{block.id}} .banner-content .description{
-							font-size: {{des_font_size | append: 'px'}};
-							line-height: {{ des_lh | append: 'px'}};
-						 }
-
-						@media only screen and (max-width: 992px) {
-
-							.block-{{block.id}} .banner-content .heading{
-								font-size: {{heading_font_size_tab | append: 'px'}};
-								line-height: {{ heading_lh_tab | append: 'px'}};
-							 }
-
-							 .block-{{block.id}} .banner-content .description{
-								font-size: {{des_font_size_tab | append: 'px'}};
-								line-height: {{ des_lh_tab | append: 'px'}};
-							 }
-
-
-						}
-						@media only screen and (max-width: 767px) {
-							.block-{{block.id}} .banner-content .heading{
-								font-size: {{heading_font_size_mob | append: 'px'}};
-								line-height: {{ heading_lh_mob | append: 'px'}};
-							 }
-
-							 .block-{{block.id}} .banner-content .description{
-								font-size: {{des_font_size_mob | append: 'px'}};
-								line-height: {{ des_lh_mob | append: 'px'}};
-							 }
-
-						}
-
-
-					
-					{%if enable_custom_color %}
-						
-						.block-{{block.id}} .banner-content .heading{
-							color: {{ heading_color }};
-						}
-						
-						.block-{{block.id}} .banner-content .description{
-							color: {{ text_color }};
-						}
-
-						.block-{{block.id}} .banner-content .description strong{
-							color: {{ text_color }};
-						}
-
-						.block-{{block.id}} .btn--primary {
-							color: {{ primary_button_color }};
-							background: {{ primary_button_bg_color }};
-							border: 2px solid {{ primary_button_border_color }};
-						
-						}
-
-                        .block-{{block.id}} .btn--primary svg{
-                            fill: {{ primary_button_color }};
-                        }
-						
-						.block-{{block.id}} .btn--primary:hover,
-						.block-{{block.id}} .btn--primary:focus,
-						.block-{{block.id}} .btn--primary:not(:disabled):not(.disabled):active{
-							color: {{ primary_hover_button_color }};
-                            background: {{ primary_hover_button_bg_color }};
-							border: 2px solid {{ primary_hover_button_border_color }};
-						}
-
-						
-                        .block-{{block.id}} .btn--primary:hover svg{
-                            fill: {{ primary_hover_button_color }};
-                        }
-
-
-						.block-{{block.id}} .btn--secondary {
-							color: {{ secondary_button_color }};
-							background: {{ secondary_button_bg_color }};
-							border: 2px solid {{ scondary_button_border_color }};
-						
-						}
-
-                        .block-{{block.id}} .btn--secondary svg{
-                            fill: {{ secondary_button_color }};
-                        }
-						
-						.block-{{block.id}} .btn--secondary:hover,
-						.block-{{block.id}} .btn--secondary:focus,
-						.block-{{block.id}} .btn--secondary:not(:disabled):not(.disabled):active{
-							color: {{ secondary_hover_button_color }};
-                            background: {{ secondary_hover_button_bg_color }};
-							border: 2px solid {{ secondary_hover_button_border_color }};
-						}
-						
-                        .block-{{block.id}} .btn--secondary:hover svg{
-                            fill: {{ secondary_hover_button_color }};
-                        }
-
-						{%endif %}
-					  </style>
-
-
-            
     {%- endcase -%}
   {%- endfor -%}   
 
