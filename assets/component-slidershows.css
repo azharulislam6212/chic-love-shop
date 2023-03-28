@@ -78,6 +78,10 @@
     .slideshow-content .heading {
         margin-bottom: 20px;
     }
+
+    .slideshow-content .description {
+        margin-bottom: 25px;
+    }
 }
 
 /*------------- Slick Slider Arrow -----------------*/
