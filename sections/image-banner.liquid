@@ -20,6 +20,14 @@
         {%- liquid
           assign image = block.settings.image
           assign image_sm = block.settings.image_sm
+
+          if block.settings.mb_image != blank
+          assign dsizes = '1296,1512,2000,2450,3000,3600'
+        else
+        assign dsizes = ''
+        endif    
+        assign msizes = '375,540,780,1080'
+        
         %}
 
 
@@ -83,7 +91,7 @@
 
       %}
 
-      
+
 			{%- liquid
 			
 				assign text = block.settings.text
@@ -151,22 +159,7 @@
 
 
 
-    
-				unless image
-				  capture loop
-					cycle 1, 2
-				  endcapture
 	
-				  assign lifestyle = 'lifestyle-' | append: loop
-				endunless
-
-
-			if block.settings.mb_image != blank
-            	assign dsizes = '1296,1512,2000,2450,3000,3600'
-            else
-        		assign dsizes = ''
-            endif    
-            assign msizes = '375,540,780,1080'
 
 
 			-%}
