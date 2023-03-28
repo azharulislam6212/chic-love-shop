@@ -4,7 +4,8 @@
 {%- liquid
 	assign banner_height = section.settings.banner_height
 	assign overlayimage = section.settings.overlayimage
-
+	assign content_position = block.settings.content_position
+				assign content_alignment = block.settings.content_alignment
 -%}
 
 
@@ -59,13 +60,12 @@
 
       {%- for block in section.blocks -%}
         {%- case block.type -%}
-          {%- when 'image' -%}
+          {%- when 'heading' -%}
 
 
 
 			{%- liquid
-				assign content_position = block.settings.content_position
-				assign content_alignment = block.settings.content_alignment
+			
 		
 				assign subheading = block.settings.subheading
 				assign heading = block.settings.heading
