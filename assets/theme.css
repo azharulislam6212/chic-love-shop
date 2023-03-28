@@ -446,7 +446,7 @@ padding: 11px 49px;
 }
 button:focus{
   outline: none;
-  
+
 }
 
 /* payment button */
@@ -481,6 +481,7 @@ button:focus{
 .newsletter-form__field-wrapper{
   background: #FFFFFF;
   border-radius: var(--btn-border-radius);
+  padding: 5px;
 }
 
 
@@ -488,4 +489,7 @@ button:focus{
   background: #FFFF00 !important;
   border-radius: var(--btn-border-radius);
   width: 60px !important;
+}
+.newsletter-form__button{
+  
 }
