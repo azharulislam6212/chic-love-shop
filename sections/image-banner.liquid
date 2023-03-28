@@ -71,13 +71,10 @@
           {%- when 'heading' -%}
 
 
-
 			{%- liquid
 			
-		
 
 				assign heading = block.settings.heading
-
 
 				assign heading_font_size_desk = block.settings.heading_font_size_desk
 				assign heading_lh_desk = block.settings.heading_lh_desk
@@ -96,7 +93,7 @@
         <h1 class="heading  animated text-{{heading_text_transfrom}}" data-animation-in="{{heading_animation}}" data-delay-in="0.{{heading_delay}}"  >{{heading}}</h1>
         {% endif %}
 
-
+        {%- when 'heading' -%}
 
 			{%- liquid
 			
