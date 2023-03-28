@@ -499,6 +499,7 @@ button:focus{
 }
 
 .newsletter-form__button svg>path{
+  transition: 0.3s all ease-in;
 }
 .newsletter-form__button:hover svg>path,
 .newsletter-form__button:focus svg>path{
