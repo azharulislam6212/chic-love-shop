@@ -52,60 +52,10 @@
             "btn_animation": "fadeInUp",
             "btn_delay": 5
           }
-        },
-        "d2af5d9d-8c70-44e5-8e62-21c27b3938fe": {
-          "type": "slide",
-          "settings": {
-            "overlayimage": 3,
-            "heading": "gummies that give you life, literally",
-            "heading_font_size_desk": 80,
-            "heading_lh_desk": 100,
-            "heading_font_size_tab": 50,
-            "heading_lh_tab": 55,
-            "heading_font_size_mob": 30,
-            "heading_lh_mob": 40,
-            "heading_text_transfrom": "none",
-            "heading_font_weight": "700",
-            "heading_animation": "fadeInRight",
-            "heading_delay": 2,
-            "text": "<p>Clinically-backed ingredients formulated to become a divine part of your everyday life.<\/p>",
-            "des_font_size": 18,
-            "des_lh": 30,
-            "des_font_size_tab": 16,
-            "des_lh_tab": 24,
-            "des_font_size_mob": 16,
-            "des_lh_mob": 24,
-            "des_animation": "fadeInDown",
-            "des_delay": 5,
-            "button_style": "primary",
-            "button_icon": "with_icon",
-            "btn_label": "Start Shopping",
-            "btn_link": "shopify:\/\/collections\/all",
-            "content_alignment": "text-left",
-            "content_position": "align-items-center",
-            "enable_custom_color": false,
-            "heading_color": "#ffffff",
-            "text_color": "#ffffff",
-            "primary_button_color": "#ffffff",
-            "primary_button_bg_color": "#030405",
-            "primary_button_border_color": "#030405",
-            "primary_hover_button_color": "#030405",
-            "primary_hover_button_bg_color": "#ffff00",
-            "primary_hover_button_border_color": "#030405",
-            "secondary_button_color": "#030405",
-            "secondary_button_bg_color": "#ffffff",
-            "scondary_button_border_color": "#030405",
-            "secondary_hover_button_color": "#ffff00",
-            "secondary_hover_button_bg_color": "#030405",
-            "secondary_hover_button_border_color": "#ffff00",
-            "btn_animation": "fadeInUp",
-            "btn_delay": 5
-          }
         }
       },
       "block_order": [
-        "32fee708-1594-42b6-a9f7-cc8e07932b1f",
-        "d2af5d9d-8c70-44e5-8e62-21c27b3938fe"
+        "32fee708-1594-42b6-a9f7-cc8e07932b1f"
       ],
       "settings": {
         "slider_height": "full-height",
