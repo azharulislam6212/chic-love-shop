@@ -18,7 +18,8 @@
 	<div class="banner-{{slider_height}} " >	
 
   {%- for block in section.blocks -%}
-		
+    {%- case block.type -%}
+      {%- when 'heading' -%}
   
 
 			{%- liquid
@@ -303,7 +304,7 @@
 					  </style>
 						
 			</div>
-
+    {%- endcase -%}
     {%- endfor -%}   
 
 </div>
@@ -311,9 +312,6 @@
 
 
 
-{%- if request.design_mode -%}
-<script src="{{ 'slideshow.js' | asset_url }}" defer="defer"></script>
-{%- endif -%}
 
 {% schema %}
   {
