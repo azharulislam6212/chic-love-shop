@@ -46,6 +46,14 @@
     align-items: center;
 }
 
+.icon-active svg {
+    fill: #fff;
+    width: 33px;
+    height: 30px;
+    position: relative;
+    display: inline-block;
+}
+
  .slideshow-content .heading{
     font-style: normal;
     font-size: 83px;
