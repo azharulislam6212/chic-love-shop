@@ -185,11 +185,11 @@
 				  {% endif %}
 
 			
-               <div class="slideshow-absolute absolute-content d-flex w-100 {{ content_alignment }} {{ content_position }}  {%if content_position contains "align-items-end"%} bottom_possion_padding {%endif%}">
+               <div class="banner-absolute absolute-content d-flex w-100 {{ content_alignment }} {{ content_position }}  {%if content_position contains "align-items-end"%} bottom_possion_padding {%endif%}">
 				 <div class="container">
 					<div class="row">
 						<div class="col-md-12">
-							<div class="slideshow-content">
+							<div class="banner-content">
 								<!-- Slide Title -->
 								<div class="home-slider-desc">
 									<div class="home-slider-title mb-4">
@@ -216,25 +216,25 @@
 
 					<style>
 					
-						 .block-{{block.id}} .slideshow-content .heading{
+						 .block-{{block.id}} .banner-content .heading{
                            font-size: {{heading_font_size_desk | append: 'px'}};
                            line-height: {{ heading_lh_desk | append: 'px'}};
 						   font-weight: {{heading_font_weight}};
 						}
 
-						.block-{{block.id}} .slideshow-content .description{
+						.block-{{block.id}} .banner-content .description{
 							font-size: {{des_font_size | append: 'px'}};
 							line-height: {{ des_lh | append: 'px'}};
 						 }
 
 						@media only screen and (max-width: 992px) {
 
-							.block-{{block.id}} .slideshow-content .heading{
+							.block-{{block.id}} .banner-content .heading{
 								font-size: {{heading_font_size_tab | append: 'px'}};
 								line-height: {{ heading_lh_tab | append: 'px'}};
 							 }
 
-							 .block-{{block.id}} .slideshow-content .description{
+							 .block-{{block.id}} .banner-content .description{
 								font-size: {{des_font_size_tab | append: 'px'}};
 								line-height: {{ des_lh_tab | append: 'px'}};
 							 }
