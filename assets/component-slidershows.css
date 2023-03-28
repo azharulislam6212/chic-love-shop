@@ -113,7 +113,7 @@
 
 
 
-.arch-slider .slick-arrow {
+.main-slider .slick-arrow {
     position: absolute;
     width: 60px;
     height: 60px;
@@ -129,23 +129,23 @@
     filter: none;
     background: transparent;
   }
-  .arch-slider .slick-arrow.prev  {
+  .main-slider .slick-arrow.prev  {
     left: 50px
   }
-  .arch-slider .slick-arrow.next {
+  .main-slider.slick-arrow.next {
     right: 50px
   }
   
-  .arch-slider .slick-arrow svg {
+  .main-slider .slick-arrow svg {
     width: 40px;
     height: 40px;
   }
   
   @media (max-width: 750px){
-    .arch-slider .slick-arrow.prev  {
+    .main-slider.slick-arrow.prev  {
       left: 15px
     }
-    .arch-slider .slick-arrow.next {
+    .main-slider .slick-arrow.next {
       right: 15px;
     }
   }
