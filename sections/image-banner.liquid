@@ -15,7 +15,7 @@
 
 
 <div class=" banner section_{{ section.id }}" id="section_{{ section.id }}">
-	<div class="banner-{{slider_height}} " >	
+	<div class="banner-{{banner_height}} " >	
 
   {%- for block in section.blocks -%}
     {%- case block.type -%}
@@ -319,7 +319,7 @@
     "settings": [
 		{
 			"type": "select",
-			"id": "slider_height",
+			"id": "banner_height",
 			"label": "Banner Height",
 			"options": [
 			  {
