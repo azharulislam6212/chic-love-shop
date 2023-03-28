@@ -180,7 +180,7 @@
                   
 					  {% else %}
 					  <div class="ss_img js">
-						  <div class="ph_bg">{% capture current %}{% cycle 1, 2 %}{% endcapture %}{{ 'lifestyle-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}</div>
+						  <div class="ph_bg banner-{{slider_height}}">{% capture current %}{% cycle 1, 2 %}{% endcapture %}{{ 'lifestyle-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}</div>
 					  </div>
 				  {% endif %}
 
