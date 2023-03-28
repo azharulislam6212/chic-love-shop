@@ -32,14 +32,14 @@
             "primary_button_bg_color": "#030405",
             "primary_button_border_color": "#030405",
             "primary_hover_button_color": "#030405",
-            "primary_hover_button_bg_color": "#FFFF00",
+            "primary_hover_button_bg_color": "#ffff00",
             "primary_hover_button_border_color": "#030405",
             "secondary_button_color": "#030405",
             "secondary_button_bg_color": "#ffffff",
             "scondary_button_border_color": "#030405",
-            "secondary_hover_button_color": "#FFFF00",
+            "secondary_hover_button_color": "#ffff00",
             "secondary_hover_button_bg_color": "#030405",
-            "secondary_hover_button_border_color": "#FFFF00",
+            "secondary_hover_button_border_color": "#ffff00",
             "btn_first_animation": "fadeInUp",
             "btn_first_delay": 5
           }
@@ -55,9 +55,75 @@
         "autoplay_enabled": false,
         "autoplay_timeout": 7
       }
+    },
+    "7b7773c6-ffb5-49df-99ef-13da81f1b40f": {
+      "type": "marquee-section",
+      "blocks": {
+        "template--18319593734437__7b7773c6-ffb5-49df-99ef-13da81f1b40f-1679983816b9aa7ae4-0": {
+          "type": "text",
+          "settings": {
+            "text": "Viales"
+          }
+        },
+        "template--18319593734437__7b7773c6-ffb5-49df-99ef-13da81f1b40f-1679983816b9aa7ae4-1": {
+          "type": "text",
+          "settings": {
+            "text": "Viales"
+          }
+        },
+        "template--18319593734437__7b7773c6-ffb5-49df-99ef-13da81f1b40f-1679983816b9aa7ae4-2": {
+          "type": "text",
+          "settings": {
+            "text": "Viales"
+          }
+        },
+        "template--18319593734437__7b7773c6-ffb5-49df-99ef-13da81f1b40f-1679983816b9aa7ae4-3": {
+          "type": "text",
+          "settings": {
+            "text": "Viales"
+          }
+        },
+        "template--18319593734437__7b7773c6-ffb5-49df-99ef-13da81f1b40f-1679983816b9aa7ae4-4": {
+          "type": "text",
+          "settings": {
+            "text": "Viales"
+          }
+        },
+        "template--18319593734437__7b7773c6-ffb5-49df-99ef-13da81f1b40f-1679983816b9aa7ae4-5": {
+          "type": "text",
+          "settings": {
+            "text": "Viales"
+          }
+        },
+        "template--18319593734437__7b7773c6-ffb5-49df-99ef-13da81f1b40f-1679983816b9aa7ae4-6": {
+          "type": "text",
+          "settings": {
+            "text": "Viales"
+          }
+        }
+      },
+      "block_order": [
+        "template--18319593734437__7b7773c6-ffb5-49df-99ef-13da81f1b40f-1679983816b9aa7ae4-0",
+        "template--18319593734437__7b7773c6-ffb5-49df-99ef-13da81f1b40f-1679983816b9aa7ae4-1",
+        "template--18319593734437__7b7773c6-ffb5-49df-99ef-13da81f1b40f-1679983816b9aa7ae4-2",
+        "template--18319593734437__7b7773c6-ffb5-49df-99ef-13da81f1b40f-1679983816b9aa7ae4-3",
+        "template--18319593734437__7b7773c6-ffb5-49df-99ef-13da81f1b40f-1679983816b9aa7ae4-4",
+        "template--18319593734437__7b7773c6-ffb5-49df-99ef-13da81f1b40f-1679983816b9aa7ae4-5",
+        "template--18319593734437__7b7773c6-ffb5-49df-99ef-13da81f1b40f-1679983816b9aa7ae4-6"
+      ],
+      "settings": {
+        "container": "container-fluid",
+        "section_background": "#FFFF00",
+        "remove_container_space": true,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_m": 0,
+        "padding_bottom_m": 0
+      }
     }
   },
   "order": [
-    "3cf82f8d-239d-4a38-bc53-3f76f2b326bb"
+    "3cf82f8d-239d-4a38-bc53-3f76f2b326bb",
+    "7b7773c6-ffb5-49df-99ef-13da81f1b40f"
   ]
 }
