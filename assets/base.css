@@ -1523,7 +1523,6 @@ details[open] > .share-button__fallback {
 .localization-form__select:focus.localization-form__select:after {
   box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) rgba(var(--color-foreground));
   outline: 0;
-  border-radius: var(--inputs-radius);
 }
 
 .localization-form__select:focus {
