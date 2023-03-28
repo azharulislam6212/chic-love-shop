@@ -31,7 +31,7 @@
             "btn_label": "Start Shopping",
             "btn_link": "shopify:\/\/collections\/all",
             "content_alignment": "text-center",
-            "content_position": "align-items-center",
+            "content_position": "align-items-end justify-content-center",
             "enable_custom_color": false,
             "heading_color": "#ffffff",
             "text_color": "#ffffff",
