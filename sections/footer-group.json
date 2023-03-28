@@ -5,18 +5,10 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "bb928c56-178d-4c9d-8b58-c7f40b492810": {
-          "type": "link_list",
-          "settings": {
-            "column": "3",
-            "heading": "Quick links",
-            "menu": "footer"
-          }
-        },
         "2d26b522-a089-44c8-9806-eb09bf8dbdef": {
           "type": "newslatter",
           "settings": {
-            "column": "3",
+            "column": "4",
             "newsletter_enable": true,
             "heading": "SIGNUP TO THE MAILING LIST",
             "newsletter_caption": "For VIP monthly special deals on selected Artwork."
@@ -25,18 +17,17 @@
         "acc20a2c-6430-4f04-81a9-0e9ce635be31": {
           "type": "link_list",
           "settings": {
-            "column": "3",
+            "column": "2",
             "heading": "",
             "menu": ""
           }
         },
-        "5d0bbc14-345a-4b38-89d5-893c31eab6e2": {
-          "type": "text",
+        "bb928c56-178d-4c9d-8b58-c7f40b492810": {
+          "type": "link_list",
           "settings": {
-            "column": "2",
-            "heading": "Heading",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>",
-            "show_social": true
+            "column": "3",
+            "heading": "Quick links",
+            "menu": "footer"
           }
         },
         "335c52a4-7f27-4d69-af25-ffb81862ed4a": {
@@ -49,10 +40,9 @@
         }
       },
       "block_order": [
-        "bb928c56-178d-4c9d-8b58-c7f40b492810",
         "2d26b522-a089-44c8-9806-eb09bf8dbdef",
         "acc20a2c-6430-4f04-81a9-0e9ce635be31",
-        "5d0bbc14-345a-4b38-89d5-893c31eab6e2",
+        "bb928c56-178d-4c9d-8b58-c7f40b492810",
         "335c52a4-7f27-4d69-af25-ffb81862ed4a"
       ],
       "settings": {
