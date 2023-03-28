@@ -43,7 +43,16 @@
 					  </div>
 				  {% endif %}
 
- 
+        {%- endcase -%}
+      {%- endfor -%}   
+
+
+
+
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'image' -%}
+
 
 
 			{%- liquid
