@@ -228,6 +228,12 @@ document.addEventListener("shopify:section:load", function(event) {
 
 });
 
+document.addEventListener('shopify:block:select', function(event) {
+
+});
+
+
+
 
   // Select all links with hashes
   $('a[href*="#"]')
