@@ -47,7 +47,15 @@
       {%- endfor -%}   
 
 
+      <div class="banner-absolute absolute-content d-flex w-100 {{ content_alignment }} {{ content_position }}  {%if content_position contains "align-items-end"%} bottom_possion_padding {%endif%}">
+        <div class="container">
+         <div class="row">
+           <div class="col-md-12">
+             <div class="banner-content">
+               <!-- Slide Title -->
+               <div class="home-slider-desc">
 
+                
 
       {%- for block in section.blocks -%}
         {%- case block.type -%}
@@ -164,13 +172,7 @@
 				    
 
 			
-               <div class="banner-absolute absolute-content d-flex w-100 {{ content_alignment }} {{ content_position }}  {%if content_position contains "align-items-end"%} bottom_possion_padding {%endif%}">
-				 <div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="banner-content">
-								<!-- Slide Title -->
-								<div class="home-slider-desc">
+     
 								
 										
 										{% if heading != blank %}
