@@ -17,7 +17,7 @@
         "acc20a2c-6430-4f04-81a9-0e9ce635be31": {
           "type": "link_list",
           "settings": {
-            "column": "3",
+            "column": "2",
             "heading": "",
             "menu": ""
           }
@@ -25,7 +25,7 @@
         "bb928c56-178d-4c9d-8b58-c7f40b492810": {
           "type": "link_list",
           "settings": {
-            "column": "2",
+            "column": "3",
             "heading": "",
             "menu": "business"
           }
