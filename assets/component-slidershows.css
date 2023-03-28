@@ -148,4 +148,9 @@
     .main-slider .slick-arrow.next {
       right: 0px;
     }
+
+    .main-slider .slick-arrow svg {
+        width: 20px;
+        height: 20px;
+      }
   }
