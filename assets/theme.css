@@ -480,36 +480,4 @@ padding: 11px 49px;
 
 
 
-.marque-wrapper{
-  background-color: #000;
-  color: #fff;
-  padding: 15px 0;
-}
-
-
-.marquee-content {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  max-width: none;
-  white-space: nowrap;
-  font-size: .8125rem;
-  font-weight: 400;
-  overflow: hidden;
-  color: #fff;
-  
-}
-
-.Marquee-tag {
-  display: inline-flex;
-  align-items: center;
-  padding: 0 20px;
-  letter-spacing: .03em;
-  font-size: var(--font-body-weight);
-  font-family: var(--font-body-family);
-}
-
-.marquee-icon{
-  margin-right: 5px;
-}
 
