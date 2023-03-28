@@ -42,7 +42,8 @@
 
 
 .icon-active{
-    display: in;
+    display: inline-flex;
+    align-items: center;
 }
 
  .slideshow-content .heading{
