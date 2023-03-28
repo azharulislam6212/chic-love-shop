@@ -78,3 +78,8 @@
   height: 100%;
   width: 100%;
 }
+
+.banner-item  .ss_img, .no-js .ss_img {
+  opacity: 1;
+  visibility: visible;
+}
