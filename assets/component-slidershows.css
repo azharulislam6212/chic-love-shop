@@ -156,7 +156,7 @@
   }
 
   
-.slick-dots {
+  .slick-dots {
     bottom: -40px;
   }
    .slick-dots li button {
@@ -188,11 +188,12 @@
     -webkit-font-smoothing: antialiased;
   }
    .slick-dots li.slick-active button::before {
-  background:rgb(146, 50, 51);
-  width: 20px;
-  height: 8px;
-    opacity:9;
+    background:rgb(0, 0, 0);
+    width: 20px;
+    height: 8px;
+        opacity:9;
   }
+  
   .slick-dotted.slick-slider {
     margin-bottom:0px;
   }
