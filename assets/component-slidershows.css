@@ -52,10 +52,10 @@
     position: relative;
     display: inline-block;
 }
-.slideshow-absolute {
+.banner-absolute {
     padding: 100px ;
 }
- .slideshow-content .heading{
+ .banner-content .heading{
     font-style: normal;
     font-size: 80px;
     line-height: 100px;
@@ -63,7 +63,7 @@
     color: #FFFFFF;
     margin-bottom: 30px;
 }
- .slideshow-content .description {
+ .banner-content .description {
     font-style: normal;
     font-size: 18px;
     line-height: 30px;
@@ -72,14 +72,14 @@
 }
 
 @media only screen and (max-width: 991px) {
-    .slideshow-absolute {
+    .banner-absolute {
         padding: 70px 30px;
     }
-    .slideshow-content .heading {
+    .banner-content .heading {
         margin-bottom: 20px;
     }
 
-    .slideshow-content .description {
+    .banner-content .description {
         margin-bottom: 25px;
     }
 }
