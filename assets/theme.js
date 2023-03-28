@@ -224,6 +224,9 @@ $('.trigger').click(function(j) {
   j.preventDefault();
 });
 
+document.addEventListener("shopify:section:load", function(event) {
+
+});
 
 
   // Select all links with hashes
