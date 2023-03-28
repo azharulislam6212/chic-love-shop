@@ -84,19 +84,19 @@
                 font-weight: {{heading_font_weight}};
  }
 
- .block-{{block.id}} .banner-content .description{
+ .section_{{ section.id }} .banner-content .description{
    font-size: {{des_font_size | append: 'px'}};
    line-height: {{ des_lh | append: 'px'}};
   }
 
  @media only screen and (max-width: 992px) {
 
-   .block-{{block.id}} .banner-content .heading{
+  .section_{{ section.id }}  .banner-content .heading{
      font-size: {{heading_font_size_tab | append: 'px'}};
      line-height: {{ heading_lh_tab | append: 'px'}};
     }
 
-    .block-{{block.id}} .banner-content .description{
+    .section_{{ section.id }}  .banner-content .description{
      font-size: {{des_font_size_tab | append: 'px'}};
      line-height: {{ des_lh_tab | append: 'px'}};
     }
@@ -104,12 +104,12 @@
 
  }
  @media only screen and (max-width: 767px) {
-   .block-{{block.id}} .banner-content .heading{
+  .section_{{ section.id }} .banner-content .heading{
      font-size: {{heading_font_size_mob | append: 'px'}};
      line-height: {{ heading_lh_mob | append: 'px'}};
     }
 
-    .block-{{block.id}} .banner-content .description{
+    .section_{{ section.id }}  .banner-content .description{
      font-size: {{des_font_size_mob | append: 'px'}};
      line-height: {{ des_lh_mob | append: 'px'}};
     }
