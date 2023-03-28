@@ -522,155 +522,6 @@
 					"default": 3,
 					"unit": "%"
 				  },
-				
-				{
-					"type": "header",
-					"content": "Heading"
-				},
-				{
-					"type": "textarea",
-					"id": "heading",
-					"label": "Heading",
-					"default": "gummies that give you life, literally",
-					"info": "Don't want? Keep blank."
-				},
-				{
-					"type": "range",
-					"id": "heading_font_size_desk",
-					"label": "Font Size (Desktop)",
-					"min": 0,
-					"max": 90,
-					"step": 1,
-					"default":80,
-					"unit": "px"
-				  },
-				  {
-					"type": "range",
-					"id": "heading_lh_desk",
-					"label": "Line Height (Desktop)",
-					"min": 0,
-					"max": 100,
-					"step": 1,
-					"default": 100,
-					"unit": "px"
-				  },
-				  {
-					"type": "range",
-					"id": "heading_font_size_tab",
-					"label": "Font Size (Tablet)",
-					"min": 0,
-					"max": 90,
-					"step": 1,
-					"default":50,
-					"unit": "px"
-				  },
-				  {
-					"type": "range",
-					"id": "heading_lh_tab",
-					"label": "Line Height (Tablet)",
-					"min": 0,
-					"max": 100,
-					"step": 1,
-					"default": 55,
-					"unit": "px"
-				  },
-				  {
-					"type": "range",
-					"id": "heading_font_size_mob",
-					"label": "Font Size (Mobile)",
-					"min": 0,
-					"max": 50,
-					"step": 1,
-					"default": 30,
-					"unit": "px"
-				  },
-				  {
-					"type": "range",
-					"id": "heading_lh_mob",
-					"label": "Line Height (Mobile)",
-					"min": 0,
-					"max": 80,
-					"step": 1,
-					"default": 40,
-					"unit": "px"
-				  },
-				  {
-					"type": "select",
-					"id": "heading_text_transfrom",
-					"label": "Heading Text Transform",
-					"options": [
-					  {
-						"label": "Capitalize",
-						"value": "capitalize"
-					  },
-					  {
-						"label": "Uppercase",
-						"value": "uppercase"
-					  },
-					  {
-						"label": "Lowercase",
-						"value": "lowercase"
-					  },
-					  {
-						"label": "None",
-						"value": "none"
-					  }
-					],
-					"default": "none"
-				  },
-				  {
-					"type": "select",
-					"id": "heading_font_weight",
-					"label": "Heading Text Transform",
-					"options": [
-					  {
-						"label": "Bold",
-						"value": "700"
-					  },
-					  {
-						"label": "Semi Bold",
-						"value": "500"
-					  },
-					  {
-						"label": "Regular",
-						"value": "400"
-					  },
-					  {
-						"label": "Light",
-						"value": "300"
-					  }
-					],
-					"default": "700"
-				  },
-				  {
-					"type": "header",
-					"content": "Animation"
-				 },
-				  {
-					"type": "select",
-					"id": "heading_animation",
-					"label": "Choose Animation",
-					"options": [
-						{"label": "FadeInLeft", "value": "fadeInLeft"},
-						{"label": "FadeInRight", "value": "fadeInRight"},
-						{"label": "fadeInDown", "value": "fadeInDown"},
-						{"label": "fadeInUp", "value": "fadeInUp"},
-						{"label": "ZoomIn", "value": "zoomIn"},
-						{"label": "SlideInDown", "value": "slideInDown"},
-						{"label": "SlideInUp", "value": "slideInUp"}
-					],
-					"default": "fadeInRight"
-				},
-				{
-					"type": "range",
-					"id": "heading_delay",
-					"label":"Animation Delay",
-					"min": 0,
-					"max": 9,
-					"step": 1,
-					"default": 2,
-					"unit": "%"
-				},
 				{
 					"type": "header",
 					"content": "Description"
@@ -843,8 +694,12 @@
 				}
 
 			]
-		}
-
+		},
+    {
+			"type": "heading",
+			"name": "Heading",
+			"settings": []
+    }
      ],
     "presets": [
       {
