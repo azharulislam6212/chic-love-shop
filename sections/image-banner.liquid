@@ -78,7 +78,7 @@
 
 <style>
 					
-  .block-{{block.id}} .banner-content .heading{
+  .section_{{ section.id }} .banner-content .heading{
                 font-size: {{heading_font_size_desk | append: 'px'}};
                 line-height: {{ heading_lh_desk | append: 'px'}};
                 font-weight: {{heading_font_weight}};
@@ -91,12 +91,12 @@
 
  @media only screen and (max-width: 992px) {
 
-  .section_{{ section.id }}  .banner-content .heading{
+  .section_{{ section.id }} .banner-content .heading{
      font-size: {{heading_font_size_tab | append: 'px'}};
      line-height: {{ heading_lh_tab | append: 'px'}};
     }
 
-    .section_{{ section.id }}  .banner-content .description{
+    .section_{{ section.id }} .banner-content .description{
      font-size: {{des_font_size_tab | append: 'px'}};
      line-height: {{ des_lh_tab | append: 'px'}};
     }
@@ -109,7 +109,7 @@
      line-height: {{ heading_lh_mob | append: 'px'}};
     }
 
-    .section_{{ section.id }}  .banner-content .description{
+    .section_{{ section.id }} .banner-content .description{
      font-size: {{des_font_size_mob | append: 'px'}};
      line-height: {{ des_lh_mob | append: 'px'}};
     }
