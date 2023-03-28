@@ -242,12 +242,12 @@
 
 						}
 						@media only screen and (max-width: 767px) {
-							.block-{{block.id}} .slideshow-content .heading{
+							.block-{{block.id}} .banner-content .heading{
 								font-size: {{heading_font_size_mob | append: 'px'}};
 								line-height: {{ heading_lh_mob | append: 'px'}};
 							 }
 
-							 .block-{{block.id}} .slideshow-content .description{
+							 .block-{{block.id}} .banner-content .description{
 								font-size: {{des_font_size_mob | append: 'px'}};
 								line-height: {{ des_lh_mob | append: 'px'}};
 							 }
@@ -258,15 +258,15 @@
 					
 					{%if enable_custom_color %}
 						
-						.block-{{block.id}} .slideshow-content .heading{
+						.block-{{block.id}} .banner-content .heading{
 							color: {{ heading_color }};
 						}
 						
-						.block-{{block.id}} .slideshow-content .description{
+						.block-{{block.id}} .banner-content .description{
 							color: {{ text_color }};
 						}
 
-						.block-{{block.id}} .slideshow-content .description strong{
+						.block-{{block.id}} .banner-content .description strong{
 							color: {{ text_color }};
 						}
 
