@@ -71,18 +71,62 @@
         "template--18319593734437__2397ab58-aac0-4b10-ab2d-8bdbff647e1e-167999461076d54c56-0": {
           "type": "image",
           "settings": {
-            "overlayimage": 3
+          }
+        },
+        "c1013bb9-3b2c-4aef-b263-2a85f0aa5583": {
+          "type": "heading",
+          "settings": {
+            "heading": "gummies that give you life, literally",
+            "heading_font_size_desk": 80,
+            "heading_lh_desk": 100,
+            "heading_font_size_tab": 50,
+            "heading_lh_tab": 55,
+            "heading_font_size_mob": 30,
+            "heading_lh_mob": 40,
+            "heading_text_transfrom": "none",
+            "heading_font_weight": "700",
+            "heading_animation": "fadeInRight",
+            "heading_delay": 2
+          }
+        },
+        "776be486-d064-4cde-b3f6-11c3b541c1f5": {
+          "type": "description",
+          "settings": {
+            "text": "<p>Clinically-backed ingredients formulated to become a divine part of your everyday life.<\/p>",
+            "des_font_size": 18,
+            "des_lh": 30,
+            "des_font_size_tab": 16,
+            "des_lh_tab": 24,
+            "des_font_size_mob": 16,
+            "des_lh_mob": 24,
+            "des_animation": "fadeInDown",
+            "des_delay": 5
+          }
+        },
+        "81a0af68-cdeb-4118-bd38-12c7c8c4f43e": {
+          "type": "button",
+          "settings": {
+            "button_style": "primary",
+            "button_icon": "with_icon",
+            "btn_label": "Start Shopping",
+            "btn_link": "shopify:\/\/collections\/all",
+            "btn_animation": "fadeInUp",
+            "btn_delay": 5
           }
         }
       },
       "block_order": [
-        "template--18319593734437__2397ab58-aac0-4b10-ab2d-8bdbff647e1e-167999461076d54c56-0"
+        "template--18319593734437__2397ab58-aac0-4b10-ab2d-8bdbff647e1e-167999461076d54c56-0",
+        "c1013bb9-3b2c-4aef-b263-2a85f0aa5583",
+        "776be486-d064-4cde-b3f6-11c3b541c1f5",
+        "81a0af68-cdeb-4118-bd38-12c7c8c4f43e"
       ],
       "settings": {
-        "slider_height": "medium",
+        "banner_height": "medium",
         "content_alignment": "text-left",
         "content_position": "align-items-center",
         "enable_custom_color": false,
+        "overlayimage": 3,
         "heading_color": "#ffffff",
         "text_color": "#ffffff",
         "primary_button_color": "#ffffff",
