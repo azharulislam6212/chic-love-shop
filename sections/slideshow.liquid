@@ -57,10 +57,11 @@
 				assign btn_link = block.settings.btn_link
 		
 				assign button_style = block.settings.button_style
+				assign button_icon = block.settings.button_icon
 				assign overlayimage = block.settings.overlayimage
 	
 				assign btn_icon = ''
-				if button_style == 'with_icon'
+				if button_icon == 'with_icon'
                  assign icon_class = "icon-active" 
 				assign btn_icon = '<span class="ml-4"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 476.213 476.213" style="enable-background:new 0 0 476.213 476.213;" xml:space="preserve"> <polygon points="476.213,238.105 400,161.893 400,223.106 0,223.106 0,253.106 400,253.106 400,314.32 "/><g></g> <g>  </g>  <g> </g> <g> </g>  <g>  </g> <g></g>    <g>   </g> <g>   </g>  <g>  </g> <g>  </g> <g>   </g>  <g> </g>  <g>  </g>     <g></g>  <g></g></svg></span>'
 				 endif
@@ -71,13 +72,24 @@
 				assign heading_color = block.settings.heading_color
 				assign text_color = block.settings.text_color
 					
-				assign button_color = block.settings.button_color
-				assign button_bg_color = block.settings.button_bg_color
-				assign button_border_color = block.settings.button_border_color
+				assign primary_button_color = block.settings.primary_button_color
+				assign primary_button_bg_color = block.settings.primary_button_bg_color
+				assign primary_button_border_color = block.settings.primary_button_border_color
 				
-				assign hover_button_color = block.settings.hover_button_color
-				assign hover_button_bg_color = block.settings.hover_button_bg_color
-				assign hover_button_border_color = block.settings.hover_button_border_color
+				assign primary_hover_button_color = block.settings.primary_hover_button_color
+				assign primary_hover_button_bg_color = block.settings.primary_hover_button_bg_color
+				assign primary_hover_button_border_color = block.settings.primary_hover_button_border_color
+
+
+
+				assign secondary_button_color = block.settings.secondary_button_color
+				assign secondary_button_bg_color = block.settings.secondary_button_bg_color
+				assign scondary_button_border_color = block.settings.scondary_button_border_color
+				
+				assign secondary_hover_button_color = block.settings.secondary_hover_button_color
+				assign secondary_hover_button_bg_color = block.settings.secondary_hover_button_bg_color
+				assign secondary_hover_button_border_color = block.settings.secondary_hover_button_border_color
+
 
 
 
@@ -104,8 +116,6 @@
             endif
 
     
-
-			
 				unless image
 				  capture loop
 					cycle 1, 2
@@ -165,8 +175,6 @@
 					  </div>
 				  {% endif %}
 
-
-				
 			
                <div class="slideshow-absolute absolute-content d-flex w-100 {{ content_alignment }} {{ content_position }}  {%if content_position contains "align-items-end"%} bottom_possion_padding {%endif%}">
 				 <div class="container">
@@ -188,10 +196,9 @@
 									</div>
 
 									{% if btn_label != blank %}
-									<a href="{{btn_link}}" class="btn btn--primary animated {{icon_class}}" data-animation-in="{{btn_first_animation}}" data-delay-in="0.{{btn_first_delay}}">{{btn_label}} {{btn_icon}}</a>
+									<a href="{{btn_link}}" class="btn btn--{{button_style}} animated {{icon_class}}" data-animation-in="{{btn_first_animation}}" data-delay-in="0.{{btn_first_delay}}">{{btn_label}} {{btn_icon}}</a>
 									{% endif %}
 
-									
 								</div>
 								<!-- Slide Title / End -->
 							</div>
@@ -226,7 +233,6 @@
 						 }
 
 					
-						
 						.block-{{block.id}} .slideshow-content .pre-heading{
 							color: {{ preheading_color }};
 						}
@@ -245,7 +251,7 @@
 
 						.block-{{block.id}} .btn--primary {
 							background: {{ button_bg_color }};
-							border: 1px solid {{ button_border_color }};
+							border: 2px solid {{ button_border_color }};
 							color: {{ button_color }};
 						}
 
@@ -263,25 +269,15 @@
                         .block-{{block.id}} .btn--primary:hover svg{
                             fill: {{ hover_button_color }};
                         }
-				
-
+			
 					  </style>
 						
-
-	
 			</div>
 
-
-
-
-	
     {%- endfor -%}   
-
-
 
 </div>
 </slideshows-component>
-
 
 
 
@@ -524,7 +520,17 @@
 				{
 					"type": "select",
 					"id": "button_style",
-					"label": "Alignment",
+					"label": "Button Style",
+					"options": [
+						{"label": "Primary", "value": "primary"},
+						{"label": "Secondary", "value": "secondary"}
+					],
+					"default": "primary"
+				},
+				{
+					"type": "select",
+					"id": "button_icon",
+					"label": "Button Icons",
 					"options": [
 						{"label": "Button With Icon", "value": "with_icon"},
 						{"label": "Button Without Icon", "value": "with_not_icon"}
@@ -595,43 +601,83 @@
 				  },
 				  {
 					"type": "header",
-					"content": "Button First"
+					"content": "Primary Button Color"
 				  },
 				  {
 					"type": "color",
-					"id": "button_color",
+					"id": "primary_button_color",
 					"label": "Button Label",
-					"default": "#fff"
-				  },
-				  {
-					"type": "color",
-					"id": "button_bg_color",
-					"label": "Button Background",
-					"default": "#9e292f"
-				  },
-				  {
-					"type": "color",
-					"id": "button_border_color",
-					"label": "Button border",
-					"default": "#9e292f"
-				  },
-				  {
-					"type": "color",
-					"id": "hover_button_color",
-					"label": "On hover: Button Label",
 					"default": "#ffffff"
 				  },
 				  {
 					"type": "color",
-					"id": "hover_button_bg_color",
-					"label": "On hover: Button background",
-					"default": "#17252E"
+					"id": "primary_button_bg_color",
+					"label": "Button Background",
+					"default": "#030405"
 				  },
 				  {
 					"type": "color",
-					"id": "hover_button_border_color",
+					"id": "primary_button_border_color",
+					"label": "Button border",
+					"default": "#030405"
+				  },
+				  {
+					"type": "color",
+					"id": "primary_hover_button_color",
+					"label": "On hover: Button Label",
+					"default": "#030405"
+				  },
+				  {
+					"type": "color",
+					"id": "primary_hover_button_bg_color",
+					"label": "On hover: Button background",
+					"default": "#FFFF00"
+				  },
+				  {
+					"type": "color",
+					"id": "primary_hover_button_border_color",
 					"label": "On hover: Button border",
-					"default": "#17252E"
+					"default": "#030405"
+				  },
+				  {
+					"type": "header",
+					"content": "Secondary Button Color"
+				  },
+				  {
+					"type": "color",
+					"id": "secondary_button_color",
+					"label": "Button Label",
+					"default": "#030405"
+				  },
+				  {
+					"type": "color",
+					"id": "secondary_button_bg_color",
+					"label": "Button Background",
+					"default": "#ffffff"
+				  },
+				  {
+					"type": "color",
+					"id": "scondary_button_border_color",
+					"label": "Button border",
+					"default": "#030405"
+				  },
+				  {
+					"type": "color",
+					"id": "secondary_hover_button_color",
+					"label": "On hover: Button Label",
+					"default": "#FFFF00"
+				  },
+				  {
+					"type": "color",
+					"id": "secondary_hover_button_bg_color",
+					"label": "On hover: Button background",
+					"default": "#030405"
+				  },
+				  {
+					"type": "color",
+					"id": "secondary_hover_button_border_color",
+					"label": "On hover: Button border",
+					"default": "#FFFF00"
 				  },
 				  {
 					"type": "header",
@@ -839,7 +885,17 @@
 				{
 					"type": "select",
 					"id": "button_style",
-					"label": "Alignment",
+					"label": "Button Style",
+					"options": [
+						{"label": "Primary", "value": "primary"},
+						{"label": "Secondary", "value": "secondary"}
+					],
+					"default": "primary"
+				},
+				{
+					"type": "select",
+					"id": "button_icon",
+					"label": "Button Icons",
 					"options": [
 						{"label": "Button With Icon", "value": "with_icon"},
 						{"label": "Button Without Icon", "value": "with_not_icon"}
@@ -859,6 +915,7 @@
 					"label": "Button Link",
 					"default": "\/collections\/all"
 				},
+		
 				{
 					"type": "header",
 					"content": "Content"
@@ -909,43 +966,83 @@
 				  },
 				  {
 					"type": "header",
-					"content": "Button First"
+					"content": "Primary Button Color"
 				  },
 				  {
 					"type": "color",
-					"id": "button_color",
+					"id": "primary_button_color",
 					"label": "Button Label",
-					"default": "#fff"
-				  },
-				  {
-					"type": "color",
-					"id": "button_bg_color",
-					"label": "Button Background",
-					"default": "#9e292f"
-				  },
-				  {
-					"type": "color",
-					"id": "button_border_color",
-					"label": "Button border",
-					"default": "#9e292f"
-				  },
-				  {
-					"type": "color",
-					"id": "hover_button_color",
-					"label": "On hover: Button Label",
 					"default": "#ffffff"
 				  },
 				  {
 					"type": "color",
-					"id": "hover_button_bg_color",
-					"label": "On hover: Button background",
-					"default": "#17252E"
+					"id": "primary_button_bg_color",
+					"label": "Button Background",
+					"default": "#030405"
 				  },
 				  {
 					"type": "color",
-					"id": "hover_button_border_color",
+					"id": "primary_button_border_color",
+					"label": "Button border",
+					"default": "#030405"
+				  },
+				  {
+					"type": "color",
+					"id": "primary_hover_button_color",
+					"label": "On hover: Button Label",
+					"default": "#030405"
+				  },
+				  {
+					"type": "color",
+					"id": "primary_hover_button_bg_color",
+					"label": "On hover: Button background",
+					"default": "#FFFF00"
+				  },
+				  {
+					"type": "color",
+					"id": "primary_hover_button_border_color",
 					"label": "On hover: Button border",
-					"default": "#17252E"
+					"default": "#030405"
+				  },
+				  {
+					"type": "header",
+					"content": "Secondary Button Color"
+				  },
+				  {
+					"type": "color",
+					"id": "secondary_button_color",
+					"label": "Button Label",
+					"default": "#030405"
+				  },
+				  {
+					"type": "color",
+					"id": "secondary_button_bg_color",
+					"label": "Button Background",
+					"default": "#ffffff"
+				  },
+				  {
+					"type": "color",
+					"id": "scondary_button_border_color",
+					"label": "Button border",
+					"default": "#030405"
+				  },
+				  {
+					"type": "color",
+					"id": "secondary_hover_button_color",
+					"label": "On hover: Button Label",
+					"default": "#FFFF00"
+				  },
+				  {
+					"type": "color",
+					"id": "secondary_hover_button_bg_color",
+					"label": "On hover: Button background",
+					"default": "#030405"
+				  },
+				  {
+					"type": "color",
+					"id": "secondary_hover_button_border_color",
+					"label": "On hover: Button border",
+					"default": "#FFFF00"
 				  }
 			 ]
 		}
