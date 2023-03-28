@@ -500,5 +500,5 @@ button:focus{
 
 .newsletter-form__button:hover svg,
 .newsletter-form__button:focus svg{
-  color: #FFFFFF !important;
+  stroke: #FFFFFF;
 }
