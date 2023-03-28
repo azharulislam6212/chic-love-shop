@@ -14,8 +14,8 @@
 
 
 
-<slideshows-component  class=" section_{{ section.id }}" id="section_{{ section.id }}">
-	<div class=" sslider banner-{{slider_height}} " >	
+<div class=" section_{{ section.id }}" id="section_{{ section.id }}">
+	<div class="banner-{{slider_height}} " >	
 
   {%- for block in section.blocks -%}
 		
@@ -104,13 +104,6 @@
 			
 
 
-            if block.settings.video_url.type == "youtube"
-                assign videotype = "youtube"
-            elsif block.settings.video_url.type == "vimeo"
-                assign videotype = "vimeo"
-            else
-                assign videotype = "video"
-            endif
 
     
 				unless image
