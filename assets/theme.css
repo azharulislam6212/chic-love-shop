@@ -498,7 +498,7 @@ button:focus{
 
 }
 
-.newsletter-form__button:hover svg,
-.newsletter-form__button:focus svg{
+.newsletter-form__button:hover svg>path,
+.newsletter-form__button:focus svg>path{
   stroke: #FFFFFF;
 }
