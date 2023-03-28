@@ -1684,15 +1684,17 @@ details[open] > .share-button__fallback {
 .customer .field label {
   font-size: 1.6rem;
   left: calc(var(--inputs-border-width) + 2rem);
-  top: calc(1rem + var(--inputs-border-width));
+  top: 14px;
   margin-bottom: 0;
   pointer-events: none;
   position: absolute;
-  transition: top var(--duration-short) ease,
-    font-size var(--duration-short) ease;
-  color: rgba(var(--color-foreground), 0.75);
-  letter-spacing: 0.1rem;
+  transition: top var(--duration-short) ease,font-size var(--duration-short) ease;
+  color: rgba(var(--color-foreground),.75);
+  letter-spacing: .1rem;
   line-height: 1.5;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
 }
 
 .field__input:focus ~ .field__label,
