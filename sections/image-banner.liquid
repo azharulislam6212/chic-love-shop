@@ -236,26 +236,16 @@
            <div class="col-md-12">
              <div class="banner-content">
                <!-- Slide Title -->
-      
-
-
 
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'heading' -%}
 
-
 			{%- liquid
 			
-
 				assign heading = block.settings.heading
-
-
-
       %}
 
-
-      		
       {% if heading != blank %}
         <h1 class="heading  animated text-{{heading_text_transfrom}}" data-animation-in="{{heading_animation}}" data-delay-in="0.{{heading_delay}}"  >{{heading}}</h1>
         {% endif %}
@@ -265,7 +255,6 @@
 			{%- liquid
 			
 				assign text = block.settings.text
-
 
       %}
 
