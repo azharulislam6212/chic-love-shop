@@ -64,9 +64,44 @@
         "autoplay_enabled": false,
         "autoplay_timeout": 7
       }
+    },
+    "2397ab58-aac0-4b10-ab2d-8bdbff647e1e": {
+      "type": "image-banner",
+      "blocks": {
+        "template--18319593734437__2397ab58-aac0-4b10-ab2d-8bdbff647e1e-167999461076d54c56-0": {
+          "type": "image",
+          "settings": {
+            "overlayimage": 3
+          }
+        }
+      },
+      "block_order": [
+        "template--18319593734437__2397ab58-aac0-4b10-ab2d-8bdbff647e1e-167999461076d54c56-0"
+      ],
+      "settings": {
+        "slider_height": "medium",
+        "content_alignment": "text-left",
+        "content_position": "align-items-center",
+        "enable_custom_color": false,
+        "heading_color": "#fff",
+        "text_color": "#fff",
+        "primary_button_color": "#ffffff",
+        "primary_button_bg_color": "#030405",
+        "primary_button_border_color": "#030405",
+        "primary_hover_button_color": "#030405",
+        "primary_hover_button_bg_color": "#FFFF00",
+        "primary_hover_button_border_color": "#030405",
+        "secondary_button_color": "#030405",
+        "secondary_button_bg_color": "#ffffff",
+        "scondary_button_border_color": "#030405",
+        "secondary_hover_button_color": "#FFFF00",
+        "secondary_hover_button_bg_color": "#030405",
+        "secondary_hover_button_border_color": "#FFFF00"
+      }
     }
   },
   "order": [
-    "3cf82f8d-239d-4a38-bc53-3f76f2b326bb"
+    "3cf82f8d-239d-4a38-bc53-3f76f2b326bb",
+    "2397ab58-aac0-4b10-ab2d-8bdbff647e1e"
   ]
 }
