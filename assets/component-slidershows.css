@@ -42,17 +42,15 @@
 
 
 .icon-active{
-    /* display: inline-flex; */
+    display: inline-flex;
     align-items: center;
 }
 
 .icon-active svg {
     width: 24px;
-    height: 25px;
+    height: 24px;
     position: relative;
     display: inline-block;
-    position: absolute;
-    top: 7px;
 }
 
  .slideshow-content .heading{
