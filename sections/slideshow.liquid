@@ -57,10 +57,11 @@
 				assign btn_link = block.settings.btn_link
 		
 				assign button_style = block.settings.button_style
+				assign button_icon = block.settings.button_icon
 				assign overlayimage = block.settings.overlayimage
 	
 				assign btn_icon = ''
-				if button_style == 'with_icon'
+				if button_icon == 'with_icon'
                  assign icon_class = "icon-active" 
 				assign btn_icon = '<span class="ml-4"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 476.213 476.213" style="enable-background:new 0 0 476.213 476.213;" xml:space="preserve"> <polygon points="476.213,238.105 400,161.893 400,223.106 0,223.106 0,253.106 400,253.106 400,314.32 "/><g></g> <g>  </g>  <g> </g> <g> </g>  <g>  </g> <g></g>    <g>   </g> <g>   </g>  <g>  </g> <g>  </g> <g>   </g>  <g> </g>  <g>  </g>     <g></g>  <g></g></svg></span>'
 				 endif
