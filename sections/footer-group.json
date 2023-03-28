@@ -8,7 +8,7 @@
         "2d26b522-a089-44c8-9806-eb09bf8dbdef": {
           "type": "newslatter",
           "settings": {
-            "column": "4",
+            "column": "5",
             "newsletter_enable": true,
             "heading": "Déjanos tu email y no te pierdas ninguna novedad",
             "newsletter_caption": "*Al unirte aceptas la Política de privacidad y recibir comunicaciones."
@@ -17,7 +17,7 @@
         "acc20a2c-6430-4f04-81a9-0e9ce635be31": {
           "type": "link_list",
           "settings": {
-            "column": "2",
+            "column": "3",
             "heading": "",
             "menu": ""
           }
@@ -25,7 +25,7 @@
         "bb928c56-178d-4c9d-8b58-c7f40b492810": {
           "type": "link_list",
           "settings": {
-            "column": "3",
+            "column": "2",
             "heading": "",
             "menu": "business"
           }
@@ -33,7 +33,7 @@
         "335c52a4-7f27-4d69-af25-ffb81862ed4a": {
           "type": "link_list",
           "settings": {
-            "column": "3",
+            "column": "2",
             "heading": "",
             "menu": "footer"
           }
