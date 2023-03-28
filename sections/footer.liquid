@@ -103,7 +103,7 @@
                     {%- if block.settings.newsletter_enable -%}
                       <div class="footer-block__newsletter ">
 
-                        {% form 'customer', class: 'newsletter-form' %}
+                        {% form 'customer', class: 'footer__newsletter subscribe-form' %}
                           <input type="hidden" name="contact[tags]" value="newsletter">
                           <div class="newsletter-form__field-wrapper">
                             <div class="field">
