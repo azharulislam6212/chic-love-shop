@@ -19,7 +19,7 @@
             "heading_font_weight": "300",
             "heading_animation": "fadeInRight",
             "heading_delay": 2,
-            "text": "<p>Clinically-backed ingredients formulated to become a divine part of your everyday life.<\/p>",
+            "text": "<p>Clinically-backed ingredients formulated to become<\/p><p> a divine part of your everyday life.<\/p>",
             "des_font_size": 20,
             "des_lh": 22,
             "des_font_size_tab": 16,
