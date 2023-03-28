@@ -491,5 +491,6 @@ button:focus{
   width: 60px !important;
 }
 .newsletter-form__button{
-  
+  background: #FFFFFF !important;
+  transition: 0.3s;
 }
