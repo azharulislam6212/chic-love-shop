@@ -182,7 +182,7 @@
   
     width: 20px;
     height: 8px;
-
+    border-radius: var(--btn-border-radius);
 
     content: "";
     text-align: center;
