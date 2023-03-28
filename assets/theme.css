@@ -489,8 +489,9 @@ button:focus{
   background: #FFFF00 !important;
   border-radius: var(--btn-border-radius);
   width: 60px !important;
+  transition: 0.3s all ease-in;
 }
 .newsletter-form__button{
   background: #FFFFFF !important;
-  transition: 0.3s;
+  transition: 0.3s all ease-in;
 }
