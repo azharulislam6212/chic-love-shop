@@ -3,7 +3,7 @@
   background-color: transparent;
    border: 2px solid #fff;
 }
-
+.search-bar   
 .search__button {
   right: var(--inputs-border-width);
   top: var(--inputs-border-width);
