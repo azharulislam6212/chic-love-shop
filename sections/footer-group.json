@@ -37,29 +37,13 @@
             "menu": "footer",
             "show_social": false
           }
-        },
-        "18aeb4da-d81b-4144-ac66-8c6a7b91630b": {
-          "type": "image",
-          "settings": {
-            "column": "3",
-            "image_width": 100,
-            "alignment": "left",
-            "icon_url": "",
-            "description": "<p>2195 Defoor Hills Road NW, Suite M, Atlanta, GA 30318<\/p>",
-            "iconmail": "",
-            "email": "info@mytop.com",
-            "icon_phone": "",
-            "phone": "404-962-0930",
-            "show_social": true
-          }
         }
       },
       "block_order": [
         "2d26b522-a089-44c8-9806-eb09bf8dbdef",
         "a0d21785-92c8-4279-8f3f-7fc3028b0712",
         "bb928c56-178d-4c9d-8b58-c7f40b492810",
-        "335c52a4-7f27-4d69-af25-ffb81862ed4a",
-        "18aeb4da-d81b-4144-ac66-8c6a7b91630b"
+        "335c52a4-7f27-4d69-af25-ffb81862ed4a"
       ],
       "settings": {
         "bg_color": "#a5a2dc",
