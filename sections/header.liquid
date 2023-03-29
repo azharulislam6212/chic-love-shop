@@ -219,7 +219,7 @@
 {% endcapture %}
 
 {% capture navigation_offset %}
-{%- render 'navigation', main_menu: main_menu , limit: limit_count -%} 
+{%- render 'navigation', main_menu: main_menu, limit: offset_count , offset: limit_count -%}
 {% endcapture %}
 
 <div class="header-wrapper">
@@ -564,7 +564,7 @@
       {%- endif -%}
     {%- endif -%}
 
-  
+  {{navigation }}
   
   
     {%- if section.settings.logo_position == 'middle-center' -%}
