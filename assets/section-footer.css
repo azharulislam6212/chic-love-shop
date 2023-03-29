@@ -178,6 +178,11 @@
 }
 
 @media screen and (min-width: 750px) {
+
+  .footer-block__newsletter.rte{
+    line-height: 22px;
+  }
+  
   /* Pushes other components to the right of the flexbox */
   .footer-block__newsletter:not(:only-child) {
     text-align: left;
