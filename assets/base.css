@@ -2034,9 +2034,6 @@ product-info .loading-overlay:not(.hidden) ~ *,
   border-bottom: transparent;
 }
 
-.header {
-position: relative;
-}
 .header-meddle-center{
   display: flex;
   align-items: center;
