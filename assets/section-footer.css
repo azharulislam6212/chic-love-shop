@@ -414,9 +414,7 @@ noscript .localization-selector.link {
   justify-content: center;
 }
 
-.footer__copyright {
-  margin-top: 1.5rem;
-}
+
 
 @media screen and (min-width: 750px) {
   .footer__content-bottom-wrapper:not(.footer__content-bottom-wrapper--center) .footer__copyright {
