@@ -2170,7 +2170,9 @@ product-info .loading-overlay:not(.hidden) ~ *,
 .header-top-center .header__icons {
   flex: 1;
 }
-
+.header-middle-left  .header__icons {
+  flex: 1;
+}  
 .header__icon:not(.header__icon--summary),
 .header__icon span {
   display: flex;
