@@ -319,7 +319,7 @@
         
 
         {%- case block.type -%}
-
+          {%- when 'image' -%}
           {%- if block.settings.menu != blank -%}
             <ul class="footer-block__details-content list-unstyled">
               {%- for link in block.settings.menu.links -%}
