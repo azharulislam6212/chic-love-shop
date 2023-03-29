@@ -523,7 +523,7 @@
     {%- endif -%}
 
     {%- if section.settings.menu != blank -%}
-      {navigation.liquid}
+      {%- render 'navigation', main_menu: main_menu , limit: link_count_half -%} 
     {%- endif -%}
 
     {%- if section.settings.logo_position == 'middle-center' -%}
