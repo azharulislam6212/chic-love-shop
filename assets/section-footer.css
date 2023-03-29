@@ -169,7 +169,7 @@
 }
 
 .footer__list-social.list-social:only-child {
-  justify-content: center;
+  justify-content: start;
 }
 
 .footer-block__newsletter {
