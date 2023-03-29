@@ -38,10 +38,9 @@ menu-drawer > details[open] > summary::before {
   width: calc(100vw - 4rem);
   padding: 0;
   border-width: 0;
-  background-color: #;
+  background-color: #000;
   overflow-x: hidden;
   border-style: solid;
-  border-color: rgba(var(--color-foreground), var(--drawer-border-opacity));
   filter: drop-shadow(
     var(--drawer-shadow-horizontal-offset)
     var(--drawer-shadow-vertical-offset)
