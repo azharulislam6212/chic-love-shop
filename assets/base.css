@@ -2085,7 +2085,9 @@ product-info .loading-overlay:not(.hidden) ~ *,
   margin: 0 20px;
   text-align: center;
 }
-
+.header-middle-left .header__heading{
+  flex: 1;
+  }
 .header > .header__heading-link {
   line-height: 0;
 }
@@ -2421,9 +2423,7 @@ details[open] > .header__submenu {
   margin-left: 0;
 }
 
-.header-middle-left .header__heading{
-flex: 1;
-}
+
 .header-middle-left .header__inline-menu {
   flex: 2;
 }
