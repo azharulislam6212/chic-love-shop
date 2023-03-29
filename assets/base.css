@@ -2164,6 +2164,10 @@ position: relative;
   align-items: center;
 }
 
+.header-top-center .header__icons {
+
+}
+
 .header__icon:not(.header__icon--summary),
 .header__icon span {
   display: flex;
