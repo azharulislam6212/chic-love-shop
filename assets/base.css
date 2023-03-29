@@ -2046,6 +2046,7 @@ position: relative;
   align-items: center;
   margin-bottom: 15px;
   width: 100%;
+  justify-content: space-between;
 }
 .header__inline-menu, .header-inner-wrap{
   flex: 1;
