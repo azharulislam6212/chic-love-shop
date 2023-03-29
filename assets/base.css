@@ -2422,7 +2422,9 @@ details[open] > .header__submenu {
   .header__inline-menu {
     display: block;
   }
-
+.header-top-center+  .header__inline-menu {
+  text-align: center;
+}
   .header--top-center .header__inline-menu {
     justify-self: center;
   }
