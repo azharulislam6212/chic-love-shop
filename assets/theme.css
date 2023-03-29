@@ -519,12 +519,11 @@ button:focus{
 }
 
 
-
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 768px) {
 
   .footer__list-social.list-social svg{
     width: 30px;
     height: 30px;
   }
-  
+
 }
