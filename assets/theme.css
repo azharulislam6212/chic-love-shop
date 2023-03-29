@@ -531,3 +531,7 @@ button:focus{
 .footer-block__details-content svg{
   margin-bottom: 10px;
 }
+
+.footer-block__details-content ul{
+  list-style: none;
+}
