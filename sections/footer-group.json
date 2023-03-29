@@ -2,80 +2,63 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
-    "a7fc6833-2abf-4f9a-8123-b51cc3eed4cd": {
-      "type": "faq-accordion-section",
+    "footer": {
+      "type": "footer",
       "blocks": {
-        "sections--18319593537829__a7fc6833-2abf-4f9a-8123-b51cc3eed4cd-16799837666115ef11-0": {
-          "type": "heading",
+        "2d26b522-a089-44c8-9806-eb09bf8dbdef": {
+          "type": "newslatter",
           "settings": {
-            "main_heading": "answers to all your questions"
+            "column": "5",
+            "newsletter_enable": true,
+            "heading": "Déjanos tu email y no te pierdas ninguna novedad",
+            "newsletter_caption": "*Al unirte aceptas la Política de privacidad y recibir comunicaciones."
           }
         },
-        "sections--18319593537829__a7fc6833-2abf-4f9a-8123-b51cc3eed4cd-16799837666115ef11-1": {
-          "type": "group_acc_heading",
+        "a0d21785-92c8-4279-8f3f-7fc3028b0712": {
+          "type": "blank_space",
           "settings": {
-            "small_heading": "ORDERS & SHIPPING"
+            "column": "2"
           }
         },
-        "sections--18319593537829__a7fc6833-2abf-4f9a-8123-b51cc3eed4cd-16799837666115ef11-2": {
-          "type": "accordion_info",
+        "bb928c56-178d-4c9d-8b58-c7f40b492810": {
+          "type": "link_list",
           "settings": {
-            "question": "Are these gummies veagan?",
-            "answer": "Yes, Lemme Sleep is vegan and vegetarian."
+            "column": "3",
+            "heading": "",
+            "menu": "business"
           }
         },
-        "737ada15-345b-4f8e-88a1-49a01790555d": {
-          "type": "accordion_info",
+        "335c52a4-7f27-4d69-af25-ffb81862ed4a": {
+          "type": "link_list",
           "settings": {
-            "question": "Are these gummies veagan?",
-            "answer": "Yes, Lemme Sleep is vegan and vegetarian."
-          }
-        },
-        "72565307-c142-48a4-a3f3-7efeebc256c8": {
-          "type": "accordion_info",
-          "settings": {
-            "question": "Are these gummies veagan?",
-            "answer": "Yes, Lemme Sleep is vegan and vegetarian."
+            "column": "2",
+            "heading": "",
+            "menu": "footer"
           }
         }
       },
       "block_order": [
-        "sections--18319593537829__a7fc6833-2abf-4f9a-8123-b51cc3eed4cd-16799837666115ef11-0",
-        "sections--18319593537829__a7fc6833-2abf-4f9a-8123-b51cc3eed4cd-16799837666115ef11-1",
-        "sections--18319593537829__a7fc6833-2abf-4f9a-8123-b51cc3eed4cd-16799837666115ef11-2",
-        "737ada15-345b-4f8e-88a1-49a01790555d",
-        "72565307-c142-48a4-a3f3-7efeebc256c8"
+        "2d26b522-a089-44c8-9806-eb09bf8dbdef",
+        "a0d21785-92c8-4279-8f3f-7fc3028b0712",
+        "bb928c56-178d-4c9d-8b58-c7f40b492810",
+        "335c52a4-7f27-4d69-af25-ffb81862ed4a"
       ],
       "settings": {
-        "container": "container",
-        "section_background": "#DFC8E7",
-        "remove_container_space": false,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_top_m": 30,
-        "padding_bottom_m": 30
-      }
-    },
-    "footer": {
-      "type": "footer",
-      "settings": {
-        "color_scheme": "background-1",
-        "newsletter_enable": true,
-        "newsletter_heading": "Subscribe to our emails",
-        "enable_follow_on_shop": false,
-        "show_social": true,
-        "enable_country_selector": true,
-        "enable_language_selector": true,
-        "payment_enable": true,
-        "show_policy": false,
-        "margin_top": 48,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "bg_color": "#a5a2dc",
+        "heading_color": "#030405",
+        "text_color": "#030405",
+        "text_hover_color": "#ffff00",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": false,
+        "custom_text": "Chic & Love Fashion Brand S.L.",
+        "margin_top": 0,
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     }
   },
   "order": [
-    "a7fc6833-2abf-4f9a-8123-b51cc3eed4cd",
     "footer"
   ]
 }
