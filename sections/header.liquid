@@ -215,7 +215,7 @@
 
 
 {% capture navigation %}
-
+{%- render 'navigation', main_menu: main_menu , limit: limit_count -%} 
 {% endcapture %}
 
 <div class="header-wrapper">
@@ -561,7 +561,7 @@
     {%- endif -%}
 
   
-    {%- render 'navigation', main_menu: main_menu , limit: limit_count -%} 
+  
   
     {%- if section.settings.logo_position == 'middle-center' -%}
      
