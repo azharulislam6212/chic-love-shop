@@ -4,8 +4,33 @@
   "sections": {
     "header": {
       "type": "header",
+      "blocks": {
+        "f11b4dc7-c989-42ec-a480-875d28cc6f3d": {
+          "type": "megamenu",
+          "settings": {
+            "link_title": "catalog",
+            "handle_text": "shop",
+            "block_text_1": "<p>Our tailored fibre blends are clinically formulated to target your health goals. Need help deciding?<\/p>",
+            "btn_block_text": "Compare our Blends",
+            "btn_block_link": "",
+            "handle_1": "shop",
+            "image_1_url": "",
+            "handle_2": "",
+            "image_2_url": "",
+            "handle_3": "",
+            "image_3_url": "",
+            "handle_4": "",
+            "image_4_url": "shopify:\/\/collections\/all"
+          }
+        }
+      },
+      "block_order": [
+        "f11b4dc7-c989-42ec-a480-875d28cc6f3d"
+      ],
       "settings": {
-        "color_scheme": "background-1",
+        "bg_color": "#030405",
+        "link_color": "#ffffff",
+        "text_hover_color": "#ffff00",
         "logo_position": "middle-center",
         "menu": "main-menu",
         "menu_type_desktop": "mega",
@@ -14,7 +39,9 @@
         "mobile_logo_position": "center",
         "margin_bottom": 0,
         "padding_top": 20,
-        "padding_bottom": 20
+        "padding_bottom": 20,
+        "padding_top_m": 10,
+        "padding_bottom_m": 10
       }
     }
   },
