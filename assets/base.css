@@ -2038,7 +2038,10 @@ product-info .loading-overlay:not(.hidden) ~ *,
   display: flex;
   align-items: center;
 }
-
+.header-middle-left{
+  display: flex;
+  align-items: center;
+}
 .header-top-left{
   display: flex;
   align-items: center;
