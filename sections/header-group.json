@@ -36,6 +36,7 @@
         "menu_offset": 1,
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
+        "search_popup": false,
         "mobile_logo_position": "center",
         "margin_bottom": 0,
         "padding_top": 20,
