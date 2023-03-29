@@ -464,11 +464,7 @@ noscript .localization-selector.link {
   line-height: 17px;
 }
 @media screen and (max-width: 989px) {
-  .footer-block__details-content .list-menu__item--link {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-
+ 
   .footer-block__details-content .list-menu__item--link {
     font-size: 13px;
   }
