@@ -177,7 +177,7 @@
     assign link_count = link_count | plus: 1
   endfor
   assign link_count_half = link_count | divided_by: 2
-  assign offcet = link_count |  minus: 1
+
 
 -%}
 
@@ -551,7 +551,7 @@
       {%- endif -%}
 
 
-        {%- render 'navigation', main_menu: main_menu , offset: offcet-%}
+        {%- render 'navigation', main_menu: main_menu , offset: 2-%}
      
 
     {%- endif -%}
