@@ -688,19 +688,19 @@
 
 
 
-    {%- if section.settings.logo_position == 'top-left' -%}
+    {%- if section.settings.logo_position == 'top-center' -%}
       <div class="header-top-left">
+
+        {% if section.settings.search_popup == false and  section.settings.logo_position == 'top-center'  %} 
+        {{searchbar}}
+      {% endif %}
+
        {{ logo }}
- 
-    {% if section.settings.search_popup == false and  section.settings.logo_position == 'top-left'  %} 
-       {{searchbar}}
-     {% endif %}
- 
        {{ header_icons }}
      </div>
      {%- endif -%}
 
-     
+
 
   {{ navigation }}
   
