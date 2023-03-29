@@ -33,7 +33,7 @@
         "text_hover_color": "#ffff00",
         "logo_position": "middle-center",
         "menu": "main-menu",
-        "menu_offset": 0,
+        "menu_offset": 1,
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
         "mobile_logo_position": "center",
