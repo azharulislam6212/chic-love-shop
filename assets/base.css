@@ -2038,6 +2038,8 @@ product-info .loading-overlay:not(.hidden) ~ *,
   align-items: center;
 }
 
+.header__inline-menu{}
+
 @media screen and (min-width: 990px) {
   .header--top-left,
   .header--middle-left:not(.header--has-menu) {
