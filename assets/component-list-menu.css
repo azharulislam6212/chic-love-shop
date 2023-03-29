@@ -14,8 +14,8 @@
 }
 
 .list-menu__item--active {
-  text-decoration: none;
-  text-underline-offset: 0;
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
 }
 
 .list-menu__item--active:hover {

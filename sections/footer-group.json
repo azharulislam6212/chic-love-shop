@@ -25,7 +25,8 @@
           "settings": {
             "column": "3",
             "heading": "",
-            "menu": "business"
+            "menu": "business",
+            "show_social": true
           }
         },
         "335c52a4-7f27-4d69-af25-ffb81862ed4a": {
@@ -33,6 +34,13 @@
           "settings": {
             "column": "2",
             "heading": "",
+            "menu": "footer",
+            "show_social": false
+          }
+        },
+        "4b79364d-73d7-4a1e-9d2b-72bf2d1b0304": {
+          "type": "link_list_inline",
+          "settings": {
             "menu": "footer"
           }
         }
@@ -41,7 +49,8 @@
         "2d26b522-a089-44c8-9806-eb09bf8dbdef",
         "a0d21785-92c8-4279-8f3f-7fc3028b0712",
         "bb928c56-178d-4c9d-8b58-c7f40b492810",
-        "335c52a4-7f27-4d69-af25-ffb81862ed4a"
+        "335c52a4-7f27-4d69-af25-ffb81862ed4a",
+        "4b79364d-73d7-4a1e-9d2b-72bf2d1b0304"
       ],
       "settings": {
         "bg_color": "#a5a2dc",
@@ -54,7 +63,9 @@
         "custom_text": "Chic & Love Fashion Brand S.L.",
         "margin_top": 0,
         "padding_top": 60,
-        "padding_bottom": 60
+        "padding_bottom": 0,
+        "padding_top_m": 70,
+        "padding_bottom_m": 40
       }
     }
   },
