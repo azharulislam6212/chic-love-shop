@@ -25,7 +25,7 @@
       </li>
     {%- endif -%}
     {%- if settings.social_twitter_link != blank -%}
-        <li class="list-social__item">
+        <li class="list-social__item twitter_item">
           <a href="{{ settings.social_twitter_link }}" class="link list-social__link" >
               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 5H27.5067C31.645 5 35 8.355 35 12.4933V27.5083C35 31.645 31.645 35 27.5067 35H12.4933C8.355 35 5 31.645 5 27.5067V12.5C5 8.35833 8.35833 5 12.5 5V5Z" stroke="#030405" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -36,8 +36,19 @@
         </li>
       {%- endif -%}
 
+      {%- if settings.social_facebook_link != blank -%}
+        <li class="list-social__item">
+          <a href="{{ settings.social_facebook_link }}" class="link list-social__link" >
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 5H27.5067C31.645 5 35 8.355 35 12.4933V27.5083C35 31.645 31.645 35 27.5067 35H12.4933C8.355 35 5 31.645 5 27.5067V12.5C5 8.35833 8.35833 5 12.5 5V5Z" stroke="#030405" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M18.5 21.5H27.5" stroke="#030405" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M27.5 14H25.925C23.4817 14 21.5 15.9817 21.5 18.425V20V35" stroke="#030405" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>                
+            <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
+          </a>
+        </li>
+      {%- endif -%}
 
-      
     {%- if settings.social_tiktok_link != blank -%}
       <li class="list-social__item">
         <a href="{{ settings.social_tiktok_link }}" class="link list-social__link" >
