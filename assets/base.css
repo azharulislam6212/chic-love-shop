@@ -2436,6 +2436,7 @@ details[open] > .header__submenu {
 }
 .header-middle-left .header__inline-menu {
   text-align: center;
+  max-width: 45%;
 }
   .header--top-center .header__inline-menu {
     justify-self: center;
