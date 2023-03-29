@@ -2421,9 +2421,10 @@ details[open] > .header__submenu {
   margin-left: 0;
 }
 
-.header__inline-menu {
+.header-middle-left .header__inline-menu {
 flex: 1;
 }
+
 @media screen and (min-width: 990px) {
   .header__inline-menu {
     display: block;
