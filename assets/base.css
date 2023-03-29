@@ -2421,7 +2421,7 @@ details[open] > .header__submenu {
   margin-left: 0;
 }
 
-.header-middle-left .header__inline-menu {
+.header-middle-left .header__heading{
 flex: 1;
 }
 .header-middle-left .header__inline-menu {
