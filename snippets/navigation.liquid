@@ -1,6 +1,6 @@
 <nav class="header__inline-menu">
     <ul class="list-menu list-menu--inline" role="list">
-      {%- for link in section.settings.menu.links -%}
+        {%- for link in main_menu.links limit: limit offset: offset -%}
 
         {%- assign has_dropdown = false -%}
         {%- assign has_megamenu = false -%}
