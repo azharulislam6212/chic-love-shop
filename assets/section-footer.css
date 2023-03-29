@@ -236,7 +236,6 @@
   .footer__follow-on-shop,
   .footer-block__newsletter {
     display: flex;
-    justify-content: center;
   }
 
   .footer-block__newsletter {
