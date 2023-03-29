@@ -2173,7 +2173,9 @@ product-info .loading-overlay:not(.hidden) ~ *,
   justify-content: center;
 }
 
-
+.header__icons a{
+  margin-left: 10px;
+}
 
 .header__icon span {
   height: 100%;
