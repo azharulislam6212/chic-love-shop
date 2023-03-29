@@ -390,11 +390,11 @@
 {% capture header_icons %}
 
 <div class="header__icons">
-  {% if section.settings.search_popup == false and  section.settings.logo_position == 'middle-center'  %} 
+  {% if section.settings.search_popup == false and  section.settings.logo_position == 'middle-center' or section.settings.logo_position == 'top-left'   %} 
       {{searchbar}}
     {% endif %}
 
- {% if section.settings.search_popup and section.settings.logo_position != 'top-center' or section.settings.logo_position != 'top-center'  %} 
+ {% if section.settings.search_popup and section.settings.logo_position != 'top-center' or section.settings.logo_position == 'top-left'  %} 
     {{searchmodal}}
 {% endif %}
 
