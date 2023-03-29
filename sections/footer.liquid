@@ -304,7 +304,7 @@
 
     <div class="container">
      <div class="row">
-      <div class="{%- if section.settings.payment_enable -%} col-lg-6 col-md-6 col-12 {%else%} col-lg-12 col-md-12 col-12  {%- endif -%}  text-center text-lg-left order-mx">
+      <div class="{% if section.settings.payment_enable%} col-lg-6 col-md-6 col-12 {% else %} col-lg-12 col-md-12 col-12  {% endif %}  text-center text-lg-left order-mx">
         <div class="footer__copyright caption">
 
           {%if section.settings.custom_text %}
