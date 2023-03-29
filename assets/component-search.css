@@ -12,7 +12,9 @@
 .search-bar   .field__label{
   color: #fff;
 }
-
+.search-bar  .search__button .icon{
+  color: #fff;
+}
 
 .search__button {
   right: var(--inputs-border-width);
