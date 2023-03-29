@@ -2243,10 +2243,8 @@ menu-drawer + .header__search {
   display: inline-flex;
   line-height: 0;
 }
+.header-top-center 
 
-.header--top-center > .header__search {
-  display: none;
-}
 
 .header--top-center * > .header__search {
   display: inline-flex;
