@@ -2243,7 +2243,9 @@ menu-drawer + .header__search {
   display: inline-flex;
   line-height: 0;
 }
-.header-top-center 
+.header-top-center .header__search {
+  flex: 1;
+}
 
 
 .header--top-center * > .header__search {
