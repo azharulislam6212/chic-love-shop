@@ -2041,7 +2041,14 @@ product-info .loading-overlay:not(.hidden) ~ *,
 .header__inline-menu, .header-inner-wrap{
   flex: 1;
 }
-
+.header-inner-wrap{
+  
+element.style {
+  display: flex;
+  /* width: 100%; */
+  flex: 1;
+  justify-content: space-between;
+}
 @media screen and (min-width: 990px) {
   .header--top-left,
   .header--middle-left:not(.header--has-menu) {
