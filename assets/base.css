@@ -2422,7 +2422,7 @@ details[open] > .header__submenu {
 }
 
 .header__inline-menu {
-
+flex: 1;
 }
 @media screen and (min-width: 990px) {
   .header__inline-menu {
