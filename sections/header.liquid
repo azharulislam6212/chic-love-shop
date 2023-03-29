@@ -550,7 +550,7 @@
       {%- endif -%}
 
       {%- if section.settings.menu != blank -%}
-        {%- render 'navigation', main_menu: main_menu , limit: link_count_half -%} 
+        {%- render 'navigation', main_menu: main_menu , offset: link_count_half-%}
       {%- endif -%}
 
     {%- endif -%}
