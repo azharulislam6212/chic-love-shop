@@ -522,3 +522,7 @@ button:focus{
   width: 30px;
   height: 30px;
 }
+
+@media screen and (min-width: 750px) {
+
+}
