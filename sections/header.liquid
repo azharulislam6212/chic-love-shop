@@ -176,13 +176,11 @@
 
   assign link_count = 0
 
-
   for link in main_menu.links
     assign link_count = link_count | plus: 1
     assign limit_count = link_count | minus: offset_count
-
   endfor
-  assign link_count_half = link_count | divided_by: 2
+
 
 
 -%}
