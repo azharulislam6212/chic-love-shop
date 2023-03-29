@@ -565,9 +565,9 @@
       {% endif %}
       <div class="header__icons">
 
-        {% if search_popup %}
+        {% if section.settings.search_popup %}
           
-        {% endif %}
+       
       <details-modal class="header__search">
         <details>
           <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
@@ -651,7 +651,7 @@
           </div>
         </details>
       </details-modal>
-
+    {% endif %}
       {%- if shop.customer_accounts_enabled -%}
         <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
           {% render 'icon-account' %}
