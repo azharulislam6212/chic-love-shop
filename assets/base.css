@@ -2044,6 +2044,7 @@ position: relative;
 .header-top-left{
   display: flex;
   align-items: center;
+  margin-bottom: 15px;
 }
 .header__inline-menu, .header-inner-wrap{
   flex: 1;
