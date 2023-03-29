@@ -2028,7 +2028,6 @@ product-info .loading-overlay:not(.hidden) ~ *,
 .header-wrapper {
   display: block;
   position: relative;
-  overflow: hidden;
 }
 
 .header-wrapper--border-bottom {
