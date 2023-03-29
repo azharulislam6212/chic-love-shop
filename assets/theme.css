@@ -538,7 +538,7 @@ button:focus{
 .footer_block_inline_menu{
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 0 ;
   display: inline-block;
 }
 
