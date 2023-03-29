@@ -219,7 +219,11 @@
 {% endcapture %}
 
 {% capture navigation_offset %}
+
+{%- if section.settings.logo_position == 'middle-center' -%}
 {%- render 'navigation', main_menu: main_menu, limit: offset_count , offset: limit_count -%}
+
+{%- endif -%}
 {% endcapture %}
 
 
