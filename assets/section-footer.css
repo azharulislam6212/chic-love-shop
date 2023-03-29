@@ -544,9 +544,6 @@ noscript .localization-selector.link {
   height: auto;
 }
 
-.footer-block:only-child .footer-block__brand-info .footer__list-social.list-social {
-  justify-content: center;
-}
 
 .footer-block__brand-info .footer__list-social.list-social {
   justify-content: flex-start;
