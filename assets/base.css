@@ -2080,7 +2080,7 @@ position: relative;
   line-height: 0;
 }
 .header-top-center .header__heading{
-  
+  flex: 1;
 }
 
 .header > .header__heading-link {
