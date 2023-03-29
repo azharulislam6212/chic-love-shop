@@ -556,14 +556,7 @@ noscript .localization-selector.link {
 }
 
 
-.copyright__content {
-  font-size: 1.1rem;
-}
 
-.copyright__content a {
-  color: currentColor;
-  text-decoration: none;
-}
 
 .policies {
   display: inline;
