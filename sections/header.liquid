@@ -689,12 +689,10 @@
 
 
     {%- if section.settings.logo_position == 'top-center' -%}
-      <div class="header-top-left">
-
+      <div class="header-top-center">
         {% if section.settings.search_popup == false and  section.settings.logo_position == 'top-center'  %} 
         {{searchbar}}
       {% endif %}
-
        {{ logo }}
        {{ header_icons }}
      </div>
