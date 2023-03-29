@@ -528,4 +528,6 @@ button:focus{
 
 }
 
-.footer-block__details-content 
+.footer-block__details-content svg{
+  margin-bottom: 10px;
+}
