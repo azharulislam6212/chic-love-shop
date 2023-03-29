@@ -173,11 +173,13 @@
   assign main_menu = linklists[section.settings.menu]
 
   assign offset_count = 1
+
   assign link_count = 0
 
 
   for link in main_menu.links
     assign link_count = link_count | plus: 1
+    assign link_count = link_count | minus: 1
 
   endfor
   assign link_count_half = link_count | divided_by: 2
