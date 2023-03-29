@@ -2327,7 +2327,7 @@ details[open] .modal-overlay::after {
   position: relative;
 }
 .header-top-center .search-bar{
-
+  justify-content: flex-start;
 }
 @media screen and (min-width: 750px) {
   .search-modal__close-button {
