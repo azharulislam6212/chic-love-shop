@@ -1,0 +1,161 @@
+{%- for childlink in link.links -%}
+  {%- if childlink.links != blank -%}
+  
+     
+        {% if childlink.title == handle_1  or
+          childlink.title == handle_2 or 
+          childlink.title == handle_3 or
+          childlink.title == handle_4 %}
+        <li class="mega-item"> 
+    
+        {% if childlink.title == handle_1 %}
+        {%- render 'mega-menu-loop-image', 
+        img_src: img_src_1, 
+        img_url: img_url_1, 
+        title: childlink.title
+        -%}
+        {% endif %}
+  
+  
+        {% if childlink.title == handle_2 %}
+  
+        {%- render 'mega-menu-loop-image', 
+        img_src: img_src_2, 
+        img_url: img_url_2, 
+        title: childlink.title
+        -%}
+  
+        {% endif %}
+  
+        {% if childlink.title == handle_3 %}
+        {%- render 'mega-menu-loop-image', 
+        img_src: img_src_3, 
+        img_url: img_url_3, 
+        title: childlink.title
+        -%}
+        {% endif %}
+  
+  
+        {% if childlink.title == handle_4 %}
+        {%- render 'mega-menu-loop-image', 
+        img_src: img_src_4, 
+        img_url: img_url_4, 
+        title: childlink.title
+        -%}
+        {% endif %}
+  
+        </li> 
+        {% elsif childlink.title == handle_text %}
+  
+  
+        <li class="mega-item mega-item__content" >
+  
+         
+          <div class="sub-menu">
+  
+            <div class="mega-content-wrap">
+  
+              {{ block_text_1  }}
+     
+             <a href="{{ btn_block_link }}" class="btn btn-primary"><span>{{ btn_block_text }}</span></a>
+           </div>
+           
+  
+          </div>
+    
+       
+        </li>
+  
+        {% else %}
+  
+        <li class="mega-item ">
+        <h5 class="mt-3 mb-3 ml-2 ft-bold d-lg-block d-md-none d-none">{{ childlink.title }}</h5> 
+        <a href="javascript:void(0);" class="d-lg-none d-md-block d-block">              
+          {{ childlink.title }} <span class="mega-indicator"><span class="submenu-indicator-chevron"></span></span>
+        </a>
+  
+        <ul class="sub-menu ">
+          {%- for grandchild in childlink.links -%}
+          <li><a href="{{ grandchild.url }}"><span>{{ grandchild.title }}</span></a></li>
+          {%- endfor -%}
+        </ul>
+  
+      </li>
+        {% endif %}
+  
+   
+  {%- else -%}
+  
+        {% if childlink.title == handle_1  or
+              childlink.title == handle_2 or 
+              childlink.title == handle_3 or
+              childlink.title == handle_4 %}
+      
+        <li class="mega-item"> 
+  
+          {% if childlink.title == handle_1 %}
+          {%- render 'mega-menu-loop-image', 
+          img_src: img_src_1, 
+          img_url: img_url_1, 
+          title: childlink.title,
+          over_text: over_text_1,
+          link_text: link_text_1
+          -%}
+          {% endif %}
+  
+          
+          {% if childlink.title == handle_2 %}
+         
+          {%- render 'mega-menu-loop-image', 
+          img_src: img_src_2, 
+          img_url: img_url_2, 
+          title: childlink.title
+          -%}
+  
+          {% endif %}
+  
+          {% if childlink.title == handle_3 %}
+        {%- render 'mega-menu-loop-image', 
+          img_src: img_src_3, 
+          img_url: img_url_3, 
+          title: childlink.title
+          -%}
+          {% endif %}
+  
+  
+  
+          {% if childlink.title == handle_4 %}
+          {%- render 'mega-menu-loop-image', 
+            img_src: img_src_4, 
+            img_url: img_url_4, 
+            title: childlink.title
+            -%}
+            {% endif %}
+  
+        </li> 
+ 
+        {% elsif childlink.title == handle_text %}
+  
+  
+      <li class="mega-item mega-item__content">
+  
+          <div class="sub-menu">
+  
+            <div class="mega-content-wrap">
+  
+              {{ block_text_1  }}
+     
+             <a href="{{ btn_block_link }}" class="btn btn-primary"><span>{{ btn_block_text }}</span></a>
+           </div>
+          </div>
+     
+      </li>
+  
+        {% else %}
+        <li class="mega-item"><a href="{{ childlink.url }}"><span>{{ childlink.title }}</span></a></li>
+        {% endif %}
+  
+  
+  {%- endif -%}
+  {%- endfor -%}
+  

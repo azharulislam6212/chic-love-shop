@@ -1,0 +1,33 @@
+
+
+<ul class="sub-menu">
+  <li>
+      <div
+      class="position-relative image-block-item">
+      {%- if img_src != blank -%}
+      <a href="{{ img_url }}" class="thumb pb-0">
+        <img class="d-block" src="{{ img_src | img_url: 'large' }}" alt="{{ img_src.alt }}">
+      </a>
+      {%- else -%}
+      <div class="placeholder-background placeholder-mix">
+          <span class="recommended_size">266x240</span>
+          {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      </div>
+  {%- endif -%}
+
+      <div class="absolute-content ">
+          <div class="wrap-content-in d-flex align-items-center"> 
+              <div class="wrap-caption">
+                  <h4 class="fw-700">
+                      {{ title }}
+                  </h4>
+              </div>
+          </div>
+      </div>
+
+      <a href="{{ img_url }}" class="stretched-link"></a>
+
+  </div>
+  </li>
+
+</ul>
