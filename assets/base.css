@@ -2034,10 +2034,11 @@ product-info .loading-overlay:not(.hidden) ~ *,
   border-bottom: transparent;
 }
 
-.header-meddle-center{
+.header-middle-center{
   display: flex;
   align-items: center;
 }
+
 .header-top-left{
   display: flex;
   align-items: center;
