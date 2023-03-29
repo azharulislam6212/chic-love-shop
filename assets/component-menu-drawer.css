@@ -40,7 +40,6 @@ menu-drawer > details[open] > summary::before {
   border-width: 0;
   background-color: #000;
   overflow-x: hidden;
-  border-style: solid;
   filter: drop-shadow(
     var(--drawer-shadow-horizontal-offset)
     var(--drawer-shadow-vertical-offset)
