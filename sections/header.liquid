@@ -686,6 +686,22 @@
     </div>
     {%- endif -%}
 
+
+
+    {%- if section.settings.logo_position == 'top-left' -%}
+      <div class="header-top-left">
+       {{ logo }}
+ 
+    {% if section.settings.search_popup == false and  section.settings.logo_position == 'top-left'  %} 
+       {{searchbar}}
+     {% endif %}
+ 
+       {{ header_icons }}
+     </div>
+     {%- endif -%}
+
+     
+
   {{ navigation }}
   
   
