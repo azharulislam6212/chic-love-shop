@@ -314,6 +314,8 @@
         {%- endif -%}
       </div>
       </div>
+
+      {%- if section.settings.payment_enable -%}
       <div class="col-lg-6 col-md-6 col-12 text-center text-lg-right order-2 order-md-1">
         {%- if section.settings.payment_enable -%}
           <div class="footer__payment">
@@ -328,6 +330,8 @@
           </div>
         {%- endif -%}
       </div>
+
+    {%- endif -%}
     
     </div>
     </div>
