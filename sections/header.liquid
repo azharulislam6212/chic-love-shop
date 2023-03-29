@@ -745,7 +745,7 @@
     {%- if section.settings.logo_position == 'top-left' -%}
      <div class="header-top-left">
       {{ logo }}
-    
+      {{ header_icons }}
     </div>
     {%- endif -%}
 
@@ -756,7 +756,7 @@
      
       {{ logo }}
 
-    {%- endif -%}
+   
 
     <div class="header-inner-wrap">
       {% if offset_count > 0 %}
@@ -766,6 +766,8 @@
       {{ header_icons }}
  
   </div>
+
+{%- endif -%}
   </header>
 </div>
 
