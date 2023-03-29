@@ -558,5 +558,8 @@ line-height: 15px;
 }
 
 .copyright__content{
-  
+  font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 17px;
 }
