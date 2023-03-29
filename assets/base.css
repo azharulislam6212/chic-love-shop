@@ -2432,7 +2432,9 @@ flex: 1;
 .header-top-center+.header__inline-menu {
   text-align: center;
 }
-
+..header-middle-left .header__inline-menu {
+  text-align: center;
+}
   .header--top-center .header__inline-menu {
     justify-self: center;
   }
