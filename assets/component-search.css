@@ -62,10 +62,6 @@
   background-color: inherit;
 }
 
-.search__button:hover .icon,
-.reset__button:hover .icon {
-  transform: scale(1.07);
-}
 
 
 .search__button .icon {
