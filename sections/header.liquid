@@ -548,7 +548,15 @@
       {%- if request.page_type == 'index' -%}
         </h1>
       {%- endif -%}
+
+      {%- if section.settings.menu != blank -%}
+        {%- render 'navigation', main_menu: main_menu , limit: link_count_half -%} 
+      {%- endif -%}
+
     {%- endif -%}
+
+
+
 
     <div class="header__icons">
       <details-modal class="header__search">
