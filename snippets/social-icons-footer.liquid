@@ -10,7 +10,12 @@
     {%- if settings.social_instagram_link != blank -%}
       <li class="list-social__item">
         <a href="{{ settings.social_instagram_link }}" class="link list-social__link" >
-          {%- render 'icon-instagram' -%}
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.4499 10.9083H24.5499C27.0565 10.9083 29.0899 12.94 29.0899 15.45V24.55C29.0899 27.0567 27.0582 29.09 24.5482 29.09H15.4499C12.9415 29.09 10.9082 27.0583 10.9082 24.5483V15.45C10.9082 12.9417 12.9415 10.9083 15.4499 10.9083Z" stroke="#030405" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M24.9993 14.9167C24.9527 14.9167 24.916 14.955 24.916 15C24.916 15.045 24.9527 15.0833 24.9993 15.0833C25.046 15.0833 25.0827 15.0467 25.0827 15C25.0827 14.955 25.0443 14.9167 24.9993 14.9167" stroke="#030405" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M22.3576 17.6433C23.6592 18.945 23.6592 21.055 22.3576 22.3567C21.0559 23.6583 18.9459 23.6583 17.6442 22.3567C16.3426 21.055 16.3426 18.945 17.6442 17.6433C18.9459 16.3417 21.0559 16.3417 22.3576 17.6433" stroke="#030405" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 5H27.5067C31.645 5 35 8.355 35 12.4933V27.5083C35 31.645 31.645 35 27.5067 35H12.4933C8.355 35 5 31.645 5 27.5067V12.5C5 8.35833 8.35833 5 12.5 5V5Z" stroke="#030405" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                
           <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
         </a>
       </li>
