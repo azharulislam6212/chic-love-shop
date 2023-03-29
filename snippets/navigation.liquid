@@ -3,7 +3,7 @@
       assign limit = main_menu.links.size
     endunless
     unless offset
-      assign offset = limit  | minus: 1
+      assign offset = 0
 
     endunless
   -%}
@@ -12,7 +12,7 @@
     <ul class="list-menu list-menu--inline" role="list">
 
 
-        {%- for link in main_menu.links limit: limit offset: offset -%}
+        {%- for link in main_menu.links limit: limit offset: 2 -%}
 
         {%- assign has_dropdown = false -%}
         {%- assign has_megamenu = false -%}
