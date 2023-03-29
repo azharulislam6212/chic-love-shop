@@ -517,3 +517,7 @@ button:focus{
 .footer-social{
   margin-top: 50px;
 }
+
+.footer__list-social.list-social svg{
+  width: 30px;
+}
