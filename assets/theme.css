@@ -569,6 +569,9 @@ line-height: 17px;
 }
 
 @media screen and (max-width: 768px) {
+  .footer_block_inline_menu{
+  margin: 0;
+  }
   .footer_block_inline_menu li{
     display: block;
   }
