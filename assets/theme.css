@@ -533,6 +533,10 @@ button:focus{
     margin-bottom: 40px;
   }
 
+  .newslatter-wrapper .footer-block__heading{
+    text-align: center;
+  }
+
 }
 
 .footer-block__details-content svg{
