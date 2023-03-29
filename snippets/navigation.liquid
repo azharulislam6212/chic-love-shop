@@ -1,6 +1,15 @@
+{%- liquid
+    unless limit
+      assign limit = main_menu.links.size
+    endunless
+    unless offset
+      assign offset = 0
+    endunless
+  -%}
+
 <nav class="header__inline-menu">
     <ul class="list-menu list-menu--inline" role="list">
-{{main_menu}}
+
 
         {%- for link in main_menu.links limit: limit offset: offset -%}
 
