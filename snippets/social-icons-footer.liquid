@@ -1,0 +1,94 @@
+<ul class="footer__list-social list-unstyled list-social">
+ 
+    {%- if settings.social_instagram_link != blank -%}
+      <li class="list-social__item">
+        <a href="{{ settings.social_instagram_link }}" class="link list-social__link" >
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.4499 10.9083H24.5499C27.0565 10.9083 29.0899 12.94 29.0899 15.45V24.55C29.0899 27.0567 27.0582 29.09 24.5482 29.09H15.4499C12.9415 29.09 10.9082 27.0583 10.9082 24.5483V15.45C10.9082 12.9417 12.9415 10.9083 15.4499 10.9083Z" stroke="#030405" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M24.9993 14.9167C24.9527 14.9167 24.916 14.955 24.916 15C24.916 15.045 24.9527 15.0833 24.9993 15.0833C25.046 15.0833 25.0827 15.0467 25.0827 15C25.0827 14.955 25.0443 14.9167 24.9993 14.9167" stroke="#030405" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M22.3576 17.6433C23.6592 18.945 23.6592 21.055 22.3576 22.3567C21.0559 23.6583 18.9459 23.6583 17.6442 22.3567C16.3426 21.055 16.3426 18.945 17.6442 17.6433C18.9459 16.3417 21.0559 16.3417 22.3576 17.6433" stroke="#030405" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 5H27.5067C31.645 5 35 8.355 35 12.4933V27.5083C35 31.645 31.645 35 27.5067 35H12.4933C8.355 35 5 31.645 5 27.5067V12.5C5 8.35833 8.35833 5 12.5 5V5Z" stroke="#030405" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                
+          <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
+        </a>
+      </li>
+    {%- endif -%}
+    {%- if settings.social_youtube_link != blank -%}
+      <li class="list-social__item">
+        <a href="{{ settings.social_youtube_link }}" class="link list-social__link" >
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6699 25L25.3299 20L16.6699 15V25Z" stroke="#030405" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 5H27.5067C31.645 5 35 8.355 35 12.4933V27.5083C35 31.645 31.645 35 27.5067 35H12.4933C8.355 35 5 31.645 5 27.5067V12.5C5 8.35833 8.35833 5 12.5 5V5Z" stroke="#030405" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                
+          <span class="visually-hidden">{{ 'general.social.links.youtube' | t }}</span>
+        </a>
+      </li>
+    {%- endif -%}
+
+    {%- if settings.social_twitter_link != blank -%}
+        <li class="list-social__item ">
+          <a href="{{ settings.social_twitter_link }}" class="link list-social__link twitter_link" >
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 5H27.5067C31.645 5 35 8.355 35 12.4933V27.5083C35 31.645 31.645 35 27.5067 35H12.4933C8.355 35 5 31.645 5 27.5067V12.5C5 8.35833 8.35833 5 12.5 5V5Z" stroke="#030405" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M29.666 17.5833C29.666 16.893 29.1064 16.3333 28.416 16.3333C27.7257 16.3333 27.166 16.893 27.166 17.5833H29.666ZM11.4253 24.8459C11.0181 24.2885 10.236 24.1668 9.67861 24.574C9.12117 24.9813 8.99944 25.7633 9.4067 26.3207L11.4253 24.8459ZM10.2211 24.3486C9.53915 24.4563 9.07364 25.0964 9.18131 25.7783C9.28898 26.4602 9.92906 26.9257 10.611 26.818L10.2211 24.3486ZM13.416 24.5833L13.8133 25.7685C14.2225 25.6313 14.5321 25.2927 14.632 24.8728C14.732 24.4529 14.6083 24.0112 14.3047 23.7043L13.416 24.5833ZM12.416 12.5833L13.517 11.9915C13.3127 11.6114 12.9268 11.3635 12.4961 11.3359C12.0654 11.3083 11.651 11.5047 11.3997 11.8556L12.416 12.5833ZM18.416 17.5833L18.1206 18.7979C18.4862 18.8869 18.8725 18.8063 19.1721 18.5787C19.4718 18.3511 19.653 18.0005 19.6653 17.6244L18.416 17.5833ZM27.416 14.5833L26.3727 15.2718C26.6041 15.6224 26.996 15.8333 27.416 15.8333V14.5833ZM30.416 14.5833L31.4561 15.2767C31.7118 14.8931 31.7356 14.4 31.5181 13.9935C31.3006 13.5871 30.877 13.3333 30.416 13.3333V14.5833ZM27.376 16.89C26.993 17.4644 27.1482 18.2405 27.7226 18.6234C28.2971 19.0063 29.0731 18.8511 29.4561 18.2767L27.376 16.89ZM27.166 17.5833C27.166 20.8533 26.2328 23.535 24.6037 25.3813C22.9917 27.2082 20.5982 28.3333 17.416 28.3333V30.8333C21.2338 30.8333 24.3403 29.4584 26.4783 27.0354C28.5992 24.6317 29.666 21.3134 29.666 17.5833H27.166ZM17.416 28.3333C15.6571 28.3333 14.5122 27.8816 13.6618 27.2799C12.7733 26.6511 12.1297 25.81 11.4253 24.8459L9.4067 26.3207C10.099 27.2683 10.9554 28.4273 12.2177 29.3206C13.5182 30.2409 15.175 30.8333 17.416 30.8333V28.3333ZM10.611 26.818C10.6549 26.8111 10.6889 26.8032 10.7002 26.8006C10.7159 26.797 10.7285 26.7937 10.7359 26.7917C10.7508 26.7878 10.7627 26.7844 10.7685 26.7827C10.7809 26.7791 10.7916 26.7758 10.7976 26.774C10.8107 26.7699 10.8251 26.7653 10.8381 26.7611C10.8653 26.7523 10.9017 26.7404 10.9445 26.7264C11.0306 26.698 11.1507 26.6583 11.2924 26.6112C11.5762 26.5168 11.951 26.3917 12.3242 26.267C12.6975 26.1422 13.0698 26.0176 13.3487 25.9242C13.4881 25.8775 13.6043 25.8386 13.6855 25.8113C13.7262 25.7977 13.7581 25.787 13.7799 25.7797C13.7908 25.7761 13.7991 25.7733 13.8047 25.7714C13.8076 25.7704 13.8097 25.7697 13.8111 25.7692C13.8118 25.769 13.8124 25.7688 13.8127 25.7687C13.8129 25.7686 13.8131 25.7686 13.8132 25.7686C13.8132 25.7686 13.8132 25.7685 13.8133 25.7685C13.8133 25.7685 13.8133 25.7685 13.416 24.5833C13.0187 23.3981 13.0187 23.3981 13.0187 23.3982C13.0187 23.3982 13.0186 23.3982 13.0186 23.3982C13.0185 23.3982 13.0184 23.3983 13.0182 23.3983C13.0178 23.3984 13.0173 23.3986 13.0166 23.3989C13.0152 23.3993 13.0131 23.4 13.0103 23.401C13.0046 23.4029 12.9963 23.4057 12.9855 23.4093C12.9637 23.4166 12.9319 23.4273 12.8913 23.4409C12.8101 23.4681 12.6941 23.5069 12.5548 23.5536C12.2761 23.6469 11.9043 23.7713 11.5316 23.8959C11.1587 24.0206 10.7855 24.1451 10.5038 24.2388C10.3628 24.2857 10.2458 24.3244 10.1636 24.3515C10.1221 24.3651 10.0915 24.3751 10.0717 24.3815C10.0613 24.3848 10.0572 24.3861 10.0572 24.3861C10.0575 24.386 10.0587 24.3856 10.0606 24.3851C10.0623 24.3846 10.0659 24.3835 10.0708 24.382C10.0747 24.3809 10.085 24.3779 10.0987 24.3743C10.1055 24.3725 10.1176 24.3694 10.1328 24.3658C10.1437 24.3633 10.1773 24.3555 10.2211 24.3486L10.611 26.818ZM14.3047 23.7043C11.4017 20.7694 11.1863 16.4477 13.4323 13.3111L11.3997 11.8556C8.45902 15.9623 8.75036 21.644 12.5273 25.4624L14.3047 23.7043ZM11.315 13.1751C12.667 15.6904 15.2182 18.0919 18.1206 18.7979L18.7115 16.3688C16.6672 15.8715 14.6251 14.0529 13.517 11.9915L11.315 13.1751ZM19.6653 17.6244C19.7038 16.4539 20.115 15.5137 20.7406 14.8745C21.3596 14.2421 22.2563 13.8333 23.416 13.8333V11.3333C21.6308 11.3333 20.075 11.9804 18.9539 13.1259C17.8395 14.2646 17.2232 15.8244 17.1667 17.5422L19.6653 17.6244ZM23.416 13.8333C24.2569 13.8333 24.8423 13.9927 25.2736 14.2229C25.7024 14.4518 26.0558 14.7917 26.3727 15.2718L28.4593 13.8948C27.9612 13.14 27.3171 12.4798 26.4509 12.0175C25.5873 11.5565 24.5801 11.3333 23.416 11.3333V13.8333ZM27.416 15.8333H30.416V13.3333H27.416V15.8333ZM29.376 13.89L27.376 16.89L29.4561 18.2767L31.4561 15.2767L29.376 13.89Z" fill="#030405"/>
+                  </svg>                
+            <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
+          </a>
+        </li>
+      {%- endif -%}
+
+      {%- if settings.social_facebook_link != blank -%}
+        <li class="list-social__item">
+          <a href="{{ settings.social_facebook_link }}" class="link list-social__link" >
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 5H27.5067C31.645 5 35 8.355 35 12.4933V27.5083C35 31.645 31.645 35 27.5067 35H12.4933C8.355 35 5 31.645 5 27.5067V12.5C5 8.35833 8.35833 5 12.5 5V5Z" stroke="#030405" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M18.5 21.5H27.5" stroke="#030405" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M27.5 14H25.925C23.4817 14 21.5 15.9817 21.5 18.425V20V35" stroke="#030405" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>                
+            <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
+          </a>
+        </li>
+      {%- endif -%}
+
+    {%- if settings.social_tiktok_link != blank -%}
+      <li class="list-social__item">
+        <a href="{{ settings.social_tiktok_link }}" class="link list-social__link" >
+          {%- render 'icon-tiktok' -%}
+          <span class="visually-hidden">{{ 'general.social.links.tiktok' | t }}</span>
+        </a>
+      </li>
+    {%- endif -%}
+ 
+    {%- if settings.social_pinterest_link != blank -%}
+      <li class="list-social__item">
+        <a href="{{ settings.social_pinterest_link }}" class="link list-social__link" >
+          {%- render 'icon-pinterest' -%}
+          <span class="visually-hidden">{{ 'general.social.links.pinterest' | t }}</span>
+        </a>
+      </li>
+    {%- endif -%}
+    {%- if settings.social_snapchat_link != blank -%}
+      <li class="list-social__item">
+        <a href="{{ settings.social_snapchat_link }}" class="link list-social__link" >
+          {%- render 'icon-snapchat' -%}
+          <span class="visually-hidden">{{ 'general.social.links.snapchat' | t }}</span>
+        </a>
+      </li>
+    {%- endif -%}
+    {%- if settings.social_tumblr_link != blank -%}
+      <li class="list-social__item">
+        <a href="{{ settings.social_tumblr_link }}" class="link list-social__link" >
+          {%- render 'icon-tumblr' -%}
+          <span class="visually-hidden">{{ 'general.social.links.tumblr' | t }}</span>
+        </a>
+      </li>
+    {%- endif -%}
+    {%- if settings.social_vimeo_link != blank -%}
+      <li class="list-social__item">
+        <a href="{{ settings.social_vimeo_link }}" class="link list-social__link" >
+          {%- render 'icon-vimeo' -%}
+          <span class="visually-hidden">{{ 'general.social.links.vimeo' | t }}</span>
+        </a>
+      </li>
+    {%- endif -%}
+  </ul>

@@ -19,20 +19,20 @@
     margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
   }
 
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
 
-  @media screen and (min-width: 750px) {
+  .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top_m }}px;
+      padding-bottom: {{ section.settings.padding_bottom_m }}px;
+    }
+  @media screen and (min-width: 767px) {
     .footer {
       margin-top: {{ section.settings.margin_top }}px;
     }
-
     .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+  
   }
 {%- endstyle -%}
 
@@ -195,6 +195,12 @@
                     
                     </div>
 
+                    {%- if block.settings.show_social and has_social_icons -%}
+                      <div class="footer-social">
+                        {%- render 'social-icons-footer' -%}
+                      </div>
+                      {%- endif -%}
+
                     
                   </div>
                   {%- when 'blank_space' -%}
@@ -204,7 +210,6 @@
                     <div class="footer-block col-lg-{{column}} col-md-6 col-12" {{ block.shopify_attributes }}>
 
                   
-
                   </div>
                   {%- when 'image' -%}
 
@@ -276,30 +281,21 @@
                 {{block.settings.phone}}
                 </a>
                 </li>
-                    
                     </ul>
                  {%- endif -%}
 
                     </div>
-
                     {%- if block.settings.show_social and has_social_icons -%}
                       <div class="footer-social">
                         {%- render 'social-icons-footer' -%}
                       </div>
                       {%- endif -%}
-    
-                    
                     </div>
-
-                    
                   </div>
                   {%- endcase -%}
        
             {%- endfor -%}
           </div>
-    
-
-    
       </div>
     {%- endunless -%}
   {%- endif -%}
@@ -308,17 +304,41 @@
 
     <div class="container">
      <div class="row">
-      <div class="col-lg-6 col-md-6 col-12 text-center text-lg-left order-mx">
+      <div class="{% if section.settings.payment_enable%} col-lg-6 col-md-6 col-12 {% else %} col-lg-12 col-md-12 col-12  {% endif %} order-mx">
         <div class="footer__copyright caption">
 
           {%if section.settings.custom_text %}
           <small class="copyright__content">{{section.settings.custom_text }}</small>
           {% else %}
-          <small class="copyright__content"> <span class="theme-color">Copyright</span> &copy; {{ 'now' | date: '%Y' }} <a href="{{shop.url}}">myTop</a> IP, LLC.</small>
+          <small class="copyright__content"> <span class="theme-color">Copyright</span> &copy; {{ 'now' | date: '%Y' }} <a href="{{shop.url}}">Chic & Love </a> Fashion Brand S.L.</small>
         {%- endif -%}
       </div>
+
+
+      {%- for block in section.blocks -%}
+        
+
+        {%- case block.type -%}
+          {%- when 'link_list_inline' -%}
+          {%- if block.settings.menu != blank -%}
+            <ul class="footer_block_inline_menu">
+              {%- for link in block.settings.menu.links -%}
+                <li>
+                  <a href="{{ link.url }}" class="list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}">
+                    {{ link.title }}
+                  </a>
+                </li>
+              {%- endfor -%}
+            </ul>
+          {%- endif -%}
+
+        {%- endcase -%}
+       
+      {%- endfor -%}
       </div>
-      <div class="col-lg-6 col-md-6 col-12 text-center text-lg-right order-2 order-md-1">
+
+      {%- if section.settings.payment_enable -%}
+      <div class="col-lg-6 col-md-6 col-12 order-2 order-md-1">
         {%- if section.settings.payment_enable -%}
           <div class="footer__payment">
             <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
@@ -332,6 +352,8 @@
           </div>
         {%- endif -%}
       </div>
+
+    {%- endif -%}
     
     </div>
     </div>
@@ -489,7 +511,7 @@
     background-color: {{ section.settings.bg_color }};
   }
   .footer-block__heading{
-    color: {{  section.settings.Heading }};
+    color: {{  section.settings.heading_color }};
   }
   .footer-block .rte , .footer-block  p{
     color: {{  section.settings.text_color }};
@@ -500,7 +522,23 @@
   .footer-menu-wrap a:hover,  .footer-menu-wrap a:focus{
     color: {{  section.settings.text_hover_color }};
   }
+
+  .list-social__link svg>path{
+    stroke: {{  section.settings.text_color }};
+    transition: 0.3s all;
+  }
+  .list-social__link:hover svg>path{
+    stroke: {{  section.settings.text_hover_color }};
+    transition: 0.3s all;
+  }
+  .list-social__link.twitter_link:hover svg path:last-child{
+    fill: {{  section.settings.text_hover_color }};
+  }
+  .footer-block__details-content .list-menu__item--active{
+    color: {{  section.settings.text_hover_color }};
+  }
 </style> 
+
 
 
 
@@ -538,6 +576,26 @@
           "default": "Quick links",
           "label": "t:sections.footer.blocks.link_list.settings.heading.label"
         },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "default": "footer",
+          "label": "t:sections.footer.blocks.link_list.settings.menu.label",
+          "info": "t:sections.footer.blocks.link_list.settings.menu.info"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_social",
+          "default": true,
+          "label": "t:sections.footer.blocks.brand_information.settings.show_social.label",
+          "info": "t:sections.footer.blocks.brand_information.settings.show_social.info"
+        }
+      ]
+    },
+    {
+      "type": "link_list_inline",
+      "name": "[Footer Bottom Menu]",
+      "settings": [
         {
           "type": "link_list",
           "id": "menu",
@@ -862,6 +920,30 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_top",
       "default": 50
+    },
+    {
+      "type": "header",
+      "content": "Top Bottom Padding (Mobile)"
+    },
+    {
+      "type": "range",
+      "id": "padding_top_m",
+      "min": 0,
+      "max": 260,
+      "step": 10,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 70
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_m",
+      "min": 0,
+      "max": 260,
+      "step": 10,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
     }
   ],
   "default": {
