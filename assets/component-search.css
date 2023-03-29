@@ -1,5 +1,7 @@
 .search__input.field__input {
   padding-right:3.8rem;
+  background-color: transparent;
+  
 }
 
 .search__button {
