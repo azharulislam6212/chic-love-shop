@@ -541,3 +541,7 @@ button:focus{
   margin: 0;
   display: inline-block;
 }
+
+.footer_block_inline_menu li{
+  display: inline-block;
+}
