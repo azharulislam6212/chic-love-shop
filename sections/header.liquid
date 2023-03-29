@@ -166,11 +166,19 @@
 
 
 
+{%- liquid  
 
 
 
+  assign main_menu = linklists[section.settings.main_menu]
 
+  assign link_count = 0
+  for link in main_menu.links
+    assign link_count = link_count | plus: 1
+  endfor
+  assign link_count_half = link_count | divided_by: 2
 
+-%}
 
 <{% if section.settings.sticky_header_type != 'none' %}sticky-header data-sticky-type="{{ section.settings.sticky_header_type }}"{% else %}div{% endif %} class="header-wrapper {% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
   <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu != blank %} header--has-menu{% endif %}">
