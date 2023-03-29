@@ -394,7 +394,7 @@
       {{searchbar}}
     {% endif %}
 
- {% if section.settings.search_popup %} 
+ {% if section.settings.search_popup  and section.settings.logo_position != 'middle-center'  %} 
     {{searchmodal}}
 {% endif %}
 
