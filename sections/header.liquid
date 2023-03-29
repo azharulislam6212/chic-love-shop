@@ -172,7 +172,7 @@
 
   assign main_menu = linklists[section.settings.menu]
 
-  assign offset_count = 1
+  assign offset_count = 2
 
   assign link_count = 0
 
@@ -555,7 +555,7 @@
       {%- endif -%}
 
 
-        {%- render 'navigation', main_menu: main_menu, limit: 1 , offset: limit_count -%}
+        {%- render 'navigation', main_menu: main_menu, limit: offset_count , offset: limit_count -%}
      
 
     {%- endif -%}
