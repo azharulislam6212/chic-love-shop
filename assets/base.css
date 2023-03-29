@@ -2041,6 +2041,10 @@ position: relative;
   display: flex;
   align-items: center;
 }
+.header-top-left{
+  display: flex;
+  align-items: center;
+}
 .header__inline-menu, .header-inner-wrap{
   flex: 1;
 }
