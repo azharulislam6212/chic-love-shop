@@ -168,7 +168,6 @@
 }
 
 .footer-block__newsletter {
-  text-align: center;
   flex-grow: 1;
 }
 
@@ -468,7 +467,7 @@ noscript .localization-selector.link {
   .footer-block__details-content .list-menu__item--link {
     font-size: 13px;
   }
-  
+
 
 }
 
