@@ -2186,8 +2186,8 @@ product-info .loading-overlay:not(.hidden) ~ *,
 }
 
 .header__icon .icon {
-  height: 2rem;
-  width: 2rem;
+  height: 35px;
+  width: 35px;
   fill: none;
   vertical-align: middle;
 }
