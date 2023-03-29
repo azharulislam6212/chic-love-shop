@@ -1,5 +1,7 @@
 <nav class="header__inline-menu">
     <ul class="list-menu list-menu--inline" role="list">
+{{main_menu}}
+
         {%- for link in main_menu.links limit: limit offset: offset -%}
 
         {%- assign has_dropdown = false -%}
