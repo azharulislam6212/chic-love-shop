@@ -5,7 +5,6 @@
   left: -0.1rem;
   border-style: solid;
   background: #F7F1F9;
-  transform: matrix(1, 0, 0, -1, 0, 0);
   z-index: 3;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
