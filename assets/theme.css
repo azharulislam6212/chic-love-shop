@@ -518,11 +518,13 @@ button:focus{
   margin-top: 50px;
 }
 
-.footer__list-social.list-social svg{
-  width: 30px;
-  height: 30px;
-}
 
-@media screen and (min-width: 750px) {
 
+@media screen and (max-width: 750px) {
+
+  .footer__list-social.list-social svg{
+    width: 30px;
+    height: 30px;
+  }
+  
 }
