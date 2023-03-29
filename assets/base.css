@@ -2079,6 +2079,9 @@ position: relative;
   margin: 0;
   line-height: 0;
 }
+.header-top-center .header__heading{
+  
+}
 
 .header > .header__heading-link {
   line-height: 0;
