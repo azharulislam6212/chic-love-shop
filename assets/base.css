@@ -2043,7 +2043,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
 }
 .header-inner-wrap{
   display: flex;
-  flex: 1;  justify-content: space-between;
+  justify-content: space-between;
 }
 @media screen and (min-width: 990px) {
   .header--top-left,
@@ -2162,8 +2162,8 @@ product-info .loading-overlay:not(.hidden) ~ *,
 /* Header icons */
 .header__icons {
   display: flex;
-  grid-area: icons;
-  justify-self: end;
+  flex: 1;
+  justify-content: flex-end;
 }
 
 .header__icon:not(.header__icon--summary),
