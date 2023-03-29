@@ -700,9 +700,10 @@
 
   {{ navigation }}
 
-
+{%- if section.settings.logo_position == 'middle-left' -%}
   {{ header_icons }}
-  
+{%- endif -%}
+
   {%- if section.settings.logo_position == 'middle-center' -%}
       {{ logo }}
     <div class="header-inner-wrap">
