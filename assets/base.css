@@ -2035,10 +2035,12 @@ product-info .loading-overlay:not(.hidden) ~ *,
 }
 
 .header {
+position: relative;
+}
+.header-meddle-center{
   display: flex;
   align-items: center;
 }
-
 .header__inline-menu, .header-inner-wrap{
   flex: 1;
 }
