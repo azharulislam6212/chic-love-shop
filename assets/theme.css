@@ -601,6 +601,9 @@ line-height: 17px;
     order: 3;
   }
 
+  .newslatter-wrapper{
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 768px){
