@@ -25,7 +25,8 @@
           "settings": {
             "column": "3",
             "heading": "",
-            "menu": "business"
+            "menu": "business",
+            "show_social": true
           }
         },
         "335c52a4-7f27-4d69-af25-ffb81862ed4a": {
@@ -33,7 +34,8 @@
           "settings": {
             "column": "2",
             "heading": "",
-            "menu": "footer"
+            "menu": "footer",
+            "show_social": false
           }
         }
       },
