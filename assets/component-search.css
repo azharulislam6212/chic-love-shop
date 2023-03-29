@@ -2,10 +2,15 @@
   padding-right:3.8rem;
   background-color: transparent;
    border: 2px solid #fff;
+   color: #fff;
 }
+
+.search-bar 
 .search-bar   .field__label{
   color: #fff;
 }
+
+
 .search__button {
   right: var(--inputs-border-width);
   top: var(--inputs-border-width);
