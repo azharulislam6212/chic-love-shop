@@ -392,7 +392,9 @@
 <div class="header__icons">
   {% if section.settings.search_popup == false and  section.settings.logo_position == 'middle-center'  %} 
       {{searchbar}}
-    {% else %}
+    {% endif %}
+
+ {% if section.settings.search_popup %} 
     {{searchmodal}}
 {% endif %}
 
