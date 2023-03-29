@@ -1944,7 +1944,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
 .cart-count-bubble {
   position: absolute;
   background-color: transparent;
-  color: rgb(var(--color-button-text));
+  color:000;
   height: 1.7rem;
   width: 1.7rem;
   border-radius: 100%;
