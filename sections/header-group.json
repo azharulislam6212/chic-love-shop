@@ -31,7 +31,7 @@
         "bg_color": "#030405",
         "link_color": "#ffffff",
         "text_hover_color": "#ffff00",
-        "logo_position": "middle-left",
+        "logo_position": "middle-center",
         "enable_sticky_header": true,
         "enable_transparent_header": true,
         "enable_border_bottom": true,
