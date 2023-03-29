@@ -534,21 +534,13 @@ h6:empty {
   display: inline-block;
   border: none;
   box-shadow: none;
-  text-decoration: underline;
+  text-decoration: none;
   text-underline-offset: 0.3rem;
-  color: rgb(var(--color-link));
   background-color: transparent;
   font-size: 1.4rem;
   font-family: inherit;
 }
 
-.link--text {
-  color: rgb(var(--color-foreground));
-}
-
-.link--text:hover {
-  color: rgba(var(--color-foreground), 0.75);
-}
 
 .link-with-icon {
   display: inline-flex;
@@ -1591,7 +1583,7 @@ details[open] > .share-button__fallback {
   pointer-events: none;
   position: absolute;
   transition: top var(--duration-short) ease,font-size var(--duration-short) ease;
-  color: rgba(var(--color-foreground),.75);
+  color: var( --body-color);
   font-weight: 600;
   font-size: 15px;
   line-height: 18px;
@@ -2035,17 +2027,14 @@ product-info .loading-overlay:not(.hidden) ~ *,
 .header-wrapper {
   display: block;
   position: relative;
-  background-color: rgb(var(--color-background));
 }
 
 .header-wrapper--border-bottom {
-  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
+  border-bottom: transparent;
 }
 
 .header {
-  display: grid;
-  grid-template-areas: 'left-icon heading icons';
-  grid-template-columns: 1fr 2fr 1fr;
+  display: flex;
   align-items: center;
 }
 
@@ -2111,13 +2100,11 @@ product-info .loading-overlay:not(.hidden) ~ *,
   word-break: break-word;
 }
 
-.header__heading-link:hover .h2 {
-  color: rgb(var(--color-foreground));
-}
+
 
 .header__heading-link .h2 {
   line-height: 1;
-  color: rgba(var(--color-foreground), 0.75);
+  font-size: 30px;
 }
 
 .header__heading-logo {
@@ -2127,6 +2114,11 @@ product-info .loading-overlay:not(.hidden) ~ *,
 }
 
 @media screen and (max-width: 989px) {
+
+  .header__heading-link .h2 {
+    font-size: 24px;
+  }
+
   .header__heading,
   .header__heading-link {
     text-align: center;
@@ -2431,19 +2423,15 @@ details[open] > .header__submenu {
 .header__menu-item {
   padding: 1.2rem;
   text-decoration: none;
-  color: rgba(var(--color-foreground), 0.75);
 }
 
-.header__menu-item:hover {
-  color: rgb(var(--color-foreground));
-}
 
 .header__menu-item span {
   transition: text-decoration var(--duration-short) ease;
 }
 
 .header__menu-item:hover span {
-  text-decoration: underline;
+  text-decoration: none;
   text-underline-offset: 0.3rem;
 }
 
@@ -2461,9 +2449,6 @@ details[open] > .header__menu-item .icon-caret {
 
 .header__active-menu-item {
   transition: text-decoration-thickness var(--duration-short) ease;
-  color: rgb(var(--color-foreground));
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
 }
 
 .header__menu-item:hover .header__active-menu-item {
