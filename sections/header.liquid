@@ -390,10 +390,10 @@
 {% capture header_icons %}
 
 <div class="header__icons">
-  {% if section.settings.search_popup  %} 
-      {{searchmodal}}
-    {% else %}
+  {% if section.settings.search_popup == false  %} 
       {{searchbar}}
+    {% else %}
+    {{searchmodal}}
 {% endif %}
 
 {%- if shop.customer_accounts_enabled -%}
