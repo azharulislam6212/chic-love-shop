@@ -2103,6 +2103,10 @@ position: relative;
 
 @media screen and (max-width: 989px) {
 
+  .header--mobile{
+    display: flex;
+    align-items: center;
+  }
   .header__heading-link .h2 {
     font-size: 24px;
   }
