@@ -1943,7 +1943,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
 
 .cart-count-bubble {
   position: absolute;
-  background-color: rgb(var(--color-button));
+  background-color: transparent;
   color: rgb(var(--color-button-text));
   height: 1.7rem;
   width: 1.7rem;
@@ -1951,10 +1951,11 @@ product-info .loading-overlay:not(.hidden) ~ *,
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 0.9rem;
-  bottom: 0.8rem;
-  left: 2.2rem;
-  line-height: calc(1 + 0.1 / var(--font-body-scale));
+  bottom: 6px;
+  left: 9px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
 }
 
 /* section-announcement-bar */
