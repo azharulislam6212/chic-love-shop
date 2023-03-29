@@ -694,7 +694,9 @@
      </div>
      {%- endif -%}
 
-
+     {%- if section.settings.logo_position == 'middle-left' -%}
+      {{ logo }}
+    {%- endif -%}
 
   {{ navigation }}
   
