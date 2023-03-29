@@ -554,16 +554,15 @@
         </h1>
       {%- endif -%}
 
-      {% if offset_count > 0 %}
-        {%- render 'navigation', main_menu: main_menu, limit: offset_count , offset: limit_count -%}
-      {% endif %}
-
+      
     {%- endif -%}
 
 
 
 
     <div class="header__icons">
+
+      
       <details-modal class="header__search">
         <details>
           <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
