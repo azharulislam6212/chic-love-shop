@@ -2163,7 +2163,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
 /* Header icons */
 .header__icons {
   display: flex;
-  flex: 1;
+  flex: 2;
   justify-content: flex-end;
 }
 
