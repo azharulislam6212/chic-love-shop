@@ -2061,25 +2061,13 @@ product-info .loading-overlay:not(.hidden) ~ *,
     column-gap: 2rem;
   }
 
-  .header--middle-center {
-    grid-template-areas: 'navigation heading icons';
-    grid-template-columns: 1fr auto 1fr;
-    column-gap: 2rem;
-  }
+
 
   .header--middle-center a.header__heading-link {
     text-align: center;
   }
 
-  .header--top-center {
-    grid-template-areas:
-      'left-icon heading icons'
-      'navigation navigation navigation';
-  }
 
-  .header:not(.header--middle-left, .header--middle-center) .header__inline-menu {
-    margin-top: 1.05rem;
-  }
 }
 
 .header *[tabindex='-1']:focus {
