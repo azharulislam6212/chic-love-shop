@@ -554,7 +554,7 @@
         </h1>
       {%- endif -%}
 
-      {% if offset_count > 0 %}
+      {% if offset_count %}
         {%- render 'navigation', main_menu: main_menu, limit: offset_count , offset: limit_count -%}
       {% endif %}
 
