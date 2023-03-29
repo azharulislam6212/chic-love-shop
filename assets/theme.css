@@ -592,3 +592,11 @@ line-height: 17px;
     display: block;
   }
 }
+
+
+@media (max-width: 768px){
+  .order-mx{
+    order: 3;
+  }
+
+}
