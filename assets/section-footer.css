@@ -440,6 +440,10 @@ noscript .localization-selector.link {
   margin-bottom: 4rem;
 }
 
+.footer-block__details-content > li:not(:last-child) {
+ margin-bottom: ;
+}
+
 @media screen and (min-width: 750px) {
   .footer-block__details-content {
     margin-bottom: 0;
@@ -454,9 +458,7 @@ noscript .localization-selector.link {
     display: inline;
   }
 
-  .footer-block__details-content > li:not(:last-child) {
-    margin-right: 1.5rem;
-  }
+  
 }
 
 
