@@ -2081,6 +2081,7 @@ position: relative;
 }
 .header-top-center .header__heading{
   flex: 1;
+  margin: 0 20px;
 }
 
 .header > .header__heading-link {
