@@ -533,7 +533,6 @@
   
     {%- render 'navigation', main_menu: main_menu , limit: limit_count -%} 
   
-    {%- if section.settings.logo_position == 'middle-center' -%}
       {%- if request.page_type == 'index' -%}
         <h1 class="header__heading">
       {%- endif -%}
@@ -556,7 +555,7 @@
         </h1>
       {%- endif -%}
 
-    {%- endif -%}
+  
 
 
     <div class="header-inner-wrap">
