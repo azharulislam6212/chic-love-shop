@@ -2047,7 +2047,6 @@ product-info .loading-overlay:not(.hidden) ~ *,
 }
 
 .header-wrapper.header-transparent {
-  background: transparent !important;
   position: absolute;
   top: 0;
   left: 0;
