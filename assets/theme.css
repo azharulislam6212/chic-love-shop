@@ -613,3 +613,87 @@ line-height: 17px;
   }
 
 }
+
+
+
+
+
+
+/* mega menu */
+
+
+
+.megamenu-grid {
+  padding: 30px 2%;
+  max-width: 96%;
+  margin: 0 auto;
+  list-style: none;
+  border-top: 2px solid #000098;
+}
+
+.mega-item {
+  margin: 0;
+  padding: 0 15px;
+  white-space: nowrap;
+  flex: 1;
+  position: relative;
+  min-width: 16%;
+}
+
+.mega-item ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.megamenu {
+  left: 0;
+  width: 100%;
+  background-color: #fff7f7;
+}
+
+.justify-content-between {
+  -webkit-box-pack: justify !important;
+  -ms-flex-pack: justify !important;
+  justify-content: space-between !important;
+}
+
+.d-flex {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.mega-content-wrap p {
+  max-width: 305px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 132%;
+  margin-bottom: 28px;
+}
+
+.mega-content-wrap p {
+  color: #000;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.mega-content-wrap p::after {
+  content: "\a";
+  white-space: pre;
+}
+
+
+@media (max-width: 767px) {
+  .megamenu-grid {
+    padding: 30px 0;
+    max-width: 100%;
+}
+
+
+}
