@@ -1,0 +1,36 @@
+{% if link.links.size > 0 %}
+  
+ <div class="megamenu nav-dropdown nav-submenu" >
+  <ul class="megamenu-grid d-flex justify-content-between w-100"> 
+
+    {%- render 'mega-menu-loop', 
+    link: link, 
+    handle_text: block.settings.handle_text,
+    block_text_1: block.settings.block_text_1, 
+    btn_block_text: block.settings.btn_block_text, 
+    btn_block_link: block.settings.btn_block_link, 
+
+    img_src_1: block.settings.image_1, 
+    img_url_1: block.settings.image_1_url, 
+    handle_1: block.settings.handle_1,
+
+    img_src_2: block.settings.image_2, 
+    img_url_2: block.settings.image_2_url, 
+    handle_2: block.settings.handle_2,
+
+
+    img_src_3: block.settings.image_3, 
+    img_url_3: block.settings.image_3_url, 
+    handle_3: block.settings.handle_3,
+
+
+    img_src_4: block.settings.image_4, 
+    img_url_4: block.settings.image_4_url,
+    handle_4: block.settings.handle_4, 
+
+    -%}
+
+  </ul>
+  </div>
+
+{% endif %}

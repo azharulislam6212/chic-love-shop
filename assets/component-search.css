@@ -1,5 +1,19 @@
 .search__input.field__input {
-  padding-right: 9.8rem;
+  padding-right:3.8rem;
+  background-color: transparent;
+}
+
+.search-bar .search__input.field__input {
+  padding-right:3.8rem;
+  background-color: transparent;
+   border: 2px solid #fff;
+   color: #fff;
+}
+.search-bar   .field__label{
+  color: #fff;
+}
+.search-bar  .search__button .icon{
+  color: #fff;
 }
 
 .search__button {
@@ -48,15 +62,12 @@
   background-color: inherit;
 }
 
-.search__button:hover .icon,
-.reset__button:hover .icon {
-  transform: scale(1.07);
-}
 
 
 .search__button .icon {
   height: 1.8rem;
   width: 1.8rem;
+  color: #000;
 }
 
 .reset__button .icon.icon-close {
@@ -69,3 +80,4 @@
 input::-webkit-search-decoration {
   -webkit-appearance: none;
 }
+

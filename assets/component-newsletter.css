@@ -20,7 +20,8 @@
 }
 
 .newsletter-form__field-wrapper .field__input {
-  padding-right: 5rem;
+  padding-right: 6rem;
+  border: 0;
 }
 
 .newsletter-form__field-wrapper .field {
