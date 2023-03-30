@@ -223,6 +223,7 @@ $(function () {
     
     }
 
+    header_sticky();
 
 
 // accordion script
@@ -244,10 +245,12 @@ $('.trigger').click(function(j) {
 
 document.addEventListener("shopify:section:load", function(event) {
   marquee();
+  header_sticky();
 });
 
 document.addEventListener('shopify:block:select', function(event) {
   marquee();
+  header_sticky();
 });
 
 
