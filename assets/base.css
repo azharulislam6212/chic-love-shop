@@ -2028,10 +2028,9 @@ product-info .loading-overlay:not(.hidden) ~ *,
 .header-wrapper {
   display: block;
   position: relative;
-  -webkit-transition: 0.2s ease-in;
-  -o-transition: 0.2s ease-in;
-  transition: 0.2s ease-in;
-  transition: opacity 500 ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .header-wrapper.header-fixed{
