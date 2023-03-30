@@ -231,9 +231,6 @@ document.addEventListener("shopify:section:load", function(event) {
 document.addEventListener('shopify:block:select', function(event) {
   marquee();
 });
-
-
-
 function marquee(){
   $('.marquee').marquee({
     direction: 'left',
@@ -244,6 +241,7 @@ function marquee(){
     pauseOnHover: true
     });
 }
+marquee();
   // Select all links with hashes
   $('a[href*="#"]')
     // Remove links that don't actually link to anything
@@ -304,4 +302,4 @@ function marquee(){
       }
     });
 });
-
+			

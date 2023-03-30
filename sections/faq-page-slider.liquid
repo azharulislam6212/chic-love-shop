@@ -1,8 +1,21 @@
 
 {%- liquid
+
     assign container = section.settings.container
     assign remove_container_space = section.settings.remove_container_space
+ 
+    
+    assign autoplay = section.settings.autoplay_enabled
+    assign autoplay_timeout = section.settings.autoplay_timeout | times: 1000.0
+      
+    assign enable_dot = section.settings.enable_dot
+    assign arrow_enabled = section.settings.arrow_enabled
+    assign columns_desktop = section.settings.columns_desktop
+    assign columns_tab = section.settings.columns_tab
+    assign columns_mobile = section.settings.columns_mobile
+
 -%}
+
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top }}px;
@@ -15,50 +28,50 @@
     }
   }
 {%- endstyle -%}
-<section class="middle section-{{ section.id }}-padding" id="section_{{ section.id }}">
-	<div class="{{ container }} {%if remove_container_space != false %} p-0 {% endif %}">
-        <div class="row justify-content-center">
+<section class="middle section-{{ section.id }}-padding" id="section_{{ section.id }}" style="background: {{section.settings.background-color}}">
+	<div class="{{ container }} {%if remove_container_space != false %} p-0 {% endif %}" style="overflow: hidden;'>
+        <div class="row justify-content-center align-items-center {%if remove_container_space != false %} no-gutters {% endif %}">
           <div class="col-12">
-                  <slideshows-component>
-                  <ul class="slick review-slider slick " id="Slider-{{ section.id }}"   data-slick='{
-                      "dots": {{ enable_dot }}, 
-                      "autoplay": {{ autoplay }}, 
-                      "infinite": true, 
-                      "slidesToShow": {{columns_desktop}}, 
-                      "slidesToScroll": 1, 
-                      "fade": false,
-                      "cssEase": "linear", 
-                      "arrows": {{arrow_enabled}}, 
-                      "autoplaySpeed": {{ autoplay_timeout }}, 
-                      "pauseOnHover": false,
-                      "responsive": [
-                          {
-                            "breakpoint": 1024,
-                            "settings": {
-                  
-                              "slidesToShow":{{columns_tab}}
-                            }
-                          },
-                          {
-                            "breakpoint": 767,
-                            "settings": {
-                      
-                              "slidesToShow":{{columns_mobile}}
-                            }
-                          }
-                        ]
-                      }' >
+          <slideshows-component>
+            <ul class="slick review-slider" id="Slider-{{ section.id }}" data-slick='{
+              "dots": {{ enable_dot }}, 
+              "autoplay": {{ autoplay }}, 
+              "infinite": true, 
+              "slidesToShow": {{columns_desktop}}, 
+              "slidesToScroll": 1, 
+              "fade": false,
+              "cssEase": "linear", 
+              "arrows": {{arrow_enabled}}, 
+              "autoplaySpeed": {{ autoplay_timeout }}, 
+              "pauseOnHover": false,
+              "centerMode": true,
+              "responsive": [
+                  {
+                    "breakpoint": 1024,
+                    "settings": {
+                   
+                      "slidesToShow":{{columns_tab}}
+                    }
+                  },
+                  {
+                    "breakpoint": 767,
+                    "settings": {
+             
+                      "slidesToShow":{{columns_mobile}}
+                    }
+                  }
+                ]
+              }'>
                       {%- for block in section.blocks -%}
-
                           {%- if block.type == 'slider_image' -%}
                           {%- liquid
 
-                              assign image = block.settings.img
+                              assign image = block.settings.slide_image
 
                             %}
         
 
-                      <li class="review-item block-{{block.id}} slideshow_slide_{{block.id}} " {{ block.shopify_attributes }}>
+                      <li data-fancybox="gallery" href="{{ image | img_url: 'master' }}" class="faq-each-slide-item review-item block-{{block.id}} slideshow_slide_{{block.id}}" {{ block.shopify_attributes }}>
                           <div class="review-wrapper">
                             <div class="review-author-box">
                               <div class="reeview-img-wrap">
@@ -69,34 +82,59 @@
                                   {% endif %}
                             
                               </div>
-                              <div class="author-nfo">
-                                  {% if authr_name != blank %}
-                                      <h4 class="author-name">{{authr_name}}</h4>
-                                  {% endif %}
-                                  {% if designation != blank %}
-                                  <span class="designation">{{designation}}</span>
-                                  {% endif %}
-                                  {% if review_image_url != blank  %}
-                                      <img src="{{review_image_url}}" alt="">
-                                  {% endif %}
-                              </div>
                             </div>
-
-                            {% if text != blank %}
-                            <div class="review-text"> {{text}} </div>
-                          {% endif %}
                           </div>
                       </li>
                   {%- endif -%}
                   {%- endfor -%}
                   </ul>
-              </slideshows-component>
+                  </slideshows-component>
+                  {% for block in section.blocks %}
+                  {% if block.type == 'button_text' %}
+                  {% if block.settings.button_text != blank %}
+                    <div class="button_wrapper">
+                      <a href="{{block.settings.button_url}}">{{ block.settings.button_text }} <span><img src="{{ 'arrow-icon.svg' | asset_url }}"></span></a>
+                    </div>
+                  {% endif %}
+                  {% endif %}
+                  {% endfor %}
           </div>
         </div>
 	</div>
   </section>
 
 <style>
+.review-slider{
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0 -15px;
+}
+.reeview-img-wrap img{
+  width: 100% !important;
+  border: 2px solid #030405;
+  border-radius: 20px;
+}
+.review-item{
+  margin-right: 20px;
+}
+.button_wrapper {
+    text-align: right;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+.button_wrapper a{
+  font-size: 38px;
+  font-weight: bold;
+}
+.button_wrapper {
+    text-align: right;
+    margin-top: 43px;
+    margin-right: 20px;
+}
+.faq-each-slide-item{
+  cursor: pointer;
+}
 </style>
 
 {% schema %}
@@ -104,6 +142,12 @@
     "name": "FAQ Slider",
     "class": "faq_slider",
     "settings": [
+      {
+        "type": "color",
+        "id": "background-color",
+        "label": "Section Background",
+        "default": "#eadcf0"
+      },
         {
         "type": "select",
         "id": "container",
@@ -156,7 +200,7 @@
         "type": "range",
         "id": "columns_desktop",
         "min": 1,
-        "max": 4,
+        "max": 5,
         "step": 1,
         "default":2,
         "label": "t:sections.featured-collection.settings.columns_desktop.label"
@@ -233,11 +277,51 @@
             "label": "Slide Image"
           }
         ]
+      },
+      {
+        "type": "button_text",
+        "name": "Button",
+        "settings": [
+          {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text",
+            "default": "CHIC&LOVE socialize"
+          },
+          {
+            "type": "url",
+            "id": "button_url",
+            "label": "Button Url"
+          }
+        ]
       }
     ],
     "presets": [
       {
-        "name": "FAQ Slider"
+        "name": "FAQ Slider",
+        "blocks": [
+          {
+            "type": "slider_image"
+          },
+          {
+            "type": "slider_image"
+          },
+          {
+            "type": "slider_image"
+          },
+          {
+            "type": "slider_image"
+          },
+          {
+            "type": "slider_image"
+          },
+          {
+            "type": "slider_image"
+          },
+          {
+            "type": "button_text"
+          }
+        ]
       }
   ] 
   }

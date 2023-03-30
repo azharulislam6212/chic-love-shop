@@ -1,0 +1,430 @@
+
+{%- liquid
+    assign container = section.settings.container
+    assign remove_container_space = section.settings.remove_container_space
+-%}
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+  @media screen and (max-width: 767px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top_m }}px;
+      padding-bottom: {{ section.settings.padding_bottom_m }}px;
+    }
+  }
+{%- endstyle -%}
+<section class="middle section-{{ section.id }}-padding" id="section_{{ section.id }}" style="background-color: {{section.settings.section_background}};">
+	<div class="{{ container }} {%if remove_container_space != false %} p-0 {% endif %}">
+        <div class="custom-contact-section row justify-content-center align-items-center">
+          <div class="col-12 col-md-12 col-lg-6 col-xl-6">
+            <div class="contact-heading-description-wrapper">
+            {% for block in section.blocks %}
+            {% if block.type == 'heading_subheading' %}
+              <h1 class="section-heading">{{block.settings.heading}}</h1>
+              <p class="contact-description">{{block.settings.subheading}}</p>
+            {% endif %}
+              <div class="custom-contact-social-icon"></div>
+            {% endfor %}
+            </div>
+          </div>
+          <div class="col-12 col-md-12 col-lg-6 col-xl-6">
+            <div class="custom-contact-button-wrapper">
+            {% for block in section.blocks %}
+              {% if block.type == 'contact_option' %}
+                <a class="custom-contact-button" href="{% if block.settings.contact_address contains '@' %}mailto: {% else %} tel: {% endif %}{{block.settings.contact_address}}"><span class="phone_text text">{{block.settings.contact_label}}</span><br><span class="number">{{block.settings.contact_address}}</span></a>
+              {% endif %}
+            {% endfor %}
+            </div>
+          </div>
+        </div>
+	</div>
+  </section>
+<style>
+#section_{{ section.id }}{
+  background-image: url('{{'faq_page_big_star.svg' | asset_url}}'),url('{{'faq_page_small_star.svg' | asset_url}}'),url('{{'faq_page_big_star.svg' | asset_url}}'),url('{{'faq_page_small_star.svg' | asset_url}}');
+  background-position: top 15% right 10%, top 22% right 8%, bottom 20% left 2%, bottom 15% left -1%;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+}
+.custom-contact-section{
+  margin: 50px 0;
+}
+.custom-contact-button-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.custom-contact-button-wrapper a {
+    width: 370px;
+    margin: 0 auto;
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid #030405;
+    line-height: 26px;
+}
+.custom-contact-button-wrapper a .text{
+  font-size: 16px; 
+  opacity: 50%;
+}
+.custom-contact-button-wrapper a .number{
+  font-size: 16px; 
+  font-weight: bold;
+}
+#section_{{ section.id }}  h1.section-heading {
+    font-size: {{section.settings.heading_font_size_desk | append: 'px'}};
+    line-height: {{section.settings.heading_lh_desk | append: 'px'}};
+    text-transform: {{section.settings.heading_text_transfrom}};
+}
+ #section_{{ section.id }} p.contact-description {
+    font-size: {{section.settings.des_font_size | append: 'px'}};
+    line-height: {{section.settings.des_lh | append: 'px'}};
+    margin-top: 25px;
+}
+@media only screen and (max-width: 992px){
+  #section_{{ section.id }}  h1.section-heading {
+    font-size: {{section.settings.heading_font_size_tab | append: 'px'}};
+    line-height: {{section.settings.heading_lh_tab | append: 'px'}};
+  } 
+   #section_{{ section.id }} p.contact-description {
+    font-size: {{section.settings.des_font_size_tab | append: 'px'}};
+    line-height: {{section.settings.des_lh_tab | append: 'px'}};
+    margin-top: 10px;
+  }
+  .contact-heading-description-wrapper{
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 768px){
+  #section_{{ section.id }} h1.section-heading {
+    font-size: {{section.settings.heading_font_size_mob | append: 'px'}};
+    line-height: {{section.settings.heading_lh_mob | append: 'px'}};
+  } 
+  #section_{{ section.id }} p.contact-description {
+    font-size: {{section.settings.des_font_size_mob | append: 'px'}};
+    line-height: {{section.settings.des_lh_mob | append: 'px'}};
+  }
+  .custom-contact-button-wrapper a{
+    width: 90%;
+  }
+}
+</style>
+
+{% schema %}
+  {
+    "name": "Custom Contact Section",
+    "class": "custom_contact_section",
+    "settings": [
+        {
+        "type": "select",
+        "id": "container",
+        "label": "Section Width",
+        "options": [
+            {"label": "Default", "value": "container"},
+            {"label": "Full wide", "value": "container-fluid"}
+        ],
+        "default": "container"
+    },
+    {
+        "type": "checkbox",
+        "id": "remove_container_space",
+        "label": "Remove Container Space",
+        "default": false
+    },
+        {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    },
+    {
+          "type": "header",
+          "content": "Top Bottom Padding (Mobile)"
+        }, {
+          "type": "range",
+          "id": "padding_top_m",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "unit": "px",
+          "label": "Padding Top",
+          "default": 30
+        }, {
+          "type": "range",
+          "id": "padding_bottom_m",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "unit": "px",
+          "label": "Padding Bottom",
+          "default": 30
+        },
+        {
+          "type": "color",
+          "id": "section_background",
+          "label": "Section Background",
+          "default": "#DFC8E7"
+        },
+        {
+          "type": "header",
+          "content": "Heading"
+        },
+        {
+					"type": "range",
+					"id": "heading_font_size_desk",
+					"label": "Font Size (Desktop)",
+					"min": 0,
+					"max": 90,
+					"step": 1,
+					"default":80,
+					"unit": "px"
+				  },
+				  {
+					"type": "range",
+					"id": "heading_lh_desk",
+					"label": "Line Height (Desktop)",
+					"min": 0,
+					"max": 100,
+					"step": 1,
+					"default": 100,
+					"unit": "px"
+				  },
+				  {
+					"type": "range",
+					"id": "heading_font_size_tab",
+					"label": "Font Size (Tablet)",
+					"min": 0,
+					"max": 90,
+					"step": 1,
+					"default":50,
+					"unit": "px"
+				  },
+				  {
+					"type": "range",
+					"id": "heading_lh_tab",
+					"label": "Line Height (Tablet)",
+					"min": 0,
+					"max": 100,
+					"step": 1,
+					"default": 55,
+					"unit": "px"
+				  },
+				  {
+					"type": "range",
+					"id": "heading_font_size_mob",
+					"label": "Font Size (Mobile)",
+					"min": 0,
+					"max": 50,
+					"step": 1,
+					"default": 30,
+					"unit": "px"
+				  },
+				  {
+					"type": "range",
+					"id": "heading_lh_mob",
+					"label": "Line Height (Mobile)",
+					"min": 0,
+					"max": 80,
+					"step": 1,
+					"default": 40,
+					"unit": "px"
+				  },
+				  {
+					"type": "select",
+					"id": "heading_text_transfrom",
+					"label": "Heading Text Transform",
+					"options": [
+					  {
+						"label": "Capitalize",
+						"value": "capitalize"
+					  },
+					  {
+						"label": "Uppercase",
+						"value": "uppercase"
+					  },
+					  {
+						"label": "Lowercase",
+						"value": "lowercase"
+					  },
+					  {
+						"label": "None",
+						"value": "none"
+					  }
+					],
+					"default": "none"
+				  },
+				  {
+					"type": "select",
+					"id": "heading_font_weight",
+					"label": "Heading Text Transform",
+					"options": [
+					  {
+						"label": "Bold",
+						"value": "700"
+					  },
+					  {
+						"label": "Semi Bold",
+						"value": "500"
+					  },
+					  {
+						"label": "Regular",
+						"value": "400"
+					  },
+					  {
+						"label": "Light",
+						"value": "300"
+					  }
+					],
+					"default": "700"
+				  },
+          {
+          "type": "header",
+          "content": "Description"
+        },
+        {
+					"type": "range",
+					"id": "des_font_size",
+					"label": "Font Size",
+					"min": 0,
+					"max": 30,
+					"step": 1,
+					"default": 18,
+					"unit": "px"
+				  },
+				  {
+					"type": "range",
+					"id": "des_lh",
+					"label": "Line Height",
+					"min": 0,
+					"max": 40,
+					"step": 1,
+					"default": 30,
+					"unit": "px"
+				  },
+				  {
+					"type": "range",
+					"id": "des_font_size_tab",
+					"label": "Font Size (Tablet)",
+					"min": 0,
+					"max": 30,
+					"step": 1,
+					"default": 16,
+					"unit": "px"
+				  },
+				  {
+					"type": "range",
+					"id": "des_lh_tab",
+					"label": "Line Height (Tablet)",
+					"min": 0,
+					"max": 40,
+					"step": 1,
+					"default": 24,
+					"unit": "px"
+				  },
+				  {
+					"type": "range",
+					"id": "des_font_size_mob",
+					"label": "Font Size (Mobile)",
+					"min": 0,
+					"max": 30,
+					"step": 1,
+					"default": 16,
+					"unit": "px"
+				  },
+				  {
+					"type": "range",
+					"id": "des_lh_mob",
+					"label": "Line Height (Mobile)",
+					"min": 0,
+					"max": 40,
+					"step": 1,
+					"default": 24,
+					"unit": "px"
+				  }
+    ],
+    "blocks":[
+      {
+        "type": "heading_subheading",
+        "name": "Heading and Subheading",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading One Text",
+            "default": "Contact us"
+          },
+          {
+            "type": "text",
+            "id": "subheading",
+            "label": "Subheading",
+            "default": "Our customer service hours are Monday through Friday, 9am to 6pm EST. We can help answer any questions about our products, shipping, drop dates, or anything else on your mind."
+          }
+        ]
+      },
+      {
+        "type": "contact_option",
+        "name": "Contact Option",
+        "limit": 2,
+        "settings": [
+          {
+            "type": "text",
+            "id": "contact_label",
+            "label": "Contact Label",
+            "default": "Nuestro email"
+          },
+          {
+            "type": "text",
+            "id": "contact_address",
+            "label": "Contact Address",
+            "default": "info@chiclove.com"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom Contact Section",
+        "blocks": [
+          {
+            "type": "heading_subheading"
+          },
+          {
+            "type": "contact_option",
+            "settings": {
+              "contact_label": "Nuestro email",
+              "contact_address": "info@chiclove.com"
+            }
+          },
+          {
+            "type": "contact_option",
+            "settings": {
+              "contact_label": "Contacta por teléfono",
+              "contact_address": "+34 91 657 47 20"
+            }
+          }
+        ]
+      }
+  ] 
+  }
+{% endschema %}

@@ -204,19 +204,109 @@
         "f9d12c5b-6a73-44ff-b5c3-406897c94ad4"
       ],
       "settings": {
+        "marqueenable": true,
+        "marquee_direction": "left",
+        "marquee_duration": 10,
+        "custom_color_enabled": false,
         "container": "container-fluid",
-        "section_background": "#FFFF00",
+        "section_background": "#ffff00",
         "remove_container_space": true,
         "padding_top": 0,
         "padding_bottom": 0,
         "padding_top_m": 0,
         "padding_bottom_m": 0
       }
+    },
+    "5fc005c0-916a-48ff-9ed6-282c3f92963c": {
+      "type": "faq-page-slider",
+      "blocks": {
+        "e8414616-2e8d-40f7-986c-f858fd0794a2": {
+          "type": "slider_image",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/Background-Hair-Nails_2.png"
+          }
+        },
+        "9c56c949-aa19-4b35-8ff0-766d7c3b3abd": {
+          "type": "slider_image",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/Background-Prevegrip-mobile-v4_1.png"
+          }
+        },
+        "2018b251-a97c-413d-b140-cf81453275dc": {
+          "type": "slider_image",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/Background-Hair-Nails_2.png"
+          }
+        },
+        "0d3c6df3-a87f-47a4-937c-4ae65e99075a": {
+          "type": "slider_image",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/f2_2.png"
+          }
+        },
+        "f5e8d36f-ea27-4721-97f0-21c78e9e9cbf": {
+          "type": "slider_image",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/Background-Hair-Nails_2.png"
+          }
+        },
+        "6ae14fca-1670-40ae-b15c-0a24872b226f": {
+          "type": "slider_image",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/Background-Hair-Nails_2.png"
+          }
+        },
+        "df78c588-8213-46fc-a2bc-5be36d462631": {
+          "type": "slider_image",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/Background-Hair-Nails_2.png"
+          }
+        },
+        "cf5e4528-0964-4032-93ee-89eea5ec772c": {
+          "type": "slider_image",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/Background-Hair-Nails_2.png"
+          }
+        },
+        "2b0a6bc6-0a9a-47f7-9dc5-19c78759a126": {
+          "type": "slider_image",
+          "settings": {
+            "slide_image": "shopify:\/\/shop_images\/Background-Hair-Nails_2.png"
+          }
+        }
+      },
+      "block_order": [
+        "e8414616-2e8d-40f7-986c-f858fd0794a2",
+        "9c56c949-aa19-4b35-8ff0-766d7c3b3abd",
+        "2018b251-a97c-413d-b140-cf81453275dc",
+        "0d3c6df3-a87f-47a4-937c-4ae65e99075a",
+        "f5e8d36f-ea27-4721-97f0-21c78e9e9cbf",
+        "6ae14fca-1670-40ae-b15c-0a24872b226f",
+        "df78c588-8213-46fc-a2bc-5be36d462631",
+        "cf5e4528-0964-4032-93ee-89eea5ec772c",
+        "2b0a6bc6-0a9a-47f7-9dc5-19c78759a126"
+      ],
+      "settings": {
+        "container": "container-fluid",
+        "remove_container_space": true,
+        "enable_dot": false,
+        "arrow_enabled": false,
+        "autoplay_enabled": true,
+        "autoplay_timeout": 7,
+        "columns_desktop": 4,
+        "columns_tab": 1,
+        "columns_mobile": 1,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_top_m": 30,
+        "padding_bottom_m": 30
+      }
     }
   },
   "order": [
     "main",
     "db1da258-544b-4064-a6cc-98a3cc3acc0f",
-    "672c05fe-00c4-4a1b-8a88-806c29470103"
+    "672c05fe-00c4-4a1b-8a88-806c29470103",
+    "5fc005c0-916a-48ff-9ed6-282c3f92963c"
   ]
 }

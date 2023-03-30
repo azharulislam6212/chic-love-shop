@@ -1,0 +1,558 @@
+
+{%- liquid
+    assign container = section.settings.container
+    assign remove_container_space = section.settings.remove_container_space
+
+  
+
+    assign heading_font_size_desk = section.settings.heading_font_size_desk
+    assign heading_lh_desk = section.settings.heading_lh_desk
+    assign heading_font_size_tab = section.settings.heading_font_size_tab
+    assign heading_lh_tab = section.settings.heading_lh_tab
+    assign heading_font_size_mob = section.settings.heading_font_size_mob
+    assign heading_lh_mob = section.settings.heading_lh_mob
+    assign heading_text_transfrom = section.settings.heading_text_transfrom
+    assign heading_font_weight = section.settings.heading_font_weight
+
+   
+
+    assign des_font_size = section.settings.des_font_size
+    assign des_lh = section.settings.des_lh
+    assign des_font_size_tab = section.settings.des_font_size_tab
+    assign des_lh_tab = section.settings.des_lh_tab
+    assign des_font_size_mob = section.settings.des_font_size_mob
+    assign des_lh_mob = section.settings.des_lh_mob
+-%}
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+  @media screen and (max-width: 767px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top_m }}px;
+      padding-bottom: {{ section.settings.padding_bottom_m }}px;
+    }
+  }
+{%- endstyle -%}
+<section class="middle section-{{ section.id }}-padding" id="section_{{ section.id }}" style="background-color: {{section.settings.section_bg}};">
+	<div class="{{ container }} {%if remove_container_space != false %} p-0 {% endif %}">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-12 col-lg-12 col-xl-12 center">
+            {% for block in section.blocks %}
+              {% if block.type == 'section_heading' %}
+                <div class="section-heading-text">
+                      <h1 class="section-heading">{{block.settings.heading}}</h1>
+                      <p class="section-text">{{block.settings.sub_heading}}</p>
+                </div>
+              {% endif %}
+            {% endfor %}
+
+            
+                <div class="text-box-and-image {% if section.settings.box_overlay == true %} overlap_enabled {% endif %}">
+                {% for block in section.blocks %}
+                  {% if block.type == 'section_box_img' %}
+                      <div class="img-portion">
+                          <img src="{{block.settings.image | img_url: 'master'}}">
+                      </div>
+                  {% endif %}
+                {% endfor %}
+                    <div class="text-portion">
+                    {% for block in section.blocks %}
+                      {% if block.type == 'section_box_text' %}
+                          <p class="text-inside-text-portion">
+                              {{block.settings.text}}
+                          </p>
+                      {% endif %}
+                    {% endfor %}
+                        <div class="imo-content">
+                            <img src="{{'imo.svg' | asset_url}}">
+                            <img src="{{'imo.svg' | asset_url}}">
+                            <img src="{{'imo.svg' | asset_url}}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+	    </div>
+    </div>
+  </section>
+
+<style>
+    .section-heading-text {
+        text-align: left;
+        width: 100%;
+    }
+    .section-heading-text h1{
+        font-size: 68px;
+        font-size: {{heading_font_size_desk | append: 'px'}};
+        line-height: {{ heading_lh_desk | append: 'px' }};
+        font-weight: {{ heading_font_weight }};
+        text-transform: {{heading_text_transfrom}};
+    }
+    .section-heading-text p.section-text {
+        font-size: {{des_font_size | append: 'px'}};
+        line-height: {{ des_lh | append: 'px' }};
+    }
+    .section-heading-text p.section-text{
+      width: 45%;
+    }
+    .text-box-and-image {
+        display: flex;
+        margin-top: 50px;
+        position: relative;
+        justify-content: left;
+        gap: 20px;
+    }
+    .text-box-and-image.overlap_enabled {
+        display: flex;
+        margin-top: 100px;
+        position: relative;
+        justify-content: left;
+        margin-left: 70px;
+    }
+    .text-box-and-image>div{
+        flex-basis: 50%;
+    }
+    .text-portion {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        text-align: left;
+        align-items: center;
+        padding: 30px;
+        border: 2px solid #000;
+        border-radius: 20px;
+        background: #fff;
+        gap: 10px;
+    }
+    .text-box-and-image.overlap_enabled .text-portion {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        text-align: left;
+        align-items: center;
+        padding: 30px;
+        border: 2px solid #000;
+        border-radius: 20px;
+        position: absolute;
+        width: 50%;
+        background: #fff;
+        right: 10%;
+        top: -22%;
+        height: 100%;
+        gap: 10px;
+    }
+    .wellness-section p.text-inside-text-portion{
+        font-size: 16px;
+        margin-bottom: 0 !important;
+    }
+    .img-portion img {
+        width: 100%;
+        display: block;
+        border: 2px solid #000;
+        border-radius: 20px;
+    }
+    .img-portion{
+        margin-left: 20px;
+        max-width: 589px;
+    }
+    .imo-content {
+        width: 100%;
+        display: flex;
+        justify-content: left;
+        align-items: flex-end;
+    }
+    .imo-content img {
+        width: 100%;
+        max-width: 40px;
+    }
+    @media only screen and (max-width: 1024px){
+      .text-box-and-image.overlap_enabled .text-portion{
+        padding: 20px;
+      }
+    }
+    @media only screen and (max-width: 992px){
+        .section-heading-text h1{
+          font-size: 30px;
+          font-size: {{heading_font_size_tab | append: 'px'}};
+          line-height: {{ heading_lh_tab | append: 'px' }};
+        }
+        .section-heading-text p.section-text {
+          font-size: {{des_font_size_tab | append: 'px'}};
+          line-height: {{ des_lh_tab | append: 'px' }};
+        }
+        .text-portion{
+            justify-content: normal;
+        }
+        .imo-content{
+            margin-top: 0; 
+        }
+        .text-box-and-image{
+            flex-direction: column;
+        }
+
+        .text-box-and-image.overlap_enabled{
+          margin-top: 50px;
+          margin-left: 0;
+        }
+        .img-portion{
+          margin-left: 0;
+        }
+        .text-box-and-image.overlap_enabled .text-portion{
+          position: initial;
+          align-items: flex-start;
+          width: 100%;
+        }
+    }
+    @media only screen and (max-width: 768px){
+      .section-heading-text h1{
+        font-size: {{heading_font_size_mob | append: 'px'}};
+        line-height: {{ heading_lh_mob | append: 'px' }};
+        text-align: center;
+      }
+      .section-heading-text p.section-text {
+        font-size: {{des_font_size_mob | append: 'px'}};
+        line-height: {{ des_lh_mob | append: 'px' }};
+      }
+       .section-heading-text p.section-text{
+        width: 100%;
+        text-align: center;
+       }
+    }
+</style>
+
+{% schema %}
+  {
+    "name": "Wellness Section",
+    "class": "wellness-section",
+    "settings": [
+        {
+        "type": "select",
+        "id": "container",
+        "label": "Section Width",
+        "options": [
+            {"label": "Default", "value": "container"},
+            {"label": "Full wide", "value": "container-fluid"}
+        ],
+        "default": "container"
+    },
+    {
+        "type": "checkbox",
+        "id": "remove_container_space",
+        "label": "Remove Container Space",
+        "default": false
+    },
+        {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    },
+    {
+          "type": "header",
+          "content": "Top Bottom Padding (Mobile)"
+        }, {
+          "type": "range",
+          "id": "padding_top_m",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "unit": "px",
+          "label": "Padding Top",
+          "default": 30
+        }, {
+          "type": "range",
+          "id": "padding_bottom_m",
+          "min": 0,
+          "max": 100,
+          "step": 2,
+          "unit": "px",
+          "label": "Padding Bottom",
+          "default": 30
+        },
+        {
+            "type": "color",
+            "id": "section_bg",
+            "label": "Background Color",
+            "default": "#eadcf0"
+        },
+        {
+          "type": "checkbox",
+          "id": "box_overlay",
+          "label": "Box Overlay",
+          "default": true
+        },
+        {
+          "type": "header",
+          "content": "Heading"
+        },
+        {
+					"type": "range",
+					"id": "heading_font_size_desk",
+					"label": "Font Size (Desktop)",
+					"min": 0,
+					"max": 90,
+					"step": 1,
+					"default":80,
+					"unit": "px"
+				  },
+				  {
+					"type": "range",
+					"id": "heading_lh_desk",
+					"label": "Line Height (Desktop)",
+					"min": 0,
+					"max": 100,
+					"step": 1,
+					"default": 100,
+					"unit": "px"
+				  },
+				  {
+					"type": "range",
+					"id": "heading_font_size_tab",
+					"label": "Font Size (Tablet)",
+					"min": 0,
+					"max": 90,
+					"step": 1,
+					"default":50,
+					"unit": "px"
+				  },
+				  {
+					"type": "range",
+					"id": "heading_lh_tab",
+					"label": "Line Height (Tablet)",
+					"min": 0,
+					"max": 100,
+					"step": 1,
+					"default": 55,
+					"unit": "px"
+				  },
+				  {
+					"type": "range",
+					"id": "heading_font_size_mob",
+					"label": "Font Size (Mobile)",
+					"min": 0,
+					"max": 50,
+					"step": 1,
+					"default": 30,
+					"unit": "px"
+				  },
+				  {
+					"type": "range",
+					"id": "heading_lh_mob",
+					"label": "Line Height (Mobile)",
+					"min": 0,
+					"max": 80,
+					"step": 1,
+					"default": 40,
+					"unit": "px"
+				  },
+				  {
+					"type": "select",
+					"id": "heading_text_transfrom",
+					"label": "Heading Text Transform",
+					"options": [
+					  {
+						"label": "Capitalize",
+						"value": "capitalize"
+					  },
+					  {
+						"label": "Uppercase",
+						"value": "uppercase"
+					  },
+					  {
+						"label": "Lowercase",
+						"value": "lowercase"
+					  },
+					  {
+						"label": "None",
+						"value": "none"
+					  }
+					],
+					"default": "none"
+				  },
+				  {
+					"type": "select",
+					"id": "heading_font_weight",
+					"label": "Heading Text Transform",
+					"options": [
+					  {
+						"label": "Bold",
+						"value": "700"
+					  },
+					  {
+						"label": "Semi Bold",
+						"value": "500"
+					  },
+					  {
+						"label": "Regular",
+						"value": "400"
+					  },
+					  {
+						"label": "Light",
+						"value": "300"
+					  }
+					],
+					"default": "700"
+				  },
+          {
+          "type": "header",
+          "content": "Description"
+        },
+        {
+					"type": "range",
+					"id": "des_font_size",
+					"label": "Font Size",
+					"min": 0,
+					"max": 30,
+					"step": 1,
+					"default": 18,
+					"unit": "px"
+				  },
+				  {
+					"type": "range",
+					"id": "des_lh",
+					"label": "Line Height",
+					"min": 0,
+					"max": 40,
+					"step": 1,
+					"default": 30,
+					"unit": "px"
+				  },
+				  {
+					"type": "range",
+					"id": "des_font_size_tab",
+					"label": "Font Size (Tablet)",
+					"min": 0,
+					"max": 30,
+					"step": 1,
+					"default": 16,
+					"unit": "px"
+				  },
+				  {
+					"type": "range",
+					"id": "des_lh_tab",
+					"label": "Line Height (Tablet)",
+					"min": 0,
+					"max": 40,
+					"step": 1,
+					"default": 24,
+					"unit": "px"
+				  },
+				  {
+					"type": "range",
+					"id": "des_font_size_mob",
+					"label": "Font Size (Mobile)",
+					"min": 0,
+					"max": 30,
+					"step": 1,
+					"default": 16,
+					"unit": "px"
+				  },
+				  {
+					"type": "range",
+					"id": "des_lh_mob",
+					"label": "Line Height (Mobile)",
+					"min": 0,
+					"max": 40,
+					"step": 1,
+					"default": 24,
+					"unit": "px"
+				  }
+    ],
+    "blocks":[
+      {
+        "type": "section_heading",
+        "name": "Section Heading",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Wellness should be delicious"
+          },
+          {
+            "type": "textarea",
+            "id": "sub_heading",
+            "label": "Subheading",
+            "default": "Clinically-backed ingredients formulated to become a divine part of your everyday life."
+          }
+        ]
+      },
+      {
+        "type": "section_box_img",
+        "name": "Image",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      },
+      {
+        "type": "section_box_text",
+        "name": "Text",
+        "limit": 3,
+        "settings": [
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text",
+            "default": "CHIC&LOVE es una empresa de nutricosmética cuyo objetivo es alcanzar la belleza, haciendo que tu salud mejore."
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Wellness Section",
+        "blocks": [
+            {
+                "type": "section_heading"
+            },
+            {
+                "type": "section_box_img"
+            },
+            {
+                "type": "section_box_text",
+                "settings": {
+                  "text": "CHIC&LOVE es una empresa de nutricosmética cuyo objetivo es alcanzar la belleza, haciendo que tu salud mejore."
+                }
+            },
+            {
+                "type": "section_box_text",
+                "settings": {
+                  "text": "Creamos suplementos alimenticios deliciosos y fáciles de tomar que mejoran tu salud. Nuestros productos están formulados con ingrediente de máxima calidad que contribuirán de forma eficaz a conseguir tus objetivos."
+                }
+            },
+            {
+                "type": "section_box_text",
+                "settings": {
+                  "text": "CHIC&LOVE quiere ayudarte a que te sientas mejor, te gustes más y seas más feliz."
+                }
+            }
+        ]
+      }
+  ] 
+  }
+{% endschema %}

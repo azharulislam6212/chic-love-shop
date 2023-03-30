@@ -51,8 +51,12 @@
                 {% endfor %}
             </div>
             <div class="floating_shapes_container">
-                <img class="first_background" src="{{'faq_page_big_star.svg' | asset_url}}">
-                <img class="second_background" src="{{'faq_page_small_star.svg' | asset_url}}">
+            {% if section.settings.bg_shape_1 != blank %}
+                <img class="first_background" src="{{ section.settings.bg_shape_1 | img_url: 'master'}}">
+            {% endif %}
+            {% if section.settings.bg_shape_2 != blank %}
+                <img class="second_background" src="{{ section.settings.bg_shape_2 | img_url: 'master'}}">
+            {% endif %}
             </div>
         </div>
 	</div>
@@ -95,6 +99,16 @@
         "id": "section_background",
         "label": "Section Background",
         "default": "#DFC8E7"
+    },
+    {
+        "type": "image_picker",
+        "id": "bg_shape_1",
+        "label": "Background Shape One"
+    },
+    {
+        "type": "image_picker",
+        "id": "bg_shape_2",
+        "label": "Background Shape Two"
     },
     {
         "type": "checkbox",
