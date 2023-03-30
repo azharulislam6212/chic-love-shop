@@ -207,6 +207,8 @@ $(function () {
 
 
   	// Script For Fix Header on Scroll
+
+    function header_sticky
 	$(window).on('scroll', function() {    
 		var scroll = $(window).scrollTop();
 
@@ -215,7 +217,7 @@ $(function () {
 	
 		} else {
 			$(".sticky-header").removeClass("header-fixed");
-      
+
 		}
 	});
 
