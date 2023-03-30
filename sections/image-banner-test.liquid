@@ -184,6 +184,26 @@ fill: {{ primary_button_color }};
 <div class=" banner section_{{ section.id }}" id="section_{{ section.id }}">
 	<div class="banner-{{banner_height}} "  data-overlay="{{overlayimage}}" >	
 
+
+
+
+        {%- for block in section.blocks -%}
+            {%- case block.type -%}
+            {%- when 'heading' -%}
+          <div class="row justify-content-center mb-5">
+            <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12">
+              <div class="position-relative mb-3 {{block.settings.content_alignment}} wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1s">
+                {% if block.settings.heading != blank %}
+                <h2 class="section-heading font-weight-regular">{{ block.settings.heading }}</h2>
+              {% endif %}
+              </div>
+            </div>
+          </div>
+
+        {%- endcase -%}
+        {%- endfor -%} 
+
+		
   <div class="banner-item">
   {%- for block in section.blocks -%}
     {%- case block.type -%}
