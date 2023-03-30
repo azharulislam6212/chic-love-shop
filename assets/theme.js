@@ -206,6 +206,25 @@ $(function () {
   new WOW().init();
 
 
+  	// Script For Fix Header on Scroll
+
+    function header_sticky(){
+      $(window).on('scroll', function() {    
+        var scroll = $(window).scrollTop();
+    
+        if (scroll >= 90) {
+          $(".sticky-header").addClass("header-fixed");
+      
+        } else {
+          $(".sticky-header").removeClass("header-fixed");
+    
+        }
+      });
+    
+    }
+
+    header_sticky();
+
 
 // accordion script
 $('.trigger').click(function(j) {
@@ -226,10 +245,12 @@ $('.trigger').click(function(j) {
 
 document.addEventListener("shopify:section:load", function(event) {
   marquee();
+  header_sticky();
 });
 
 document.addEventListener('shopify:block:select', function(event) {
   marquee();
+  header_sticky();
 });
 
 

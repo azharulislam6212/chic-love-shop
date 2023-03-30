@@ -2028,8 +2028,52 @@ product-info .loading-overlay:not(.hidden) ~ *,
 .header-wrapper {
   display: block;
   position: relative;
-  overflow: hidden;
+  -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
+
+.header-wrapper.header-fixed{
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  top: 0;
+  -webkit-transition: 0.2s ease-in;
+  -o-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+}
+
+.header-wrapper.header-transparent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: inline-block;
+  width: 100%;
+  z-index:9999;
+}
+.header-wrapper.header-transparent.header-fixed{
+  box-shadow: 0 5px 30px rgba(0, 22, 84, 0.1);
+  -webkit-box-shadow: 0 5px 30px rgba(0, 22, 84, 0.1);
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  top: 0;
+  -webkit-transition: 0.2s ease-in;
+  -o-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+}
+
 
 .header-wrapper--border-bottom {
   border-bottom: transparent;

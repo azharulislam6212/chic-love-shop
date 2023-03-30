@@ -88,7 +88,19 @@
     color: {{  section.settings.link_color }};
     background-color: {{ section.settings.bg_color }};
   }
-   .header__submenu.global-settings-popup{
+
+.header-wrapper.header-transparent {
+  background-color: transparent;
+}
+.header-wrapper.header-transparent.header-fixed{
+  background-color: {{ section.settings.bg_color }};
+}
+
+.header-border-bottom{
+  border-bottom:1px solid {{ section.settings.border_bottom_color }};
+}
+
+  .header__submenu.global-settings-popup{
     background-color: {{ section.settings.bg_color }};
   }
 
@@ -171,6 +183,22 @@
 
 {%- liquid  
 
+  assign container = section.settings.container
+
+   assign t_header = ''
+   if template.name == "index" and section.settings.enable_transparent_header
+   assign t_header = "header-transparent"
+   endif
+
+
+   assign tri_border = ''
+   if section.settings.enable_border_bottom
+   assign tri_border = "header-border-bottom"
+   endif
+
+  if section.settings.enable_sticky_header
+    assign enable_sticky_header = "sticky-header"
+  endif
 
 
   assign main_menu = linklists[section.settings.menu]
@@ -437,10 +465,9 @@
 
 {% endcapture %}
 
-{% comment %} top-center {% endcomment %}
 
-<div class="header-wrapper">
-  <header class="header header--mobile{% if section.settings.logo_position == 'middle-left' %} header-middle-left {% endif %}  {% if section.settings.logo_position == 'middle-center' %} header-middle-center {% endif %} header--mobile-{{ section.settings.mobile_logo_position }} container {% if section.settings.menu != blank %} header--has-menu{% endif %}">
+<div class="header-wrapper  {{ enable_sticky_header }} {{t_header}} {{ tri_border }}">
+  <header class="header header--mobile{% if section.settings.logo_position == 'middle-left' %} header-middle-left {% endif %}  {% if section.settings.logo_position == 'middle-center' %} header-middle-center {% endif %} header--mobile-{{ section.settings.mobile_logo_position }} {{container}} {% if section.settings.menu != blank %} header--has-menu{% endif %}">
     {%- if section.settings.menu != blank -%}
       <header-drawer data-breakpoint="tablet">
         <details id="Details-menu-drawer-container" class="menu-drawer-container">
@@ -791,6 +818,23 @@
         "default": "#ffff00"
     },
     {
+      "type": "color",
+      "id": "border_bottom_color",
+      "label": "Border Bottom",
+      "default": "#F7F1F9"
+  },
+    {
+      "type": "select",
+      "id": "container",
+      "label": "Section Width",
+      "options": [
+      {"label": "Container", "value": "container"},
+      {"label": "Full Wide", "value": "container-fluid"}
+      ],
+      "default": "container"
+  },
+
+    {
       "type": "header",
       "content": "t:sections.header.settings.logo_header.content"
     },
@@ -856,12 +900,6 @@
       "unit": "per",
       "label": "Menu Offset",
       "default": 1
-    },
-    {
-      "type": "checkbox",
-      "id": "show_line_separator",
-      "default": true,
-      "label": "t:sections.header.settings.show_line_separator.label"
     },
     {
       "type": "checkbox",
