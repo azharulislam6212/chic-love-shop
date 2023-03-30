@@ -171,7 +171,23 @@
 
 {%- liquid  
 
+  assign container = section.settings.container
 
+   assign t_header = ''
+   if template.name == "index" and section.settings.enable_transparent_header
+   assign t_header = "header-transparent"
+   endif
+
+
+   assign tri_border = ''
+   if template.name == "index" and section.settings.enable_border_bottom
+   assign tri_border = "tri-border"
+   endif
+
+  if section.settings.enable_sticky_header
+    assign enable_sticky_header = "sticky-header"
+  endif
+  
 
   assign main_menu = linklists[section.settings.menu]
 
