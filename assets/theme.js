@@ -212,13 +212,13 @@ $(function () {
 
 		if (scroll >= 50) {
 			$(".sticky-header").addClass("header-fixed");
-			$('.stick_header-add').show();
+	
 		} else {
 			$(".sticky-header").removeClass("header-fixed");
-			$('.stick_header-add').hide();
+			
 		}
 	});
-  
+
 
 
 // accordion script
