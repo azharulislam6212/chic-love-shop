@@ -206,6 +206,20 @@ $(function () {
   new WOW().init();
 
 
+  	// Script For Fix Header on Scroll
+	$(window).on('scroll', function() {    
+		var scroll = $(window).scrollTop();
+
+		if (scroll >= 50) {
+			$(".sticky-header").addClass("header-fixed");
+			$('.stick_header-add').show();
+		} else {
+			$(".sticky-header").removeClass("header-fixed");
+			$('.stick_header-add').hide();
+		}
+	});
+  
+
 
 // accordion script
 $('.trigger').click(function(j) {
