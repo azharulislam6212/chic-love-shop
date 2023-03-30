@@ -215,7 +215,7 @@ $(function () {
 	
 		} else {
 			$(".sticky-header").removeClass("header-fixed");
-			
+      
 		}
 	});
 
