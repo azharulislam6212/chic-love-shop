@@ -2059,7 +2059,6 @@ product-info .loading-overlay:not(.hidden) ~ *,
 .header-wrapper.header-transparent.header-fixed{
   box-shadow: 0 5px 30px rgba(0, 22, 84, 0.1);
   -webkit-box-shadow: 0 5px 30px rgba(0, 22, 84, 0.1);
-  background:#ffffff;
   position: fixed;
   z-index: 99;
   width: 100%;
