@@ -212,7 +212,7 @@ $(function () {
       $(window).on('scroll', function() {    
         var scroll = $(window).scrollTop();
     
-        if (scroll >= 100) {
+        if (scroll >= 90) {
           $(".sticky-header").addClass("header-fixed");
       
         } else {
