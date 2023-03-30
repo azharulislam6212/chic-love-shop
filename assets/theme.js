@@ -208,18 +208,20 @@ $(function () {
 
   	// Script For Fix Header on Scroll
 
-    function header_sticky
-	$(window).on('scroll', function() {    
-		var scroll = $(window).scrollTop();
-
-		if (scroll >= 50) {
-			$(".sticky-header").addClass("header-fixed");
-	
-		} else {
-			$(".sticky-header").removeClass("header-fixed");
-
-		}
-	});
+    function header_sticky(){
+      $(window).on('scroll', function() {    
+        var scroll = $(window).scrollTop();
+    
+        if (scroll >= 50) {
+          $(".sticky-header").addClass("header-fixed");
+      
+        } else {
+          $(".sticky-header").removeClass("header-fixed");
+    
+        }
+      });
+    
+    }
 
 
 
